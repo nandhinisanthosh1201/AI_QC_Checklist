@@ -1,0 +1,73 @@
+{
+    "input_file": "DGS_(Submittal Mod 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axx - 05-05-2026.pdf",
+    "method": "pdf_vector",
+    "total_sections": 2,
+    "total_rows": 2,
+    "sections": [
+        {
+            "section_header": "MATERIALS",
+            "rows": [
+                {
+                    "code": "PL-C",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "(PL-1, WB-2) WILSONART \"HARVEST MAPLE\", 7953-38, FINE VELVET TEXTURE",
+                    "raw_cells": [
+                        "PL-C",
+                        "(PL-1,",
+                        "",
+                        "",
+                        "WB-2) WILSONART \"HARVEST",
+                        "",
+                        "MAPLE\", 7953-38,",
+                        "",
+                        "",
+                        "FINE VELVET TEXTURE",
+                        "",
+                        ""
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 515,
+                            "y": 299,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 517,
+                            "y": 596,
+                            "shape": "octagon"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section_header": "QTY.    HARDWARE",
+            "rows": [
+                {
+                    "code": "H-7.1",
+                    "shape": "rectangle",
+                    "qty": "X",
+                    "description": "ORANGE ALUMINUM Z-CLIP HD PANEL RAIL",
+                    "raw_cells": [
+                        "H-7.1",
+                        "X",
+                        "",
+                        "",
+                        "ORANGE ALUMINUM Z-CLIP",
+                        "",
+                        "HD PANEL",
+                        "RAIL",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                }
+            ]
+        }
+    ]
+}

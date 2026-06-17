@@ -1,0 +1,35 @@
+{
+    "input_file": "DGS_(Submittal Mod 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axx - 05-05-2026.pdf",
+    "method": "pdf_vector",
+    "total_sections": 1,
+    "total_rows": 1,
+    "sections": [
+        {
+            "section_header": "MATERIALS",
+            "rows": [
+                {
+                    "code": "PG-C",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "(CR-1) FINGER JOINT PINE, DELIVERED PRIME (PREPPING, PAINTING, FILLING OF ATTACHMENT HOLES BY OTHERS)",
+                    "raw_cells": [
+                        "PG-C",
+                        "(CR-1) FINGER JOINT PINE,",
+                        "DELIVERED PRIME (PREPPING, PAINTING,",
+                        "FILLING OF ATTACHMENT HOLES BY OTHERS)",
+                        "",
+                        ""
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 340,
+                            "y": 452,
+                            "shape": "octagon"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

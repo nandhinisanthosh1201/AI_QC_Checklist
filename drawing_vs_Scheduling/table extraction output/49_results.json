@@ -1,0 +1,224 @@
+{
+    "input_file": "DGS_(Submittal Mod 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axx - 05-05-2026.pdf",
+    "method": "pdf_vector",
+    "total_sections": 2,
+    "total_rows": 14,
+    "sections": [
+        {
+            "section_header": "MATERIALS",
+            "rows": [
+                {
+                    "code": "MM-A",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "WHITE MELAMINE",
+                    "raw_cells": [
+                        "MM-A",
+                        "WHITE",
+                        "MELAMINE"
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "PL-A",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "WHITE CAB LINER",
+                    "raw_cells": [
+                        "PL-A",
+                        "WHITE",
+                        "CAB LINER"
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "PL-D",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "(PL-2) PIONITE \"FOLKSTONE GRAY\", SG241-SD, TEXTURED/SUEDE FINISH",
+                    "raw_cells": [
+                        "PL-D",
+                        "(PL-2) PIONITE",
+                        "\"FOLKSTONE GRAY\", SG241-SD, TEXTURED/SUEDE FINISH"
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 277,
+                            "y": 567,
+                            "shape": "octagon"
+                        }
+                    ]
+                },
+                {
+                    "code": "PL-E",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "(PL-3) WILSONART \"WHITE\", 1570-60, FINE VELVET TEXTURE 1570-38",
+                    "raw_cells": [
+                        "PL-E",
+                        "(PL-3) WILSONART",
+                        "\"WHITE\", 1570-60, FINE VELVET TEXTURE 1570-38"
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 283,
+                            "y": 397,
+                            "shape": "octagon"
+                        }
+                    ]
+                },
+                {
+                    "code": "PL-F",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "(PL-4) WILSONART \"CARBON MESH\", 4880-38, FINE VELVET TEXTURE",
+                    "raw_cells": [
+                        "PL-F",
+                        "(PL-4) WILSONART",
+                        "\"CARBON MESH\", 4880-38, FINE VELVET TEXTURE"
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 437,
+                            "y": 473,
+                            "shape": "none"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section_header": "QTY. HARDWARE",
+            "rows": [
+                {
+                    "code": "H-1.2",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X X SALICE SALICE H-1.2 0mm 0mm CLIP-ON CLIP-ON HINGE HINGE PLATE PLATE EURO EURO SCREW, SCREW, BARGR09/16 BARGR09/16",
+                    "raw_cells": [
+                        "H-1.2 H-1.2",
+                        "X X SALICE SALICE",
+                        "0mm 0mm CLIP-ON CLIP-ON HINGE HINGE PLATE PLATE EURO EURO SCREW, SCREW, BARGR09/16 BARGR09/16"
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "H-1.3",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X X SALICE SALICE H-1.3 110° 110° FO FO SOFT-CLOSE, SOFT-CLOSE, LOGICA LOGICA SILENTIA, SILENTIA, C7J6AE9 C7J6AE9",
+                    "raw_cells": [
+                        "H-1.3 H-1.3",
+                        "X X SALICE SALICE",
+                        "110° 110° FO FO SOFT-CLOSE, SOFT-CLOSE, LOGICA LOGICA SILENTIA, SILENTIA, C7J6AE9 C7J6AE9"
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "H-2.0",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X KNAPE & VOGT DRAWER SLIDES, KV8400, SIDE MOUNT, FULL EXT. 100lb LOAD RATING",
+                    "raw_cells": [
+                        "H-2.0",
+                        "X KNAPE",
+                        "& VOGT DRAWER SLIDES, KV8400, SIDE MOUNT, FULL EXT. 100lb LOAD RATING"
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "H-2.1",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X KNAPE & VOGT DRAWER SLIDES, KV8600, SIDE MOUNT, FULL EXT. 150lb LOAD RATING",
+                    "raw_cells": [
+                        "H-2.1",
+                        "X KNAPE",
+                        "& VOGT DRAWER SLIDES, KV8600, SIDE MOUNT, FULL EXT. 150lb LOAD RATING"
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "H-3.0",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X BERENSON WIRE PULL, BN6131-2SC-P, 96mm CTC, SATIN CHROME FINISH",
+                    "raw_cells": [
+                        "H-3.0",
+                        "X BERENSON",
+                        "WIRE PULL, BN6131-2SC-P, 96mm CTC, SATIN CHROME FINISH"
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "H-4.0",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X HAFELE SHELF SUPPORT, 282.04.711, 5mm SHELF PIN, STEEL NICKEL-PLATED",
+                    "raw_cells": [
+                        "H-4.0",
+                        "X HAFELE",
+                        "SHELF SUPPORT, 282.04.711, 5mm SHELF PIN, STEEL NICKEL-PLATED"
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "H-4.1.1",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X BRACKET, A&M CFLAT 21 (2.0)",
+                    "raw_cells": [
+                        "H-4.1.1",
+                        "X BRACKET,",
+                        "A&M CFLAT 21 (2.0)"
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "H-4.1.2",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X BRACKET, A&M CFLAT 24 (2.0)",
+                    "raw_cells": [
+                        "H-4.1.2",
+                        "X BRACKET,",
+                        "A&M CFLAT 24 (2.0)"
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 444,
+                            "y": 529,
+                            "shape": "rectangle"
+                        }
+                    ]
+                },
+                {
+                    "code": "H-7.0",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X 1/8\" x 1-1/4\" x 1-1/4\" ALUMINUM L-ANGLE, MILL FINISH",
+                    "raw_cells": [
+                        "H-7.0",
+                        "X 1/8\"",
+                        "x 1-1/4\" x 1-1/4\" ALUMINUM L-ANGLE, MILL FINISH"
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                }
+            ]
+        }
+    ]
+}

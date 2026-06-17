@@ -1,0 +1,377 @@
+{
+    "input_file": "DGS_(Submittal Mod 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axx - 05-05-2026.pdf",
+    "method": "pdf_vector",
+    "total_sections": 2,
+    "total_rows": 9,
+    "sections": [
+        {
+            "section_header": "MATERIALS",
+            "rows": [
+                {
+                    "code": "MM-A",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "WHITE MELAMINE",
+                    "raw_cells": [
+                        "MM-A",
+                        "",
+                        "WHITE",
+                        "",
+                        "MELAMINE",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 318,
+                            "y": 339,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 388,
+                            "y": 338,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 710,
+                            "y": 337,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 831,
+                            "y": 339,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 467,
+                            "y": 336,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 548,
+                            "y": 341,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 629,
+                            "y": 324,
+                            "shape": "octagon"
+                        }
+                    ]
+                },
+                {
+                    "code": "PL-C",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "(PL-1, WB-2) WILSONART \"HARVEST MAPLE\", 7953-38, FINE VELVET TEXTURE",
+                    "raw_cells": [
+                        "PL-C",
+                        "",
+                        "(PL-1,",
+                        "WB-2)",
+                        "",
+                        "WILSONART",
+                        "\"HARVEST",
+                        "",
+                        "MAPLE\", 7953-38,",
+                        "",
+                        "FINE",
+                        "VELVET",
+                        "TEXTURE",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 640,
+                            "y": 395,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 830,
+                            "y": 424,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 208,
+                            "y": 423,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 942,
+                            "y": 416,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 334,
+                            "y": 597,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 832,
+                            "y": 603,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 208,
+                            "y": 676,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 942,
+                            "y": 671,
+                            "shape": "octagon"
+                        }
+                    ]
+                },
+                {
+                    "code": "PG-A",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "(CR-1) SOLID POPLAR, DELIVERED PRIMED (PREPPING, PAINTING, FILLING OF ATTACHMENT HOLES BY OTHERS)",
+                    "raw_cells": [
+                        "PG-A",
+                        "",
+                        "(CR-1)",
+                        "",
+                        "SOLID",
+                        "POPLAR, DELIVERED",
+                        "",
+                        "",
+                        "PRIMED (PREPPING,",
+                        "",
+                        "",
+                        "PAINTING,",
+                        "FILLING OF ATTACHMENT",
+                        "",
+                        "",
+                        "HOLES BY OTHERS)",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 115,
+                            "y": 439,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 1032,
+                            "y": 439,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 115,
+                            "y": 695,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 1032,
+                            "y": 693,
+                            "shape": "octagon"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section_header": "QTY.  HARDWARE",
+            "rows": [
+                {
+                    "code": "H-1.2",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X SALICE 0mm CLIP-ON HINGE PLATE EURO SCREW, BARGR09/16",
+                    "raw_cells": [
+                        "H-1.2",
+                        "",
+                        "X",
+                        "SALICE",
+                        "",
+                        "0mm CLIP-ON",
+                        "",
+                        "HINGE",
+                        "PLATE EURO",
+                        "SCREW,",
+                        "",
+                        "BARGR09/16",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "H-1.3",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X SALICE 110° FO SOFT-CLOSE, LOGICA SILENTIA, C7J6AE9",
+                    "raw_cells": [
+                        "H-1.3",
+                        "",
+                        "X",
+                        "SALICE",
+                        "",
+                        "110° FO SOFT-CLOSE,",
+                        "",
+                        "",
+                        "LOGICA SILENTIA,",
+                        "",
+                        "",
+                        "C7J6AE9",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "H-2.0",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X KNAPE & VOGT DRAWER SLIDES, KV8400, SIDE MOUNT, FULL EXT. 100lb LOAD RATING",
+                    "raw_cells": [
+                        "H-2.0",
+                        "",
+                        "X",
+                        "KNAPE",
+                        "",
+                        "& VOGT DRAWER",
+                        "",
+                        "SLIDES,",
+                        "KV8400,",
+                        "SIDE",
+                        "MOUNT,",
+                        "",
+                        "FULL EXT. 100lb LOAD",
+                        "RATING",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "H-2.1",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X KNAPE & VOGT DRAWER SLIDES, KV8600, SIDE MOUNT, FULL EXT. 150lb LOAD RATING",
+                    "raw_cells": [
+                        "H-2.1",
+                        "",
+                        "X",
+                        "KNAPE",
+                        "",
+                        "& VOGT DRAWER",
+                        "",
+                        "SLIDES,",
+                        "KV8600,",
+                        "SIDE",
+                        "MOUNT,",
+                        "",
+                        "FULL EXT. 150lb LOAD",
+                        "RATING",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "H-4.0",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X HAFELE SHELF SUPPORT, 282.04.711, 5mm SHELF PIN, STEEL NICKEL-PLATED",
+                    "raw_cells": [
+                        "H-4.0",
+                        "",
+                        "X",
+                        "HAFELE",
+                        "",
+                        "SHELF SUPPORT,",
+                        "",
+                        "282.04.711,",
+                        "5mm",
+                        "SHELF",
+                        "",
+                        "PIN,",
+                        "STEEL NICKEL-PLATED",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "H-9.1",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X GRAINGER - GRAB CATCH - 4PE50, STEEL",
+                    "raw_cells": [
+                        "H-9.1",
+                        "",
+                        "X",
+                        "GRAINGER",
+                        "",
+                        "- GRAB",
+                        "CATCH",
+                        "",
+                        "- 4PE50, STEEL",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                }
+            ]
+        }
+    ]
+}

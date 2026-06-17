@@ -1,0 +1,199 @@
+{
+    "input_file": "DGS_(Submittal Mod 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axx - 05-05-2026.pdf",
+    "method": "pdf_vector",
+    "total_sections": 2,
+    "total_rows": 8,
+    "sections": [
+        {
+            "section_header": "MATERIALS",
+            "rows": [
+                {
+                    "code": "MM-A",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "WHITE MELAMINE",
+                    "raw_cells": [
+                        "MM-A",
+                        "",
+                        "",
+                        "WHITE",
+                        "",
+                        "MELAMINE",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "PL-D",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "(PL-2) PIONITE \"FOLKSTONE GRAY\", SG241-SD, TEXTURED/SUEDE FINISH",
+                    "raw_cells": [
+                        "PL-D",
+                        "",
+                        "",
+                        "(PL-2)",
+                        "PIONITE",
+                        "",
+                        "\"FOLKSTONE GRAY\",",
+                        "",
+                        "SG241-SD,",
+                        "TEXTURED/SUEDE FINISH"
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 347,
+                            "y": 212,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 723,
+                            "y": 377,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 73,
+                            "y": 677,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 473,
+                            "y": 677,
+                            "shape": "octagon"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section_header": "QTY.  HARDWARE",
+            "rows": [
+                {
+                    "code": "H-1.2",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X SALICE 0mm CLIP-ON HINGE PLATE EURO SCREW, BARGR09/16",
+                    "raw_cells": [
+                        "H-1.2",
+                        "",
+                        "",
+                        "X",
+                        "SALICE",
+                        "",
+                        "0mm CLIP-ON HINGE",
+                        "",
+                        "PLATE",
+                        "EURO SCREW, BARGR09/16"
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "H-1.3",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X SALICE 110° FO SOFT-CLOSE, LOGICA SILENTIA, C7J6AE9",
+                    "raw_cells": [
+                        "H-1.3",
+                        "",
+                        "",
+                        "X",
+                        "SALICE",
+                        "",
+                        "110° FO SOFT-CLOSE,",
+                        "",
+                        "LOGICA",
+                        "SILENTIA, C7J6AE9"
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "H-3.0",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X BERENSON WIRE PULL, BN6131-2SC-P, 96mm CTC, SATIN CHROME FINISH",
+                    "raw_cells": [
+                        "H-3.0",
+                        "",
+                        "",
+                        "X",
+                        "BERENSON",
+                        "",
+                        "WIRE PULL,",
+                        "BN6131-2SC-P,",
+                        "",
+                        "96mm CTC, SATIN CHROME FINISH"
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "H-4.0",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X HAFELE SHELF SUPPORT, 282.04.711, 5mm SHELF PIN, STEEL NICKEL-PLATED",
+                    "raw_cells": [
+                        "H-4.0",
+                        "",
+                        "",
+                        "X",
+                        "HAFELE",
+                        "",
+                        "SHELF SUPPORT,",
+                        "282.04.711,",
+                        "",
+                        "5mm SHELF PIN, STEEL NICKEL-PLATED"
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "H-7.1",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X ORANGE ALUMINUM Z-CLIP HD PANEL RAIL",
+                    "raw_cells": [
+                        "H-7.1",
+                        "",
+                        "",
+                        "X",
+                        "ORANGE",
+                        "",
+                        "ALUMINUM Z-CLIP",
+                        "HD",
+                        "PANEL",
+                        "RAIL"
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "H-7.3",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X EAGLE ALUMINUM 1/8\" CORNER ACCENT, MILL FINISH",
+                    "raw_cells": [
+                        "H-7.3",
+                        "",
+                        "",
+                        "X",
+                        "EAGLE",
+                        "",
+                        "ALUMINUM 1/8\" CORNER",
+                        "",
+                        "ACCENT,",
+                        "MILL FINISH"
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                }
+            ]
+        }
+    ]
+}

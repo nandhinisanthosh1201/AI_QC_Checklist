@@ -1,0 +1,127 @@
+{
+    "input_file": "DGS_(Submittal Mod 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axx - 05-05-2026.pdf",
+    "method": "pdf_vector",
+    "total_sections": 2,
+    "total_rows": 3,
+    "sections": [
+        {
+            "section_header": "MATERIALS",
+            "rows": [
+                {
+                    "code": "PG-A",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "(CR-1) SOLID POPLAR, DELIVERED PRIMED (PREPPING, PAINTING, FILLING OF ATTACHMENT HOLES BY OTHERS)",
+                    "raw_cells": [
+                        "PG-A",
+                        "(CR-1)",
+                        "SOLID POPLAR, DELIVERED PRIMED",
+                        "(PREPPING,",
+                        "",
+                        "PAINTING,",
+                        "FILLING OF ATTACHMENT",
+                        "",
+                        "",
+                        "HOLES BY OTHERS)",
+                        "",
+                        ""
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 472,
+                            "y": 525,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 1021,
+                            "y": 333,
+                            "shape": "octagon"
+                        }
+                    ]
+                },
+                {
+                    "code": "PL-C",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "(PL-1, WB-2) WILSONART \"HARVEST MAPLE\", 7953-38, FINE VELVET TEXTURE",
+                    "raw_cells": [
+                        "PL-C",
+                        "(PL-1, WB-2)",
+                        "WILSONART \"HARVEST MAPLE\",",
+                        "7953-38,",
+                        "FINE",
+                        "VELVET",
+                        "TEXTURE",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 292,
+                            "y": 120,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 305,
+                            "y": 670,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 190,
+                            "y": 631,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 1021,
+                            "y": 446,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 1021,
+                            "y": 645,
+                            "shape": "octagon"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section_header": "QTY. HARDWARE",
+            "rows": [
+                {
+                    "code": "H-7.1",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X ORANGE ALUMINUM Z-CLIP HD PANEL RAIL",
+                    "raw_cells": [
+                        "H-7.1",
+                        "X ORANGE",
+                        "ALUMINUM Z-CLIP HD",
+                        "PANEL RAIL",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 1017,
+                            "y": 383,
+                            "shape": "rectangle"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

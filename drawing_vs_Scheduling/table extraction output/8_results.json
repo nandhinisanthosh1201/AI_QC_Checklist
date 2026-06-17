@@ -1,0 +1,145 @@
+{
+    "input_file": "DGS_(Submittal Mod 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axx - 05-05-2026.pdf",
+    "method": "pdf_vector",
+    "total_sections": 2,
+    "total_rows": 7,
+    "sections": [
+        {
+            "section_header": "MATERIALS",
+            "rows": [
+                {
+                    "code": "PL-C",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "(PL-1, WB-2) WILSONART \"HARVEST MAPLE\", 7953-38, FINE VELVET TEXTURE",
+                    "raw_cells": [
+                        "PL-C",
+                        "(PL-1, WB-2)",
+                        "WILSONART \"HARVEST MAPLE\", 7953-38, FINE VELVET TEXTURE"
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 287,
+                            "y": 554,
+                            "shape": "octagon"
+                        }
+                    ]
+                },
+                {
+                    "code": "PL-D",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "(PL-2) PIONITE \"FOLKSTONE GRAY\", SG241-SD, TEXTURED/SUEDE FINISH",
+                    "raw_cells": [
+                        "PL-D",
+                        "(PL-2) PIONITE",
+                        "\"FOLKSTONE GRAY\", SG241-SD, TEXTURED/SUEDE FINISH"
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 296,
+                            "y": 201,
+                            "shape": "octagon"
+                        }
+                    ]
+                },
+                {
+                    "code": "PL-E",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "(PL-3) WILSONART \"WHITE\", 1570-60, MATTE FINISH",
+                    "raw_cells": [
+                        "PL-E",
+                        "(PL-3) WILSONART",
+                        "\"WHITE\", 1570-60, MATTE FINISH"
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "GL-A",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "1/4\" CLEAR TEMPERED GLASS",
+                    "raw_cells": [
+                        "GL-A",
+                        "1/4\" CLEAR",
+                        "TEMPERED GLASS"
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 306,
+                            "y": 249,
+                            "shape": "octagon"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section_header": "QTY. HARDWARE",
+            "rows": [
+                {
+                    "code": "H-4.6",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X KNAPE & VOGT 80 SERIES SHELF STANDARDS & 180 SERIES 10\" BRACKETS, WHITE FINISH",
+                    "raw_cells": [
+                        "H-4.6",
+                        "X KNAPE",
+                        "& VOGT 80 SERIES SHELF STANDARDS & 180 SERIES 10\" BRACKETS, WHITE FINISH"
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 422,
+                            "y": 390,
+                            "shape": "rectangle"
+                        }
+                    ]
+                },
+                {
+                    "code": "H-9.4",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X KNAPE & VOGT ROLL - EZY BALL - BEARING TRACK, 72\" L",
+                    "raw_cells": [
+                        "H-9.4",
+                        "X KNAPE",
+                        "& VOGT ROLL - EZY BALL - BEARING TRACK, 72\" L"
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 411,
+                            "y": 262,
+                            "shape": "rectangle"
+                        }
+                    ]
+                },
+                {
+                    "code": "H-9.6",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X KNAPE & VOGT RATCHET LOCK, 965K 50 NP, POLISHED NICKEL FINISH",
+                    "raw_cells": [
+                        "H-9.6",
+                        "X KNAPE",
+                        "& VOGT RATCHET LOCK, 965K 50 NP, POLISHED NICKEL FINISH"
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 423,
+                            "y": 477,
+                            "shape": "rectangle"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

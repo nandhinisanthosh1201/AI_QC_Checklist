@@ -1,0 +1,96 @@
+{
+    "input_file": "DGS_(Submittal Mod 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axx - 05-05-2026.pdf",
+    "method": "pdf_vector",
+    "total_sections": 2,
+    "total_rows": 3,
+    "sections": [
+        {
+            "section_header": "MATERIALS",
+            "rows": [
+                {
+                    "code": "PL-F",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "(PL-4) WILSONART \"CARBON MESH\", 4880-38, FINE VELVET TEXTURE",
+                    "raw_cells": [
+                        "PL-F",
+                        "(PL-4)",
+                        "",
+                        "WILSONART",
+                        "",
+                        "\"CARBON",
+                        "",
+                        "MESH\", 4880-38, FINE",
+                        "VELVET",
+                        "TEXTURE"
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 493,
+                            "y": 417,
+                            "shape": "none"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section_header": "QTY.  HARDWARE",
+            "rows": [
+                {
+                    "code": "H-4.1.1",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X BRACKET, A&M CFLAT 21 (2.0)",
+                    "raw_cells": [
+                        "H-4.1.1",
+                        "",
+                        "X",
+                        "BRACKET,",
+                        "",
+                        "A&M",
+                        "CFLAT",
+                        "21 (2.0)",
+                        "",
+                        ""
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 398,
+                            "y": 456,
+                            "shape": "rectangle"
+                        }
+                    ]
+                },
+                {
+                    "code": "H-7.0",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X 1/8\" x 1-1/4\" x 1-1/4\" ALUMINUM L-ANGLE, MILL FINISH",
+                    "raw_cells": [
+                        "H-7.0",
+                        "",
+                        "X",
+                        "1/8\"",
+                        "x",
+                        "1-1/4\" x 1-1/4\"",
+                        "",
+                        "ALUMINUM L-ANGLE, MILL",
+                        "FINISH",
+                        ""
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 319,
+                            "y": 456,
+                            "shape": "rectangle"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

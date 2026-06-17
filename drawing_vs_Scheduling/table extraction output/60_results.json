@@ -1,0 +1,94 @@
+{
+    "input_file": "DGS_(Submittal Mod 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axx - 05-05-2026.pdf",
+    "method": "pdf_vector",
+    "total_sections": 2,
+    "total_rows": 3,
+    "sections": [
+        {
+            "section_header": "MATERIALS",
+            "rows": [
+                {
+                    "code": "PG-A",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "(CR-1) SOLID POPLAR, DELIVERED PRIMED (PREPPING, PAINTING, FILLING OF ATTACHMENT HOLES BY OTHERS)",
+                    "raw_cells": [
+                        "PG-A",
+                        "(CR-1)",
+                        "SOLID",
+                        "POPLAR,",
+                        "",
+                        "",
+                        "DELIVERED PRIMED (PREPPING, PAINTING, FILLING",
+                        "OF ATTACHMENT HOLES BY OTHERS)"
+                    ],
+                    "present_in_drawing": false,
+                    "drawing_occurrences": []
+                },
+                {
+                    "code": "PL-C",
+                    "shape": "octagon",
+                    "qty": "",
+                    "description": "(PL-1, (PL-1, WB-2) WB-2) PL-C WILSONART WILSONART \"HARVEST \"HARVEST MAPLE\", MAPLE\", 7953-38, 7953-38, FINE FINE VELVET VELVET TEXTURE TEXTURE",
+                    "raw_cells": [
+                        "PL-C PL-C",
+                        "(PL-1, (PL-1, WB-2) WB-2)",
+                        "",
+                        "WILSONART WILSONART",
+                        "",
+                        "",
+                        "\"HARVEST \"HARVEST MAPLE\", MAPLE\", 7953-38, 7953-38, FINE FINE VELVET VELVET TEXTURE TEXTURE",
+                        ""
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 285,
+                            "y": 606,
+                            "shape": "octagon"
+                        },
+                        {
+                            "x": 844,
+                            "y": 605,
+                            "shape": "octagon"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "section_header": "QTY. HARDWARE",
+            "rows": [
+                {
+                    "code": "H-7.1",
+                    "shape": "rectangle",
+                    "qty": "",
+                    "description": "X ORANGE ALUMINUM Z-CLIP HD PANEL RAIL",
+                    "raw_cells": [
+                        "H-7.1",
+                        "X ORANGE",
+                        "",
+                        "",
+                        "ALUMINUM",
+                        "",
+                        "Z-CLIP HD PANEL RAIL",
+                        ""
+                    ],
+                    "present_in_drawing": true,
+                    "drawing_occurrences": [
+                        {
+                            "x": 446,
+                            "y": 606,
+                            "shape": "rectangle"
+                        },
+                        {
+                            "x": 927,
+                            "y": 584,
+                            "shape": "rectangle"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

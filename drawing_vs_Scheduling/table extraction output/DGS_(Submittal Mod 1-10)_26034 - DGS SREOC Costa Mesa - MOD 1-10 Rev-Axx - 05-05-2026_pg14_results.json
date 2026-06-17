@@ -1,0 +1,205 @@
+{
+    "input_file": "DGS_(Submittal Mod 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axx - 05-05-2026.pdf",
+    "method": "pdf_vector",
+    "total_sections": 2,
+    "total_rows": 17,
+    "sections": [
+        {
+            "section_header": "MATERIALS",
+            "rows": [
+                {
+                    "code": "MM-A",
+                    "shape": "none",
+                    "qty": "",
+                    "description": "WHITE MELAMINE",
+                    "raw_cells": [
+                        "MM-A",
+                        "WHITE",
+                        "MELAMINE"
+                    ]
+                },
+                {
+                    "code": "PL-C",
+                    "shape": "none",
+                    "qty": "",
+                    "description": "(PL-1, WB-2) WILSONART \"HARVEST MAPLE\", 7953-38, FINE VELVET TEXTURE",
+                    "raw_cells": [
+                        "PL-C",
+                        "(PL-1, WB-2)",
+                        "WILSONART \"HARVEST MAPLE\", 7953-38, FINE VELVET TEXTURE"
+                    ]
+                },
+                {
+                    "code": "PL-E",
+                    "shape": "none",
+                    "qty": "",
+                    "description": "(PL-3) WILSONART \"WHITE\", 1570-60, FINE VELVET TEXTURE 1570-38",
+                    "raw_cells": [
+                        "PL-E",
+                        "(PL-3) WILSONART",
+                        "\"WHITE\", 1570-60, FINE VELVET TEXTURE 1570-38"
+                    ]
+                },
+                {
+                    "code": "WD-A",
+                    "shape": "none",
+                    "qty": "",
+                    "description": "(WD-1) SURFACING SOLUTIONS, MAPLE TAMBOUR HALF ROUND, PROFILE 383, 3/4\"W x 5/16\"H",
+                    "raw_cells": [
+                        "WD-A",
+                        "(WD-1)",
+                        "SURFACING SOLUTIONS, MAPLE TAMBOUR HALF ROUND, PROFILE 383, 3/4\"W x 5/16\"H"
+                    ]
+                }
+            ]
+        },
+        {
+            "section_header": "QTY. HARDWARE",
+            "rows": [
+                {
+                    "code": "H-1.2",
+                    "shape": "none",
+                    "qty": "",
+                    "description": "X SALICE 0mm CLIP-ON HINGE PLATE EURO SCREW, BARGR09/16",
+                    "raw_cells": [
+                        "H-1.2",
+                        "X SALICE",
+                        "0mm CLIP-ON HINGE PLATE EURO SCREW, BARGR09/16"
+                    ]
+                },
+                {
+                    "code": "H-1.3",
+                    "shape": "none",
+                    "qty": "",
+                    "description": "X SALICE 110° FO SOFT-CLOSE, LOGICA SILENTIA, C7J6AE9",
+                    "raw_cells": [
+                        "H-1.3",
+                        "X SALICE",
+                        "110° FO SOFT-CLOSE, LOGICA SILENTIA, C7J6AE9"
+                    ]
+                },
+                {
+                    "code": "H-1.8",
+                    "shape": "none",
+                    "qty": "",
+                    "description": "X MC KINNEY DOUBLE ACTING SPRING HINGE, 1001,6\",SATIN CHROME FINISH",
+                    "raw_cells": [
+                        "H-1.8",
+                        "X MC",
+                        "KINNEY DOUBLE ACTING SPRING HINGE, 1001,6\",SATIN CHROME FINISH"
+                    ]
+                },
+                {
+                    "code": "H-2.0",
+                    "shape": "none",
+                    "qty": "",
+                    "description": "X KNAPE & VOGT DRAWER SLIDES, KV8400, SIDE MOUNT, FULL EXT. 100lb LOAD RATING",
+                    "raw_cells": [
+                        "H-2.0",
+                        "X KNAPE",
+                        "& VOGT DRAWER SLIDES, KV8400, SIDE MOUNT, FULL EXT. 100lb LOAD RATING"
+                    ]
+                },
+                {
+                    "code": "H-2.1",
+                    "shape": "none",
+                    "qty": "",
+                    "description": "X KNAPE & VOGT DRAWER SLIDES, KV8600, SIDE MOUNT, FULL EXT. 150lb LOAD RATING",
+                    "raw_cells": [
+                        "H-2.1",
+                        "X KNAPE",
+                        "& VOGT DRAWER SLIDES, KV8600, SIDE MOUNT, FULL EXT. 150lb LOAD RATING"
+                    ]
+                },
+                {
+                    "code": "H-3.0",
+                    "shape": "none",
+                    "qty": "",
+                    "description": "X BERENSON WIRE PULL, BN6131-2SC-P, 96mm CTC, SATIN CHROME FINISH",
+                    "raw_cells": [
+                        "H-3.0",
+                        "X BERENSON",
+                        "WIRE PULL, BN6131-2SC-P, 96mm CTC, SATIN CHROME FINISH"
+                    ]
+                },
+                {
+                    "code": "H-4.0",
+                    "shape": "none",
+                    "qty": "",
+                    "description": "X HAFELE SHELF SUPPORT, 282.04.711, 5mm SHELF PIN, STEEL NICKEL-PLATED",
+                    "raw_cells": [
+                        "H-4.0",
+                        "X HAFELE",
+                        "SHELF SUPPORT, 282.04.711, 5mm SHELF PIN, STEEL NICKEL-PLATED"
+                    ]
+                },
+                {
+                    "code": "H-6.0",
+                    "shape": "none",
+                    "qty": "",
+                    "description": "X MOCKETT TG FLIP-TOP SERIES DESK GROMMET, 2\"Ø, COLOR T.B.D.",
+                    "raw_cells": [
+                        "H-6.0",
+                        "X MOCKETT",
+                        "TG FLIP-TOP SERIES DESK GROMMET, 2\"Ø, COLOR T.B.D."
+                    ]
+                },
+                {
+                    "code": "H-7.1",
+                    "shape": "none",
+                    "qty": "",
+                    "description": "X ORANGE ALUMINUM Z-CLIP HD PANEL RAIL",
+                    "raw_cells": [
+                        "H-7.1",
+                        "X ORANGE",
+                        "ALUMINUM Z-CLIP HD PANEL RAIL"
+                    ]
+                },
+                {
+                    "code": "H-7.2",
+                    "shape": "none",
+                    "qty": "",
+                    "description": "X FRY REGLET MILLWORK REVEAL, 1\" PANEL, 1/2\" REVEAL, MWRB50P100, POWDER COATED",
+                    "raw_cells": [
+                        "H-7.2",
+                        "X FRY",
+                        "REGLET MILLWORK REVEAL, 1\" PANEL, 1/2\" REVEAL, MWRB50P100, POWDER COATED"
+                    ]
+                },
+                {
+                    "code": "H-7.3",
+                    "shape": "none",
+                    "qty": "",
+                    "description": "X EAGLE ALUMINUM 1/8\" CORNER ACCENT, MILL FINISH",
+                    "raw_cells": [
+                        "H-7.3",
+                        "X EAGLE",
+                        "ALUMINUM 1/8\" CORNER ACCENT, MILL FINISH"
+                    ]
+                },
+                {
+                    "code": "H-7.4",
+                    "shape": "none",
+                    "qty": "",
+                    "description": "X McMASTER CARR ALUMINUM CHANNEL, 9001K664, 1-3/4\"W x 1\"H, MILL FINISH",
+                    "raw_cells": [
+                        "H-7.4",
+                        "X McMASTER",
+                        "CARR ALUMINUM CHANNEL, 9001K664, 1-3/4\"W x 1\"H, MILL FINISH"
+                    ]
+                },
+                {
+                    "code": "H-8.0",
+                    "shape": "none",
+                    "qty": "",
+                    "description": "X KEKU CLIP, BLACK FINISH",
+                    "raw_cells": [
+                        "H-8.0",
+                        "X KEKU",
+                        "CLIP, BLACK FINISH"
+                    ]
+                }
+            ]
+        }
+    ]
+}
