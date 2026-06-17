@@ -897,6 +897,10 @@ def extract_pdf_vector(pdf_path: str, page_num: int = 0,
         else:
             break
 
+    # A valid schedule table must have at least 2 horizontal lines (e.g., top and bottom bounds)
+    if len(BORDER_YS) < 2:
+        return None
+
     print(f"  [PDF] Table span x={TX0:.0f}→{TX1:.0f}  "
           f"border_ys={[round(y, 1) for y in BORDER_YS]}")
 
