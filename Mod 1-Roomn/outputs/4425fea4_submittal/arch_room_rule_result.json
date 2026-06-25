@@ -1,8 +1,0 @@
-{
-  "rule_code": "ARCH-ROOM-001",
-  "rule_name": "Room Name and Room Number Verification",
-  "submittal_path": "inputs\\live_uploads\\4425fea4_submittal.jpg",
-  "run_timestamp": "2026-06-23T09:36:04.540789",
-  "view_validation_results": [],
-  "error": "OpenRouter API failed: None"
-}

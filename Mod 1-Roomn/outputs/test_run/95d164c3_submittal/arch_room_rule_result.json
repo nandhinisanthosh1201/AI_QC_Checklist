@@ -1,8 +1,0 @@
-{
-  "rule_code": "ARCH-ROOM-001",
-  "rule_name": "Room Name and Room Number Verification",
-  "submittal_path": "inputs\\live_uploads\\95d164c3_submittal.jpg",
-  "run_timestamp": "2026-06-23T12:30:33.756883",
-  "view_validation_results": [],
-  "error": "OpenRouter API failed: HTTP 404: {\"error\":{\"message\":\"No endpoints found for google/gemini-2.0-flash-exp:free.\",\"code\":404},\"user_id\":\"user_3FWiR7z55xqZa6tlGyVF1VjrYeH\"}"
-}

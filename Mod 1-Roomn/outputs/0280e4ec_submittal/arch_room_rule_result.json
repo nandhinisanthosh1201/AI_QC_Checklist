@@ -1,8 +1,0 @@
-{
-  "rule_code": "ARCH-ROOM-001",
-  "rule_name": "Room Name and Room Number Verification",
-  "submittal_path": "inputs\\live_uploads\\0280e4ec_submittal.jpg",
-  "run_timestamp": "2026-06-23T12:15:26.869285",
-  "view_validation_results": [],
-  "error": "OpenRouter API failed: HTTP 400: {\"error\":{\"message\":\"google/gemini-2.0-flash-lite-preview-02-05:free is not a valid model ID\",\"code\":400},\"user_id\":\"user_3FUHhBmwhMxj5Z9g03MkNfc1juy\"}"
-}

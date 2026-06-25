@@ -1,8 +1,0 @@
-{
-  "rule_code": "ARCH-ROOM-001",
-  "rule_name": "Room Name and Room Number Verification",
-  "submittal_path": "inputs\\live_uploads\\d9a9d866_submittal.jpg",
-  "run_timestamp": "2026-06-23T12:34:53.753199",
-  "view_validation_results": [],
-  "error": "Could not parse JSON from Qwen response."
-}
