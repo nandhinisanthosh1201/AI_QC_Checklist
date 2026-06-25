@@ -1,0 +1,4 @@
+requests
+Pillow
+opencv-python-headless
+gradio

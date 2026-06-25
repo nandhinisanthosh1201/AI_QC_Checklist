@@ -1,0 +1,148 @@
+[{
+"rule_id": "RULE_NOTE_INWALL_STRAPPING_BY_OTHERS_001",
+"rule_name": "In-Wall Strapping By Others Note Validation",
+"type_of_rule": "note_validation",
+"category": "Notes Check",
+"discipline": "Millwork",
+"required_sources": ["Submittal Drawing"],
+"source_priority": ["Submittal Drawing"],
+"views_need_to_check": ["Section"],
+"view_matching_logic": {
+  "Section": "Check only Section views that show the standard in-wall strapping structure: a narrow veritical or horizontal  rectangular backing/strap plate near the wall/cabinet interface with X-cross lines inside and a bolt/fastener/block detail. Do not check every Section. Omit Sections showing only countertop, HSS support, sink/knee clearance, toe kick, floor datum, freestanding support, or countertop support unless the complete in-wall strapping symbol is visible."
+},
+  "geometry_logic": {
+"boundary_detection": "The rule is activated only when the exact Section visibly contains the standard in-wall strapping symbol/structure: a narrow veritical or horizontal rectangular backing/strap plate near the wall/cabinet interface, with X-shaped cross lines inside the rectangle and a bolt/fastener/block detail associated with the symbol.Do not activate from Section type, cabinet presence, wall line, gypsum board, cabinet back, shim space, leader arrow, or note text alone. Geometry_applicable must be true only when this physical X-cross rectangular strapping symbol is visible in the same Section crop. Each Section must be validated independently; do not reuse an in-wall strapping note or geometry from another Section on the same sheet.",
+"wall_interaction_conditions": [
+  "Section shows the standard in-wall strapping symbol: narrow veritical or horizontal rectangular plate with X-shaped cross lines inside.",
+  "The symbol is located near the wall/cabinet interface or inside/adjacent to the wall line.",
+  "A small bolt, fastener, or block-like detail may be present near or through the X-cross rectangular plate.",
+  "Leader arrow or note may point to the symbol, but arrow/text alone is not enough.",
+  "Do not activate for plain cabinet back, wall finish, gypsum board, shim space, or wall line unless the X-cross rectangular strapping symbol is visible.",
+  "Do not activate for countertop, curtain wall, HSS support, sink clearance, toe kick, floor datum, door, or freestanding base cabinet sections."
+],
+"expected_boundary_region": "The expected region is the exact Section area where the standard in-wall strapping symbol is visible: narrow veritical or horizontal rectangular plate with X-cross lines and a bolt/fastener/block detail, located near the wall/cabinet interface. The detected note must be inside or immediately associated with that same view crop and same view_id."
+},
+"required_entities": ["In-Wall Strapping By Others Note"],
+"optional_entities": [
+"In-Wall Strapping",
+"Wall Strapping",
+"Strapping By Others",
+"Wall Cabinet",
+"Upper Cabinet",
+"Tall Cabinet",
+"Media Wall Cabinet",
+"Wall Finish",
+"Gypsum Board",
+"Cabinet Back",
+"Shim Space",
+"Hidden Blocking",
+"Concealed Support"
+],
+"detected_text_variants": [
+  "IN-WALL STRAPPING BY OTHERS",
+  "IN WALL STRAPPING BY OTHERS",
+  "IN-WALL STRAPPING\nBY OTHERS",
+  "IN-WALL\nSTRAPPING\nBY OTHERS",
+  "IN-WALL STRAPING BY OTHERS",
+  "IN WALL STRAPING BY OTHERS"
+],
+"pass_condition": [
+"The exact detected view is a Section that shows physical wall/cabinet in-wall strapping or physical X-cross rectangular in-wall strapping symbol.",
+"The in-wall strapping condition is active in that same view and not inferred from a different Section.",
+"The required note or accepted variant is visibly present in that same view near the wall/cabinet interface.",
+"Detected note evidence, detected_text, and coordinates are non-empty and belong to the same view_id/crop.",
+"Confidence score is greater than or equal to 75."
+],
+"fail_condition": [
+"The exact Section clearly shows physical in-wall strapping/physical X-cross rectangular in-wall strapping symbol requiring the note.",
+"The required note is missing from that same view while the applicable wall/cabinet interface is clearly visible.",
+"Failure is not allowed based on Section type alone; the physical X-cross rectangular in-wall strapping symbol must be active."
+],
+"review_required_condition": [
+"The Section crop is unclear, clipped, rotated, or too low-resolution to determine whether physical in-wall strapping is shown.",
+"The cabinet-to-wall condition is visible but it is unclear whether support is in-wall strapping by others or another support type.",
+"The note text is partially readable or ambiguous.",
+"Multiple Section views are present and the detected note cannot be confidently associated with the exact view.",
+"A centerline strapping note is visible but physical in-wall strapping by others is not clearly shown.",
+"Confidence score is below 75."
+],
+"omit_condition": [
+"The detected view is not a Section.",
+"The Section does not show the complete standard in-wall strapping symbol: a narrow veritical or horizontal rectangular plate with X-cross lines and a bolt/fastener/block detail.",
+"The Section is a countertop section, countertop with bracket, countertop with equipment, countertop support, HSS support, curtain wall interface, sink clearance, toe kick, finished floor, or similar condition where the standard in-wall strapping symbol is not visible.",
+"The note appears in another Section but not in this exact view."
+],
+"allowed_status": ["PASS", "FAIL", "REVIEW_REQUIRED", "OMITTED"],
+"confidence_score": {
+"type": "float",
+"range": "0.0 - 100.0",
+"minimum_pass_threshold": 75
+},
+"coordinate_format": "xyxy",
+"coordinate_keys": {
+"x1": "left",
+"y1": "top",
+"x2": "right",
+"y2": "bottom"
+},
+"markup_required": true,
+"markup_color": "red",
+"markup_label": "IN-WALL STRAPPING BY OTHERS — CHECK",
+"severity": "Major",
+"priority": "High",
+"output_required": {
+"confidence_score": true,
+"reasoning": true,
+"coordinates": true,
+"detected_text": true
+},
+"reasoning": {
+"type": "string",
+"description": "Explain whether the exact Section contains the complete standard in-wall strapping symbol: narrow veritical or horizontal rectangular plate with X-cross lines and a bolt/fastener/block detail, whether the note was found in that same view, and why similar Sections or countertop/support Sections without that symbol are omitted."},
+"output_json_format": {
+"rule_id": "string",
+"rule_name": "string",
+"sheet_status": "PASS | FAIL | OMITTED | REVIEW_REQUIRED",
+"view_results": [
+{
+"view_id": "V1",
+"view_type": "Detected actual view title from drawing",
+"matched_rule_view": "Matched rule view or null",
+"view_applicable": "boolean",
+"geometry_applicable": "boolean",
+"mod_condition_active": "boolean",
+"required_note_found": "boolean",
+"status": "PASS | FAIL | OMITTED | REVIEW_REQUIRED",
+"confidence_score": "float",
+"reasoning": "string",
+"detected_entities": [
+{
+"entity_name": "string",
+"detected_text": "string",
+"coordinates": {
+"x1": 0,
+"y1": 0,
+"x2": 0,
+"y2": 0
+}
+}
+]
+}
+],
+"markup_required": "boolean",
+"markup_color": "string",
+"markup_label": "string",
+"severity": "Minor | Major | Critical",
+"priority": "Low | Medium | High"
+},
+"applicability_logic": {
+"check_view_before_fail": true,
+"check_geometry_before_fail": true,
+"check_mod_condition_before_fail": true,
+"if_view_not_applicable": "OMITTED",
+"if_geometry_not_applicable": "OMITTED",
+"if_mod_not_applicable": "OMITTED",
+"if_condition_unclear": "REVIEW_REQUIRED",
+"fail_only_when_condition_active_and_note_missing": true
+}
+}]

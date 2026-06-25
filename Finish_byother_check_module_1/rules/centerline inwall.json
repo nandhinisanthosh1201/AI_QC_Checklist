@@ -1,0 +1,153 @@
+{
+  "rule_id": "RULE_NOTE_CENTERLINE_INWALL_STRAPPING_001",
+  "rule_name": "Centerline Of In-Wall Strapping Note Validation",
+  "type_of_rule": "note_validation",
+  "category": "Notes Check",
+  "discipline": "Millwork",
+  "required_sources": [
+    "Submittal Drawing"
+  ],
+  "source_priority": [
+    "Submittal Drawing"
+  ],
+  "views_need_to_check": [
+    "Elevation",
+    "Section"
+  ],
+  "view_matching_logic": {
+    "Elevation": "Check Elevation views only for the presence of a blue installation dimension line, vertical or horizontal, containing one or more A.F.F. or F.F. height references. Do not evaluate cabinet material, countertop, HSS support, wall finish, shim space, appliance, door, or other drawing content for this rule. If the Elevation does not contain a blue A.F.F./F.F. installation dimension line, omit the view.",
+    "Section": "Check Section views only for the presence of a blue installation dimension line, vertical or horizontal, containing one or more A.F.F. or F.F. height references. Do not evaluate cabinet material, countertop, HSS support, wall finish, shim space, appliance, door, or other drawing content for this rule. If the Section does not contain a blue A.F.F./F.F. installation dimension line, omit the view."
+  },
+  "geometry_logic": {
+    "boundary_detection": "This rule is activated only by a blue installation dimension line, vertical or horizontal, that contains one or more A.F.F. or F.F. height references inside the same detected Elevation or Section view. No other material, cabinet, countertop, wall finish, HSS support, shim space, appliance, door, or hardware condition shall activate this rule. If the blue A.F.F./F.F. installation dimension line is clearly present, the model must check whether the required CENTERLINE OF IN-WALL STRAPPING note is present near or logically associated with that blue dimension line. If the blue A.F.F./F.F. installation dimension line is not present, the view shall be OMITTED. If the blue A.F.F./F.F. installation dimension line is present but the required centerline note is missing, the view shall be FAIL. If the blue A.F.F./F.F. installation dimension line is present but the nearby note area is unclear, clipped, unreadable, or association cannot be confirmed, the view shall be REVIEW_REQUIRED.",
+    "wall_interaction_conditions": [
+      "The detected view is an Elevation or Section.",
+      "A blue installation dimension line is visible in the same detected view.",
+      "The blue installation dimension line may be vertical or horizontal.",
+      "The blue installation dimension line contains one or more A.F.F. or F.F. height references.",
+      "The required CENTERLINE OF IN-WALL STRAPPING note must be checked near or logically associated with that blue A.F.F./F.F. dimension line."
+    ],
+    "expected_boundary_region": "The expected checking region is the area around the blue installation dimension line, vertical or horizontal, containing A.F.F. or F.F. height references. The required CENTERLINE OF IN-WALL STRAPPING note should be near or logically associated with that blue A.F.F./F.F. dimension line within the same detected view/crop."
+  },
+  "required_entities": [
+    "Centerline Of In-Wall Strapping Note"
+  ],
+  "optional_entities": [
+    "Centerline",
+    "AFF Dimension",
+    "F.F. Dimension",
+    "Blue Installation Dimension Line"
+  ],
+  "detected_text_variants": [
+    "CENTERLINE OF IN-WALL STRAPPING (STRAPPING BY OTHERS)",
+    "CENTERLINE OF IN WALL STRAPPING (STRAPPING BY OTHERS)",
+    "CENTERLINE OF IN-WALL STRAPPING",
+    "CENTERLINE OF IN WALL STRAPPING",
+    "C/L OF IN-WALL STRAPPING (STRAPPING BY OTHERS)",
+    "CL OF IN-WALL STRAPPING"
+  ],
+  "pass_condition": [
+    "The detected view is an Elevation or Section.",
+    "The same detected view contains a blue installation dimension line, vertical or horizontal, with one or more A.F.F. or F.F. height references.",
+    "The required note text containing CENTERLINE, C/L, or CL together with IN-WALL STRAPPING or IN WALL STRAPPING is visibly present near or logically associated with that blue A.F.F./F.F. dimension line.",
+    "The blue A.F.F./F.F. dimension line and the required centerline note both belong to the same detected view/crop.",
+    "Confidence score is greater than or equal to 75."
+  ],
+  "fail_condition": [
+    "The detected view is an Elevation or Section.",
+    "The same detected view contains a blue installation dimension line, vertical or horizontal, with one or more A.F.F. or F.F. height references.",
+    "The required CENTERLINE / C/L / CL OF IN-WALL STRAPPING note is missing near that blue A.F.F./F.F. dimension line.",
+    "Failure is allowed only when the blue A.F.F./F.F. dimension line is clearly visible and the note area is clear."
+  ],
+  "review_required_condition": [
+    "The detected view is an Elevation or Section and contains a blue installation dimension line with A.F.F./F.F. references, but it is unclear whether the required centerline note is present near it.",
+    "The blue dimension line, A.F.F./F.F. text, or nearby note area is clipped, blurry, rotated, unreadable, or outside the crop.",
+    "The note is detected but its association with the blue A.F.F./F.F. dimension line is unclear.",
+    "Confidence score is below 75."
+  ],
+  "omit_condition": [
+    "The detected view is not an Elevation or Section.",
+    "The detected Elevation or Section does not contain a blue installation dimension line with A.F.F. or F.F. height references.",
+    "The view contains blue lines without A.F.F./F.F. references.",
+    "The view contains A.F.F./F.F. text but it is not part of a blue installation dimension line."
+  ],
+  "allowed_status": [
+    "PASS",
+    "FAIL",
+    "REVIEW_REQUIRED",
+    "OMITTED"
+  ],
+  "confidence_score": {
+    "type": "float",
+    "range": "0.0 - 100.0",
+    "minimum_pass_threshold": 75
+  },
+  "coordinate_format": "xyxy",
+  "coordinate_keys": {
+    "x1": "left",
+    "y1": "top",
+    "x2": "right",
+    "y2": "bottom"
+  },
+  "markup_required": true,
+  "markup_color": "red",
+  "markup_label": "CENTERLINE OF IN-WALL STRAPPING — CHECK",
+  "severity": "Major",
+  "priority": "High",
+  "output_required": {
+    "confidence_score": true,
+    "reasoning": true,
+    "coordinates": true,
+    "detected_text": true
+  },
+  "reasoning": {
+    "type": "string",
+    "description": "Explain whether the detected Elevation or Section contains a blue installation dimension line with A.F.F./F.F. height references, whether the required CENTERLINE OF IN-WALL STRAPPING note is found near or logically associated with that blue dimension line in the same view, and why views without the blue A.F.F./F.F. dimension line are omitted."
+  },
+  "output_json_format": {
+    "rule_id": "string",
+    "rule_name": "string",
+    "sheet_status": "PASS | FAIL | OMITTED | REVIEW_REQUIRED",
+    "view_results": [
+      {
+        "view_id": "V1",
+        "view_type": "Detected actual view title from drawing",
+        "matched_rule_view": "Matched rule view or null",
+        "view_applicable": "boolean",
+        "geometry_applicable": "boolean",
+        "mod_condition_active": "boolean",
+        "required_note_found": "boolean",
+        "status": "PASS | FAIL | OMITTED | REVIEW_REQUIRED",
+        "confidence_score": "float",
+        "reasoning": "string",
+        "detected_entities": [
+          {
+            "entity_name": "string",
+            "detected_text": "string",
+            "coordinates": {
+              "x1": 0,
+              "y1": 0,
+              "x2": 0,
+              "y2": 0
+            }
+          }
+        ]
+      }
+    ],
+    "markup_required": "boolean",
+    "markup_color": "string",
+    "markup_label": "string",
+    "severity": "Minor | Major | Critical",
+    "priority": "Low | Medium | High"
+  },
+  "applicability_logic": {
+    "check_view_before_fail": true,
+    "check_geometry_before_fail": true,
+    "check_mod_condition_before_fail": true,
+    "if_view_not_applicable": "OMITTED",
+    "if_geometry_not_applicable": "OMITTED",
+    "if_mod_not_applicable": "OMITTED",
+    "if_condition_unclear": "REVIEW_REQUIRED",
+    "fail_only_when_condition_active_and_note_missing": true
+  }
+}

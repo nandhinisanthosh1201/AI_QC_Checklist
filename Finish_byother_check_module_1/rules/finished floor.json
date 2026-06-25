@@ -1,0 +1,118 @@
+{
+  "rule_id": "RULE_NOTE_FINISHED_FLOOR_001",
+  "rule_name": "Finished Floor Note Validation",
+  "type_of_rule": "note_validation",
+  "category": "Reference Notes Check",
+  "discipline": "Millwork",
+  "required_sources": [
+    "Submittal Drawing"
+  ],
+  "source_priority": [
+    "Submittal Drawing"
+  ],
+  "views_need_to_check": [
+    "Section"
+  ],
+  "view_matching_logic": {
+    "Section": "Validate FINISHED FLOOR note only when the section view contains a floor-related condition. Finished Floor means the final top surface of the floor after all finishes such as tile, marble, vinyl, carpet, or concrete topping are completed. It is used as a reference datum for dimensions, elevations, and installation heights. Any visible countertop in the detected Section view automatically activates FINISHED FLOOR validation, even if no explicit floor line or floor datum is shown."
+  },
+  "geometry_logic": {
+    "boundary_detection": "Detect whether the Section view shows any floor-related installation condition before checking for the FINISHED FLOOR note. Any visible floor line, floor slab, bottom construction line, CLR dimension, floor datum, floor-referenced leader, countertop, countertop support, countertop with equipment, countertop with sink, countertop with base cabinet, or millwork installed relative to the floor activates FINISHED FLOOR validation. Only pure wall-mounted conditions with no floor-related reference or countertop shall be omitted.",
+    "wall_interaction_conditions": [
+      "Floor line is visible",
+      "Finished floor datum or floor reference line is visible",
+      "Elevation dimension references AFF or finished floor",
+      "Any visible countertop, countertop support, countertop with equipment, countertop with sink, countertop with base cabinet, or countertop installation referenced from floor level shall activate FINISHED FLOOR validation. The presence of a countertop in a Section view is sufficient to require FINISHED FLOOR validation unless the view is clearly wall-mounted only with no floor reference.",
+      "Any visible floor line, floor slab, bottom construction line, CLR dimension, floor datum leader, or floor-referenced installation condition activates FINISHED FLOOR validation regardless of whether the view contains countertop, cabinet, equipment, or millwork.",
+      "Leader line points to floor surface or floor datum",
+      "The Section shows countertop at glazing require finished floor note",
+      "A visible countertop in a Section view shall activate FINISHED FLOOR validation. The presence of a countertop is considered a floor-related installation condition and requires validation of the FINISHED FLOOR note.",
+      "Wall cabinet alone must NOT activate finished floor validation"
+    ],
+    "expected_boundary_region": "Any area within or near the section view where the floor datum, floor reference, floor line, or related dimension annotation is shown."
+  },
+  "required_entities": [
+    "FINISHED FLOOR"
+  ],
+  "optional_entities": [
+    "Floor Datum",
+    "Floor Reference Line",
+    "Finished Floor Line",
+    "Base Cabinet"
+  ],
+  "detected_text_variants": [
+    "FINISHED FLOOR",
+    "FIN. FLOOR",
+    "FIN FLOOR",
+    "FINISHED FLR",
+    "FINISH FLOOR"
+  ],
+  "pass_condition": [
+    "Section view is detected and applicable.",
+    "Floor-related condition is detected in the section view.",
+    "FINISHED FLOOR note is visibly detected within or near the section view annotation area.",
+    "Detected text matches expected variants such as FINISHED FLOOR / FIN. FLOOR.",
+    "Confidence score is greater than or equal to 75.0."
+  ],
+  "fail_condition": [
+    "Section view is detected and floor-related condition is applicable, but FINISHED FLOOR note is missing.",
+    "Floor datum, floor line, base cabinet, or vertical dimension from floor level is visible, but finished floor note is not detected.",
+    "The Section view contains a visible countertop, but the required FINISHED FLOOR note is missing.",
+    "Detected text does not match expected finished floor variants."
+  ],
+  "review_required_condition": [
+    "Section view is detected and floor-related condition may be present, but the floor reference is unclear.",
+    "Possible FINISHED FLOOR text is cropped, partially visible, blurred, or unreadable.",
+    "Confidence score is below 75.0.",
+    "Floor datum or dimension reference is visible, but note association is ambiguous."
+  ],
+  "omit_condition": [
+    "No Section view is detected in the drawing.",
+    "Section view is present but no visible floor line, floor slab, bottom construction line, floor datum, CLR dimension, floor-referenced leader, or any floor-based installation reference is shown.",
+    "Section view only shows wall cabinet, wall strapping or wall-mounted condition without any floor reference.",
+    "Drawing view is Elevation-only, Plan-only, RCP-only, or unrelated to finished floor validation.",
+    "Only wall cabinet, floating cabinet, or suspended millwork is visible and does not extend to or reference the finished floor.",
+    "Finished floor is not a design reference for the visible cabinet condition."
+  ],
+  "allowed_status": [
+    "PASS",
+    "FAIL",
+    "REVIEW_REQUIRED",
+    "OMITTED"
+  ],
+  "confidence_score": {
+    "type": "float",
+    "range": "0.0 - 100.0",
+    "minimum_pass_threshold": 75
+  },
+  "coordinate_format": "xyxy",
+  "coordinate_keys": {
+    "x1": "left",
+    "y1": "top",
+    "x2": "right",
+    "y2": "bottom"
+  },
+  "markup_required": true,
+  "markup_color": "red",
+  "markup_label": "FINISHED FLOOR — CHECK",
+  "severity": "Minor",
+  "priority": "Medium",
+  "output_required": {
+    "confidence_score": true,
+    "reasoning": true,
+    "coordinates": true,
+    "detected_text": true
+  },
+  "reasoning": {
+    "type": "string",
+    "description": "Explain whether the section view contains a floor-related condition. If floor-related condition exists, validate whether the FINISHED FLOOR note is detected. If the section view is only a wall cabinet or wall-mounted condition without floor reference, return OMITTED."
+  },
+  "applicability_logic": {
+    "check_view_before_fail": true,
+    "check_geometry_before_fail": true,
+    "if_view_not_applicable": "OMITTED",
+    "if_geometry_not_applicable": "OMITTED",
+    "if_condition_unclear": "REVIEW_REQUIRED",
+    "fail_only_when_condition_active_and_note_missing": true
+  }
+}

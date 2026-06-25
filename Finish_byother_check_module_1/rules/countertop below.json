@@ -1,0 +1,163 @@
+{
+    "rule_id": "RULE_NOTE_INDICATE_COUNTERTOP_BELOW_001",
+    "rule_name": "Indicate Countertop Below Note Validation",
+    "type_of_rule": "note_validation",
+    "category": "Notes Check",
+    "discipline": "Millwork",
+    "required_sources": [
+        "Submittal Drawing"
+    ],
+    "source_priority": [
+        "Submittal Drawing"
+    ],
+    "views_need_to_check": [
+        "Plan Section"
+    ],
+    "view_matching_logic": {
+        "Plan Section": "Validate this Countertop Below rule only when the detected view subtype is Plan Section Wall or Plan Section Tall. If the detected view title is exactly standard Plan Section, meaning it does not contain Wall, Tall then this Countertop Below rule is not applicable and must be OMITTED before note validation."
+    },
+    "geometry_logic": {
+        "boundary_detection": "First check the detected view title subtype. If the title is standard Plan Section and does not contain Wall, Tall, geometry_applicable must be false and the result must be OMITTED for this Countertop Below rule.",
+        "wall_interaction_conditions": [
+            "Plan Section title or geometry shows wall, upper, or tall cabinet casework rather than lower/base cabinet only.",
+            "Visible plan-section contains upper cabinet footprint, wall cabinet outline, tall cabinet upper zone, or casework above counter level.",
+            "Countertop is implied below the current cut plane and is not the primary visible plan surface.",
+            "The note should be located inside or near the upper/wall/tall cabinet Plan Section view.",
+            "Do not activate where the view shows base/lower cabinet plan-section below the counter; that belongs to countertop above.",
+            "Do not activate where countertop is directly shown in elevation/section/detail.",
+            "Do not activate for vertical floor, door, support, or in-wall strapping conditions without upper/wall/tall countertop-below plan-section geometry.",
+            "If both ABOVE and BELOW text appear on the same sheet, validate only the note associated with the exact detected view crop."
+        ],
+        "expected_boundary_region": "The expected region is the upper/wall/tall cabinet Plan Section crop: inside or immediately around upper cabinet footprints, wall cabinet outlines, tall cabinet upper zone, cabinet partitions above counter level, and the note area indicating countertop below. The detected note must belong to the same Plan Section view_id."
+    },
+    "required_entities": [
+        "Indicate Countertop Below Note"
+    ],
+    "optional_entities": [
+        "Countertop Below",
+        "Indicate Countertop Below",
+        "Indicates Countertop Below",
+        "Wall Cabinet",
+        "Upper Cabinet",
+        "Tall Cabinet",
+        "Cabinet Above Counter",
+        "Countertop Plane",
+        "Plan Section"
+    ],
+    "detected_text_variants": [
+        "INDICATE COUNTERTOP BELOW",
+        "INDICATES COUNTERTOP BELOW",
+        "COUNTERTOP BELOW",
+        "IND. COUNTERTOP BELOW",
+        "INDICATED COUNTERTOP BELOW"
+    ],
+    "pass_condition": [
+        "The exact detected view is a Plan Section showing upper/wall/tall cabinet geometry above a countertop plane.",
+        "The countertop-below condition is active in that same view and not inferred from another Plan Section.",
+        "The required note or accepted variant is visibly present in that same view near the upper/wall/tall cabinet plan-section region.",
+        "Detected note evidence, detected_text, and coordinates are non-empty and belong to the same view_id/crop.",
+        "Confidence score is greater than or equal to 75."
+    ],
+    "fail_condition": [
+        "The exact Plan Section clearly shows upper/wall/tall cabinet geometry where countertop is below the cut plane.",
+        "The required countertop-below note is missing from that same view while the applicable upper/wall/tall cabinet region is clearly visible.",
+        "Failure is not allowed for Plan Section type alone; the upper/wall/tall cabinet above-counter cut condition must be active."
+    ],
+    "review_required_condition": [
+        "The Plan Section crop is unclear, clipped, or rotated and the cut level cannot be determined.",
+        "It is unclear whether the visible cabinet geometry is upper/wall/tall cabinet above countertop or lower/base cabinet below countertop.",
+        "Text is partially readable and could be ABOVE or BELOW.",
+        "Both countertop above and countertop below notes appear nearby and association to the exact view is ambiguous.",
+        "The note is detected but coordinates do not clearly fall inside the same Plan Section crop.",
+        "Confidence score is below 75."
+    ],
+    "omit_condition": [
+        "The detected view is not a Plan Section Wall/Tall.",
+        "The Plan Section does not show upper/wall/tall cabinet geometry above a countertop plane.",
+        "The view shows lower/base cabinet plan-section geometry where countertop is above the cut plane.",
+        "The view is a normal Plan, Elevation, Section, Detail, schedule, or general note area.",
+        "The countertop is directly visible in elevation/section/detail and does not require a below indication.",
+        "The view shows door, finished floor, in-wall strapping, wall finish, support, or floor condition without upper/wall/tall countertop-below plan-section geometry.",
+        "The note appears in another plan section on the same sheet but not in this exact view.",
+        "The detected view is a Plan Section; Countertop Below validation is not applicable and shall be OMITTED."
+    ],
+    "allowed_status": [
+        "PASS",
+        "FAIL",
+        "REVIEW_REQUIRED",
+        "OMITTED"
+    ],
+    "confidence_score": {
+        "type": "float",
+        "range": "0.0 - 100.0",
+        "minimum_pass_threshold": 75
+    },
+    "coordinate_format": "xyxy",
+    "coordinate_keys": {
+        "x1": "left",
+        "y1": "top",
+        "x2": "right",
+        "y2": "bottom"
+    },
+    "markup_required": true,
+    "markup_color": "red",
+    "markup_label": "INDICATE COUNTERTOP BELOW — CHECK",
+    "severity": "Major",
+    "priority": "Medium",
+    "output_required": {
+        "confidence_score": true,
+        "reasoning": true,
+        "coordinates": true,
+        "detected_text": true
+    },
+    "reasoning": {
+        "type": "string",
+        "description": "Explain whether the exact Plan Section shows upper/wall/tall cabinet geometry above the countertop plane, whether the countertop-below note was found in that same view, and why similar Plan Sections with lower/base cabinet geometry are omitted."
+    },
+    "output_json_format": {
+        "rule_id": "string",
+        "rule_name": "string",
+        "sheet_status": "PASS | FAIL | OMITTED | REVIEW_REQUIRED",
+        "view_results": [
+            {
+                "view_id": "V1",
+                "view_type": "Detected actual view title from drawing",
+                "matched_rule_view": "Matched rule view or null",
+                "view_applicable": "boolean",
+                "geometry_applicable": "boolean",
+                "mod_condition_active": "boolean",
+                "required_note_found": "boolean",
+                "status": "PASS | FAIL | OMITTED | REVIEW_REQUIRED",
+                "confidence_score": "float",
+                "reasoning": "string",
+                "detected_entities": [
+                    {
+                        "entity_name": "string",
+                        "detected_text": "string",
+                        "coordinates": {
+                            "x1": 0,
+                            "y1": 0,
+                            "x2": 0,
+                            "y2": 0
+                        }
+                    }
+                ]
+            }
+        ],
+        "markup_required": "boolean",
+        "markup_color": "string",
+        "markup_label": "string",
+        "severity": "Minor | Major | Critical",
+        "priority": "Low | Medium | High"
+    },
+    "applicability_logic": {
+        "check_view_before_fail": true,
+        "check_geometry_before_fail": true,
+        "check_mod_condition_before_fail": true,
+        "if_view_not_applicable": "OMITTED",
+        "if_geometry_not_applicable": "OMITTED",
+        "if_mod_not_applicable": "OMITTED",
+        "if_condition_unclear": "REVIEW_REQUIRED",
+        "fail_only_when_condition_active_and_note_missing": true
+    }
+}
