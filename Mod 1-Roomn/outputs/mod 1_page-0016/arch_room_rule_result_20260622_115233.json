@@ -1,0 +1,46 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "uploads\\mod 1_page-0016.jpg",
+  "run_timestamp": "2026-06-22T11:52:33.395993",
+  "total_views": 1,
+  "pass_count": 0,
+  "fail_count": 0,
+  "review_required_count": 1,
+  "view_validation_results": [
+    {
+      "view_id": 1,
+      "submittal_room_name": "- CABINET W/ TRANSACTION COUNTER",
+      "submittal_room_number": "",
+      "submittal_view_title": "SECTION - BASE CABINET W/ TRANSACTION COUNTER",
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "status": "REVIEW_REQUIRED",
+        "confidence_score": 40,
+        "reason": "ARCH REF '4/AE384' found, but no matching architectural crop was provided.",
+        "evidence": null
+      }
+    }
+  ],
+  "submittal_raw_output": {
+    "success": true,
+    "submittal_views": [
+      {
+        "view_id": 1,
+        "view_title": "SECTION - BASE CABINET W/ TRANSACTION COUNTER",
+        "view_type": "SECTION",
+        "room_name": "- CABINET W/ TRANSACTION COUNTER",
+        "room_number": "",
+        "arch_ref": "4/AE384",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "4",
+        "arch_sheet_no": "AE384",
+        "extraction_confidence": 100,
+        "evidence_text": "SECTION - BASE CABINET W/ TRANSACTION COUNTER ARCH REF 4/AE384"
+      }
+    ],
+    "raw_output": "\n```json\n{\n  \"submittal_views\": [\n    {\n      \"view_id\": 1,\n      \"view_title_raw\": \"SECTION - BASE CABINET w/ TRANSACTION COUNTER\",\n      \"view_type\": \"SECTION\",\n      \"room_name\": null,\n      \"room_number\": null,\n      \"arch_ref_raw\": \"4/AE384\",\n      \"extraction_confidence\": 100,\n      \"evidence_text\": \"SECTION - BASE CABINET w/ TRANSACTION COUNTER\\nARCH REF: 4/AE384\"\n    }\n  ]\n}\n```",
+    "error": null
+  }
+}

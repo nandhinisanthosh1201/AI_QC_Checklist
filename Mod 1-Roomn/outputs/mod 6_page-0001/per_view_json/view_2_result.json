@@ -1,0 +1,21 @@
+{
+  "view_id": 2,
+  "submittal_room_name": "RECEPTION",
+  "submittal_room_number": "658",
+  "submittal_view_title": "PLAN - RECEPTION 658",
+  "arch_crop_path": null,
+  "arch_rooms_found": [],
+  "rule_result": {
+    "submittal_room_name": "RECEPTION",
+    "submittal_room_number": "658",
+    "architectural_room_name": null,
+    "architectural_room_number": null,
+    "architectural_rooms_all": "",
+    "room_name_match": null,
+    "room_number_match": null,
+    "name_similarity_score": 0,
+    "confidence_score": 40,
+    "status": "REVIEW_REQUIRED",
+    "reason": "ARCH REF '1/AE407' found but no matching arch file was provided."
+  }
+}

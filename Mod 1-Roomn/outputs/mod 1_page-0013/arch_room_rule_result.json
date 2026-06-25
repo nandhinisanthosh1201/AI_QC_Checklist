@@ -1,0 +1,8 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "inputs/mod 1_page-0013.jpg",
+  "run_timestamp": "2026-06-23T08:33:27.294343",
+  "view_validation_results": [],
+  "error": "Missing OPENROUTER_API_KEY. Please provide your API key."
+}

@@ -1,0 +1,26 @@
+{
+  "view_id": 1,
+  "submittal_room_name": "- CABINET W/ TRANSACTION COUNTER",
+  "submittal_room_number": "",
+  "submittal_view_title": "SECTION - BASE CABINET W/ TRANSACTION COUNTER",
+  "arch_crop_path": "uploads\\AE584-4.png",
+  "arch_rooms_found": [
+    {
+      "room_name": "RECEPTION - CABINET @ TRANSACTION COUNTER",
+      "room_number": ""
+    }
+  ],
+  "rule_result": {
+    "submittal_room_name": "SECTION - BASE CABINET W/ TRANSACTION COUNTER",
+    "submittal_room_number": "",
+    "architectural_room_name": "RECEPTION - BASE CABINET @ TRANSACTION COUNTER",
+    "architectural_room_number": "",
+    "architectural_rooms_all": "RECEPTION - CABINET @ TRANSACTION COUNTER",
+    "room_name_match": true,
+    "room_number_match": null,
+    "name_similarity_score": 93.33333333333333,
+    "confidence_score": 60,
+    "status": "PASS",
+    "reason": "No room numbers found, but view titles match closely: 'SECTION - BASE CABINET W/ TRANSACTION COUNTER' vs 'RECEPTION - BASE CABINET @ TRANSACTION COUNTER'."
+  }
+}

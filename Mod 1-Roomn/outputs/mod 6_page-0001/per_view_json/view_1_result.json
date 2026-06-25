@@ -1,0 +1,21 @@
+{
+  "view_id": 1,
+  "submittal_room_name": "KEY",
+  "submittal_room_number": "",
+  "submittal_view_title": "KEY PLAN",
+  "arch_crop_path": null,
+  "arch_rooms_found": [],
+  "rule_result": {
+    "submittal_room_name": "KEY",
+    "submittal_room_number": "",
+    "architectural_room_name": null,
+    "architectural_room_number": null,
+    "architectural_rooms_all": "",
+    "room_name_match": null,
+    "room_number_match": null,
+    "name_similarity_score": 0,
+    "confidence_score": 40,
+    "status": "REVIEW_REQUIRED",
+    "reason": "ARCH REF '1/AE101 1' found but no matching arch file was provided."
+  }
+}

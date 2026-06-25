@@ -1,0 +1,65 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "inputs/mod 1_page-0008.jpg",
+  "run_timestamp": "2026-06-22T09:12:19.221537",
+  "total_views": 1,
+  "pass_count": 1,
+  "fail_count": 0,
+  "review_required_count": 0,
+  "markup_image": null,
+  "view_validation_results": [
+    {
+      "view_id": 1,
+      "submittal_room_name": "RECEPTION",
+      "submittal_room_number": "",
+      "submittal_view_title": "PLAN - RECEPTION",
+      "arch_crop_path": "inputs/Arch AE580.jpg",
+      "arch_rooms_found": [
+        {
+          "room_name": "RECEPTION DESK - MILLWORK",
+          "room_number": ""
+        }
+      ],
+      "rule_result": {
+        "submittal_room_name": "RECEPTION",
+        "submittal_room_number": "",
+        "architectural_room_name": "RECEPTION DESK - MILLWORK",
+        "architectural_room_number": "",
+        "architectural_rooms_all": "RECEPTION DESK - MILLWORK",
+        "room_name_match": true,
+        "room_number_match": null,
+        "name_similarity_score": 100.0,
+        "confidence_score": 80,
+        "status": "PASS",
+        "reason": "Room names match (no room numbers present on either side)."
+      }
+    }
+  ],
+  "submittal_raw_qwen": {
+    "success": true,
+    "submittal_views": [
+      {
+        "view_id": 1,
+        "view_title": "PLAN - RECEPTION",
+        "view_type": "PLAN",
+        "room_name": "RECEPTION",
+        "room_number": "",
+        "arch_ref": "1/AE580",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "1",
+        "arch_sheet_no": "AE580",
+        "bbox_percent": [
+          180.0,
+          920.0,
+          290.0,
+          960.0
+        ],
+        "extraction_confidence": 95,
+        "evidence_text": "PLAN - RECEPTION SCALE 1 32 3/8 1'-0 ARCH REF 1/AE580"
+      }
+    ],
+    "raw_output": "{\n  \"submittal_views\": [\n    {\n      \"view_id\": 1,\n      \"view_title_raw\": \"PLAN - RECEPTION\",\n      \"view_type\": \"PLAN\",\n      \"room_name\": \"RECEPTION\",\n      \"room_number\": null,\n      \"arch_ref_raw\": \"1/AE580\",\n      \"title_bbox_percent\": [180.0, 920.0, 290.0, 960.0],\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"PLAN - RECEPTION\\nSCALE 1:32 (3/8\\\" = 1'-0\\\")\\nARCH REF: 1/AE580\"\n    }\n  ]\n}",
+    "error": null
+  }
+}

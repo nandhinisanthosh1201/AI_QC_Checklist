@@ -1,0 +1,27 @@
+{
+  "view_id": 1,
+  "submittal_room_name": "STAFF",
+  "submittal_room_number": "501",
+  "submittal_view_title": "ELEVATION NORTH - STAFF 501",
+  "arch_crop_path": "uploads\\AE401-3.png",
+  "arch_rooms_found": [
+    {
+      "room_name": "EOC LOBBY RM",
+      "room_number": "100"
+    }
+  ],
+  "rule_result": {
+    "submittal_room_name": "STAFF",
+    "submittal_room_number": "501",
+    "architectural_room_name": "EOC LOBBY RM",
+    "architectural_room_number": "100",
+    "architectural_rooms_all": "EOC LOBBY RM 100",
+    "room_name_match": false,
+    "room_number_match": false,
+    "name_similarity_score": 0.0,
+    "confidence_score": 75,
+    "status": "FAIL",
+    "reason": "Neither room name nor room number match. Submittal='STAFF 501'. All rooms on arch view: EOC LOBBY RM 100.",
+    "mismatch_field": "BOTH"
+  }
+}

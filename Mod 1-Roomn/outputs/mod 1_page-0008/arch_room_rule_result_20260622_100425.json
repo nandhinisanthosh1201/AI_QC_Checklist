@@ -1,0 +1,58 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "inputs/mod 1_page-0008.jpg",
+  "run_timestamp": "2026-06-22T10:04:25.626530",
+  "total_views": 1,
+  "pass_count": 1,
+  "fail_count": 0,
+  "review_required_count": 0,
+  "view_validation_results": [
+    {
+      "view_id": 1,
+      "submittal_room_name": "RECEPTION",
+      "submittal_room_number": "",
+      "submittal_view_title": "PLAN - RECEPTION",
+      "arch_crop_path": "inputs/AE580-1.png",
+      "arch_rooms_found": [
+        {
+          "room_name": "RECEPTION DESK - MILLWORK",
+          "room_number": ""
+        }
+      ],
+      "rule_result": {
+        "submittal_room_name": "PLAN - RECEPTION",
+        "submittal_room_number": "",
+        "architectural_room_name": "RECEPTION DESK - MILLWORK FLOOR PLAN",
+        "architectural_room_number": "",
+        "architectural_rooms_all": "RECEPTION DESK - MILLWORK",
+        "room_name_match": true,
+        "room_number_match": null,
+        "name_similarity_score": 72.0,
+        "confidence_score": 60,
+        "status": "PASS",
+        "reason": "No room numbers found, but view titles match closely: 'PLAN - RECEPTION' vs 'RECEPTION DESK - MILLWORK FLOOR PLAN'."
+      }
+    }
+  ],
+  "submittal_raw_output": {
+    "success": true,
+    "submittal_views": [
+      {
+        "view_id": 1,
+        "view_title": "PLAN - RECEPTION",
+        "view_type": "PLAN",
+        "room_name": "RECEPTION",
+        "room_number": "",
+        "arch_ref": "1/AE580",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "1",
+        "arch_sheet_no": "AE580",
+        "extraction_confidence": 100,
+        "evidence_text": "PLAN - RECEPTION SCALE 1 32 3/8 1'-0 ARCH REF 1/AE580"
+      }
+    ],
+    "raw_output": "\n```json\n{\n  \"submittal_views\": [\n    {\n      \"view_id\": 1,\n      \"view_title_raw\": \"PLAN - RECEPTION\",\n      \"view_type\": \"PLAN\",\n      \"room_name\": \"RECEPTION\",\n      \"room_number\": null,\n      \"arch_ref_raw\": \"1/AE580\",\n      \"extraction_confidence\": 100,\n      \"evidence_text\": \"PLAN - RECEPTION SCALE 1:32 (3/8\\\"=1'-0\\\") ARCH REF: 1/AE580\"\n    }\n  ]\n}\n```",
+    "error": null
+  }
+}

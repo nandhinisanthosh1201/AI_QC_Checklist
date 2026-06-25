@@ -1,0 +1,109 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "inputs\\live_uploads\\8480c229_submittal.jpg",
+  "run_timestamp": "2026-06-23T16:43:10.578012",
+  "total_views": 2,
+  "pass_count": 0,
+  "fail_count": 1,
+  "review_required_count": 1,
+  "markup_image": "outputs\\run_8480c229\\8480c229_submittal\\submittal_markups\\submittal_markup_all_views.png",
+  "view_validation_results": [
+    {
+      "view_id": 1,
+      "submittal_room_name": "RECEPTION",
+      "submittal_room_number": "658",
+      "submittal_view_title": "PLAN - RECEPTION 658",
+      "submittal_view_type": "PLAN",
+      "arch_view_title": "5 BREAK ROOM 115 - WEST",
+      "arch_crop_path": "inputs\\live_uploads\\8480c229_AE407-5.png",
+      "arch_rooms_found": [
+        {
+          "room_name": "BREAK ROOM 115 - WEST",
+          "room_number": "115"
+        }
+      ],
+      "rule_result": {
+        "submittal_room_name": "RECEPTION",
+        "submittal_room_number": "658",
+        "architectural_room_name": "BREAK ROOM 115 - WEST",
+        "architectural_room_number": "115",
+        "architectural_rooms_all": "BREAK ROOM 115 - WEST 115",
+        "room_name_match": false,
+        "room_number_match": false,
+        "name_similarity_score": 35.29411764705882,
+        "confidence_score": 75,
+        "status": "FAIL",
+        "reason": "Neither name nor number match. Submittal: 'RECEPTION 658'. Arch rooms: BREAK ROOM 115 - WEST 115."
+      }
+    },
+    {
+      "view_id": 2,
+      "submittal_room_name": "RECEPTION",
+      "submittal_room_number": "658",
+      "submittal_view_title": "PLAN SECTION BASE - RECEPTION 658",
+      "submittal_view_type": "SECTION",
+      "arch_view_title": null,
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "submittal_room_name": "RECEPTION",
+        "submittal_room_number": "658",
+        "architectural_room_name": null,
+        "architectural_room_number": null,
+        "architectural_rooms_all": "",
+        "room_name_match": null,
+        "room_number_match": null,
+        "name_similarity_score": 0,
+        "confidence_score": 40,
+        "status": "REVIEW_REQUIRED",
+        "reason": "ARCH REF is N/A \u2014 no comparison possible."
+      }
+    }
+  ],
+  "submittal_raw_qwen": {
+    "success": true,
+    "submittal_views": [
+      {
+        "view_id": 1,
+        "view_title": "PLAN - RECEPTION 658",
+        "view_type": "PLAN",
+        "room_name": "RECEPTION",
+        "room_number": "658",
+        "arch_ref": "5/AE-407",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "5",
+        "arch_sheet_no": "AE-407",
+        "bbox_percent": [
+          120.0,
+          490.0,
+          250.0,
+          520.0
+        ],
+        "extraction_confidence": 95,
+        "evidence_text": "PLAN - RECEPTION 658 SCALE 1 24 1/2 1'-0 ARCH REF 5/AE-407"
+      },
+      {
+        "view_id": 2,
+        "view_title": "PLAN SECTION BASE - RECEPTION 658",
+        "view_type": "SECTION",
+        "room_name": "RECEPTION",
+        "room_number": "658",
+        "arch_ref": "N/A",
+        "arch_ref_status": "N/A",
+        "arch_view_no": null,
+        "arch_sheet_no": null,
+        "bbox_percent": [
+          120.0,
+          920.0,
+          290.0,
+          950.0
+        ],
+        "extraction_confidence": 95,
+        "evidence_text": "PLAN SECTION BASE - RECEPTION 658 SCALE 1 24 1/2 1'-0 ARCH REF NA"
+      }
+    ],
+    "raw_output": "{\n  \"submittal_views\": [\n    {\n      \"view_id\": 1,\n      \"view_title_raw\": \"PLAN - RECEPTION 658\",\n      \"view_type\": \"PLAN\",\n      \"room_name\": \"RECEPTION\",\n      \"room_number\": \"658\",\n      \"arch_ref_raw\": \"5/AE-407\",\n      \"title_bbox_percent\": [120.0, 490.0, 250.0, 520.0],\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"\u2460 PLAN - RECEPTION 658 SCALE 1:24 (1/2\\\"=1'-0\\\") ARCH REF: 5/AE-407\"\n    },\n    {\n      \"view_id\": 2,\n      \"view_title_raw\": \"PLAN SECTION BASE - RECEPTION 658\",\n      \"view_type\": \"SECTION\",\n      \"room_name\": \"RECEPTION\",\n      \"room_number\": \"658\",\n      \"arch_ref_raw\": \"NA\",\n      \"title_bbox_percent\": [120.0, 920.0, 290.0, 950.0],\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"\u2461 PLAN SECTION BASE - RECEPTION 658 SCALE 1:24 (1/2\\\"=1'-0\\\") ARCH REF: NA\"\n    }\n  ]\n}",
+    "error": null
+  }
+}

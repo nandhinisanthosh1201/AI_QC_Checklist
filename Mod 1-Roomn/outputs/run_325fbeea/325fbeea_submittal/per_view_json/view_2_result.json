@@ -1,0 +1,28 @@
+{
+  "view_id": 2,
+  "submittal_room_name": "- COUNTERTOP",
+  "submittal_room_number": "",
+  "submittal_view_title": "SECTION - COUNTERTOP",
+  "submittal_view_type": "SECTION",
+  "arch_view_title": "7 RECEPTION - WORK SURFACE WITH BASE CABINET",
+  "arch_crop_path": "inputs\\live_uploads\\325fbeea_AE584-7.png",
+  "arch_rooms_found": [
+    {
+      "room_name": "RECEPTION - WORK SURFACE WITH BASE CABINET",
+      "room_number": ""
+    }
+  ],
+  "rule_result": {
+    "submittal_room_name": "- COUNTERTOP",
+    "submittal_room_number": "",
+    "architectural_room_name": null,
+    "architectural_room_number": null,
+    "architectural_rooms_all": "",
+    "room_name_match": null,
+    "room_number_match": null,
+    "name_similarity_score": 0,
+    "confidence_score": 40,
+    "status": "REVIEW_REQUIRED",
+    "reason": "ARCH REF is N/A \u2014 no architectural comparison possible."
+  }
+}

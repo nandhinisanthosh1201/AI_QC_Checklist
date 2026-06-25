@@ -1,0 +1,26 @@
+{
+  "view_id": 1,
+  "submittal_room_name": "RECEPTION",
+  "submittal_room_number": "",
+  "submittal_view_title": "ELEVATION SOUTH - RECEPTION",
+  "arch_crop_path": "inputs\\Arch AE580.jpg",
+  "arch_rooms_found": [
+    {
+      "room_name": "RECEPTION DESK - SOUTH",
+      "room_number": ""
+    }
+  ],
+  "rule_result": {
+    "submittal_room_name": "ELEVATION SOUTH - RECEPTION",
+    "submittal_room_number": "",
+    "architectural_room_name": "RECEPTION DESK - INTERIOR SOUTH ELEVATION",
+    "architectural_room_number": "",
+    "architectural_rooms_all": "RECEPTION DESK - SOUTH",
+    "room_name_match": true,
+    "room_number_match": null,
+    "name_similarity_score": 79.41176470588236,
+    "confidence_score": 60,
+    "status": "PASS",
+    "reason": "No room numbers found, but view titles match closely: 'ELEVATION SOUTH - RECEPTION' vs 'RECEPTION DESK - INTERIOR SOUTH ELEVATION'."
+  }
+}

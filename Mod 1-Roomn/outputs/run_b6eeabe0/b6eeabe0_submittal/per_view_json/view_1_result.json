@@ -1,0 +1,23 @@
+{
+  "view_id": 1,
+  "submittal_room_name": "TRAINING / LTI-PURPOSE",
+  "submittal_room_number": "134",
+  "submittal_view_title": "KEY PLAN",
+  "submittal_view_type": "KEYPLAN",
+  "arch_view_title": null,
+  "arch_crop_path": "inputs\\live_uploads\\b6eeabe0_AE101.1 - 1.png",
+  "arch_rooms_found": [],
+  "rule_result": {
+    "submittal_room_name": "TRAINING / LTI-PURPOSE",
+    "submittal_room_number": "134",
+    "architectural_room_name": null,
+    "architectural_room_number": null,
+    "architectural_rooms_all": "",
+    "room_name_match": null,
+    "room_number_match": null,
+    "name_similarity_score": 0,
+    "confidence_score": 45,
+    "status": "REVIEW_REQUIRED",
+    "reason": "Could not parse JSON"
+  }
+}

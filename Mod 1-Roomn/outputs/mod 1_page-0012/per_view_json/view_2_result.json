@@ -1,0 +1,21 @@
+{
+  "view_id": 2,
+  "submittal_room_name": "ENTERLINE OF IN-WALL STRAPPING",
+  "submittal_room_number": null,
+  "submittal_view_title": "RECEPTION",
+  "arch_crop_path": null,
+  "arch_rooms_found": [],
+  "rule_result": {
+    "submittal_room_name": "ENTERLINE OF IN-WALL STRAPPING",
+    "submittal_room_number": null,
+    "architectural_room_name": null,
+    "architectural_room_number": null,
+    "architectural_rooms_all": "",
+    "room_name_match": null,
+    "room_number_match": null,
+    "name_similarity_score": 0,
+    "confidence_score": 40,
+    "status": "REVIEW_REQUIRED",
+    "reason": "ARCH REF '7' found but no matching arch file provided."
+  }
+}

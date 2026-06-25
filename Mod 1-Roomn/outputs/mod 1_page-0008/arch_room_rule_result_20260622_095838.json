@@ -1,0 +1,166 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "inputs/mod 1_page-0008.jpg",
+  "run_timestamp": "2026-06-22T09:58:38.805698",
+  "total_views": 5,
+  "pass_count": 0,
+  "fail_count": 0,
+  "review_required_count": 5,
+  "view_validation_results": [
+    {
+      "view_id": 1,
+      "submittal_room_name": "RECEPTION",
+      "submittal_room_number": "",
+      "submittal_view_title": "",
+      "arch_crop_path": "inputs/AE580-1.png",
+      "arch_rooms_found": [
+        {
+          "room_name": "RECEPTION DESK - MILLWORK",
+          "room_number": ""
+        }
+      ],
+      "rule_result": {
+        "submittal_room_name": "RECEPTION",
+        "submittal_room_number": "",
+        "architectural_room_name": "RECEPTION DESK - MILLWORK",
+        "architectural_room_number": "",
+        "architectural_rooms_all": "RECEPTION DESK - MILLWORK",
+        "room_name_match": true,
+        "room_number_match": null,
+        "name_similarity_score": 100.0,
+        "confidence_score": 50,
+        "status": "REVIEW_REQUIRED",
+        "reason": "Room number missing. Could not verify match. Arch Title was 'RECEPTION DESK - MILLWORK FLOOR PLAN'."
+      }
+    },
+    {
+      "view_id": 2,
+      "submittal_room_name": "RECEPTION",
+      "submittal_room_number": "",
+      "submittal_view_title": "3",
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "status": "REVIEW_REQUIRED",
+        "confidence_score": 40,
+        "reason": "ARCH REF is N/A, so architectural comparison cannot be performed.",
+        "evidence": null
+      }
+    },
+    {
+      "view_id": 3,
+      "submittal_room_name": "RECEPTION",
+      "submittal_room_number": "",
+      "submittal_view_title": "1",
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "status": "REVIEW_REQUIRED",
+        "confidence_score": 40,
+        "reason": "ARCH REF is N/A, so architectural comparison cannot be performed.",
+        "evidence": null
+      }
+    },
+    {
+      "view_id": 4,
+      "submittal_room_name": "RECEPTION",
+      "submittal_room_number": "",
+      "submittal_view_title": "2",
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "status": "REVIEW_REQUIRED",
+        "confidence_score": 40,
+        "reason": "ARCH REF is N/A, so architectural comparison cannot be performed.",
+        "evidence": null
+      }
+    },
+    {
+      "view_id": 5,
+      "submittal_room_name": "RECEPTION",
+      "submittal_room_number": "",
+      "submittal_view_title": "1",
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "status": "REVIEW_REQUIRED",
+        "confidence_score": 40,
+        "reason": "ARCH REF is N/A, so architectural comparison cannot be performed.",
+        "evidence": null
+      }
+    }
+  ],
+  "submittal_raw_output": {
+    "success": true,
+    "submittal_views": [
+      {
+        "view_id": 1,
+        "view_title": "",
+        "view_type": "UNKNOWN",
+        "room_name": "RECEPTION",
+        "room_number": "",
+        "arch_ref": "1/AE580",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "1",
+        "arch_sheet_no": "AE580",
+        "extraction_confidence": 100,
+        "evidence_text": "PLAN - RECEPTION"
+      },
+      {
+        "view_id": 2,
+        "view_title": "3",
+        "view_type": "UNKNOWN",
+        "room_name": "RECEPTION",
+        "room_number": "",
+        "arch_ref": "N/A",
+        "arch_ref_status": "N/A",
+        "arch_view_no": null,
+        "arch_sheet_no": null,
+        "extraction_confidence": 100,
+        "evidence_text": "UNKNOWN TEXT PRESENT NEAR CIRCULAR CALLOUT 3 IN RECEPTION AREA"
+      },
+      {
+        "view_id": 3,
+        "view_title": "1",
+        "view_type": "UNKNOWN",
+        "room_name": "RECEPTION",
+        "room_number": "",
+        "arch_ref": "N/A",
+        "arch_ref_status": "N/A",
+        "arch_view_no": null,
+        "arch_sheet_no": null,
+        "extraction_confidence": 100,
+        "evidence_text": "UNKNOWN TEXT PRESENT NEAR CIRCULAR CALLOUT 1 IN THE RECEPTION DETAIL"
+      },
+      {
+        "view_id": 4,
+        "view_title": "2",
+        "view_type": "UNKNOWN",
+        "room_name": "RECEPTION",
+        "room_number": "",
+        "arch_ref": "N/A",
+        "arch_ref_status": "N/A",
+        "arch_view_no": null,
+        "arch_sheet_no": null,
+        "extraction_confidence": 100,
+        "evidence_text": "UNKNOWN TEXT PRESENT NEAR CIRCULAR CALLOUT 2 IN THE RECEPTION DETAIL"
+      },
+      {
+        "view_id": 5,
+        "view_title": "1",
+        "view_type": "UNKNOWN",
+        "room_name": "RECEPTION",
+        "room_number": "",
+        "arch_ref": "N/A",
+        "arch_ref_status": "N/A",
+        "arch_view_no": null,
+        "arch_sheet_no": null,
+        "extraction_confidence": 100,
+        "evidence_text": "UNKNOWN TEXT PRESENT NEAR CIRCULAR CALLOUT 1 IN RECEPTION DETAIL"
+      }
+    ],
+    "raw_output": "```json\n{\n  \"submittal_views\": [\n    {\n      \"view_id\": 1,\n      \"view_title_raw\": \"\",\n      \"view_type\": \"PLAN\",\n      \"room_name\": \"RECEPTION\",\n      \"room_number\": null,\n      \"arch_ref_raw\": \"1/AE580\",\n      \"extraction_confidence\": 100,\n      \"evidence_text\": \"PLAN - RECEPTION\"\n    },\n    {\n      \"view_id\": 2,\n      \"view_title_raw\": \"3\",\n      \"view_type\": \"DETAIL\",\n      \"room_name\": \"RECEPTION\",\n      \"room_number\": null,\n      \"arch_ref_raw\": \"N/A\",\n      \"extraction_confidence\": 100,\n      \"evidence_text\": \"Unknown text present near circular callout 3 in reception area.\"\n    },\n    {\n      \"view_id\": 3,\n      \"view_title_raw\": \"1\",\n      \"view_type\": \"DETAIL\",\n      \"room_name\": \"RECEPTION\",\n      \"room_number\": null,\n      \"arch_ref_raw\": \"N/A\",\n      \"extraction_confidence\": 100,\n      \"evidence_text\": \"Unknown text present near circular callout 1 in the reception detail.\"\n    },\n    {\n      \"view_id\": 4,\n      \"view_title_raw\": \"2\",\n      \"view_type\": \"DETAIL\",\n      \"room_name\": \"RECEPTION\",\n      \"room_number\": null,\n      \"arch_ref_raw\": \"N/A\",\n      \"extraction_confidence\": 100,\n      \"evidence_text\": \"Unknown text present near circular callout 2 in the reception detail.\"\n    },\n    {\n      \"view_id\": 5,\n      \"view_title_raw\": \"1\",\n      \"view_type\": \"DETAIL\",\n      \"room_name\": \"RECEPTION\",\n      \"room_number\": null,\n      \"arch_ref_raw\": \"N/A\",\n      \"extraction_confidence\": 100,\n      \"evidence_text\": \"Unknown text present near circular callout 1 in reception detail.\"\n    },\n    {\n      \"view_id\": 6,\n      \"view_title_raw\": \"1\",\n      \"view_type\": \"DETAIL\",\n      \"room_name\": null,\n      \"room_number\": null,\n      \"arch_ref_raw\": \"N/A\",\n      \"extraction_confidence\": 100,\n      \"evidence_text\": \"Unknown text near circular callout 1 in the upper corner.\"\n    },\n    {\n      \"view_id\": 7,\n      \"view_title_raw\": \"1\",\n      \"view_type\": \"DETAIL\",\n      \"room_name\": null,\n      \"room_number\": null,\n      \"arch_ref_raw\": \"N/A\",\n      \"extraction_confidence\": 100,\n      \"evidence_text\": \"Unknown text near circular callout 1 in the upper corner.\"\n    },\n    {\n      \"view_id\": 8,\n      \"view_title_raw\": \"1\",\n      \"view_type\": \"DETAIL\",\n      \"room_name\": null,\n      \"room_number\": null,\n      \"arch_ref_raw\": \"N/A\",\n      \"extraction_confidence\": 100,\n      \"evidence_text\": \"Unknown text near circular callout 1.\"\n    },\n    {\n      \"view_id\": 9,\n      \"view_title_raw\": \"2\",\n      \"view_type\": \"DETAIL\",\n      \"room_name\": null,\n      \"room_number\": null,\n      \"arch_ref_raw\": \"N/A\",\n      \"extraction_confidence\": 100,\n      \"evidence_text\": \"Unknown text near circular callout 2.\"\n    },\n    {\n      \"view_id\": 10,\n      \"view_title_raw\": \"2\",\n      \"view_type\": \"DETAIL\",\n      \"room_name\": null,\n      \"room_number\": null,\n      \"arch_ref_raw\": \"N/A\",\n      \"extraction_confidence\": 100,\n      \"evidence_text\": \"Unknown text near circular callout 2.\"\n    }\n  ]\n}\n```",
+    "error": null
+  }
+}

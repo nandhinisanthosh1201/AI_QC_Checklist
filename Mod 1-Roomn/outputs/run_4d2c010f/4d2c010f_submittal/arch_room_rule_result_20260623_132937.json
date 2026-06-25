@@ -1,0 +1,269 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "inputs\\live_uploads\\4d2c010f_submittal.jpg",
+  "run_timestamp": "2026-06-23T13:29:37.434529",
+  "total_views": 4,
+  "pass_count": 0,
+  "fail_count": 1,
+  "review_required_count": 3,
+  "markup_image": "outputs\\run_4d2c010f\\4d2c010f_submittal\\submittal_markups\\submittal_markup_all_views.png",
+  "view_validation_results": [
+    {
+      "view_id": 1,
+      "submittal_room_name": "WELLNESS",
+      "submittal_room_number": "112",
+      "submittal_view_title": "KEY PLAN",
+      "submittal_view_type": "KEYPLAN",
+      "arch_view_title": "FLOOR PLAN - B2C - LEVEL 1 - AREA 1",
+      "arch_crop_path": "inputs\\live_uploads\\4d2c010f_AE101.1 - 1.png",
+      "arch_rooms_found": [
+        {
+          "room_name": "ELEVATOR LOBBY",
+          "room_number": "101"
+        },
+        {
+          "room_name": "STAIRWAY",
+          "room_number": "102"
+        },
+        {
+          "room_name": "MECHANICAL ROOM",
+          "room_number": "103"
+        },
+        {
+          "room_name": "ELEVATOR MACHINE ROOM",
+          "room_number": "104"
+        },
+        {
+          "room_name": "ELEVATOR LOBBY",
+          "room_number": "105"
+        },
+        {
+          "room_name": "STAIRWAY",
+          "room_number": "106"
+        },
+        {
+          "room_name": "MECHANICAL ROOM",
+          "room_number": "107"
+        },
+        {
+          "room_name": "ELEVATOR MACHINE ROOM",
+          "room_number": "108"
+        },
+        {
+          "room_name": "ELEVATOR LOBBY",
+          "room_number": "109"
+        },
+        {
+          "room_name": "STAIRWAY",
+          "room_number": "110"
+        },
+        {
+          "room_name": "MECHANICAL ROOM",
+          "room_number": "111"
+        },
+        {
+          "room_name": "ELEVATOR MACHINE ROOM",
+          "room_number": "112"
+        },
+        {
+          "room_name": "ELEVATOR LOBBY",
+          "room_number": "113"
+        },
+        {
+          "room_name": "STAIRWAY",
+          "room_number": "114"
+        },
+        {
+          "room_name": "MECHANICAL ROOM",
+          "room_number": "115"
+        },
+        {
+          "room_name": "ELEVATOR MACHINE ROOM",
+          "room_number": "116"
+        },
+        {
+          "room_name": "ELEVATOR LOBBY",
+          "room_number": "117"
+        },
+        {
+          "room_name": "STAIRWAY",
+          "room_number": "118"
+        },
+        {
+          "room_name": "MECHANICAL ROOM",
+          "room_number": "119"
+        },
+        {
+          "room_name": "ELEVATOR MACHINE ROOM",
+          "room_number": "120"
+        }
+      ],
+      "rule_result": {
+        "submittal_room_name": "WELLNESS",
+        "submittal_room_number": "112",
+        "architectural_room_name": "ELEVATOR MACHINE ROOM",
+        "architectural_room_number": "112",
+        "architectural_rooms_all": "ELEVATOR LOBBY 101; STAIRWAY 102; MECHANICAL ROOM 103; ELEVATOR MACHINE ROOM 104; ELEVATOR LOBBY 105; STAIRWAY 106; MECHANICAL ROOM 107; ELEVATOR MACHINE ROOM 108; ELEVATOR LOBBY 109; STAIRWAY 110; MECHANICAL ROOM 111; ELEVATOR MACHINE ROOM 112; ELEVATOR LOBBY 113; STAIRWAY 114; MECHANICAL ROOM 115; ELEVATOR MACHINE ROOM 116; ELEVATOR LOBBY 117; STAIRWAY 118; MECHANICAL ROOM 119; ELEVATOR MACHINE ROOM 120",
+        "room_name_match": false,
+        "room_number_match": true,
+        "name_similarity_score": 54.54545454545454,
+        "confidence_score": 70,
+        "status": "FAIL",
+        "reason": "Room number matches (112), but name differs: 'WELLNESS' vs 'ELEVATOR MACHINE ROOM' (similarity 54.54545454545454). Arch rooms: ELEVATOR LOBBY 101; STAIRWAY 102; MECHANICAL ROOM 103; ELEVATOR MACHINE ROOM 104; ELEVATOR LOBBY 105; STAIRWAY 106; MECHANICAL ROOM 107; ELEVATOR MACHINE ROOM 108; ELEVATOR LOBBY 109; STAIRWAY 110; MECHANICAL ROOM 111; ELEVATOR MACHINE ROOM 112; ELEVATOR LOBBY 113; STAIRWAY 114; MECHANICAL ROOM 115; ELEVATOR MACHINE ROOM 116; ELEVATOR LOBBY 117; STAIRWAY 118; MECHANICAL ROOM 119; ELEVATOR MACHINE ROOM 120."
+      }
+    },
+    {
+      "view_id": 2,
+      "submittal_room_name": "WAITROOM",
+      "submittal_room_number": "485",
+      "submittal_view_title": "PLAN - WAITROOM 485",
+      "submittal_view_type": "PLAN",
+      "arch_view_title": null,
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "submittal_room_name": "WAITROOM",
+        "submittal_room_number": "485",
+        "architectural_room_name": null,
+        "architectural_room_number": null,
+        "architectural_rooms_all": "",
+        "room_name_match": null,
+        "room_number_match": null,
+        "name_similarity_score": 0,
+        "confidence_score": 40,
+        "status": "REVIEW_REQUIRED",
+        "reason": "ARCH REF '1/AE487' found but no matching arch file was provided."
+      }
+    },
+    {
+      "view_id": 3,
+      "submittal_room_name": "WAITROOM",
+      "submittal_room_number": "485",
+      "submittal_view_title": "PLAN SECTION BASE - WAITROOM 485",
+      "submittal_view_type": "SECTION",
+      "arch_view_title": null,
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "submittal_room_name": "WAITROOM",
+        "submittal_room_number": "485",
+        "architectural_room_name": null,
+        "architectural_room_number": null,
+        "architectural_rooms_all": "",
+        "room_name_match": null,
+        "room_number_match": null,
+        "name_similarity_score": 0,
+        "confidence_score": 40,
+        "status": "REVIEW_REQUIRED",
+        "reason": "ARCH REF '1/AE487' found but no matching arch file was provided."
+      }
+    },
+    {
+      "view_id": 4,
+      "submittal_room_name": "WAITROOM",
+      "submittal_room_number": "485",
+      "submittal_view_title": "PLAN SECTION TALL - WAITROOM 485",
+      "submittal_view_type": "SECTION",
+      "arch_view_title": null,
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "submittal_room_name": "WAITROOM",
+        "submittal_room_number": "485",
+        "architectural_room_name": null,
+        "architectural_room_number": null,
+        "architectural_rooms_all": "",
+        "room_name_match": null,
+        "room_number_match": null,
+        "name_similarity_score": 0,
+        "confidence_score": 40,
+        "status": "REVIEW_REQUIRED",
+        "reason": "ARCH REF '1/AE487' found but no matching arch file was provided."
+      }
+    }
+  ],
+  "submittal_raw_qwen": {
+    "success": true,
+    "submittal_views": [
+      {
+        "view_id": 1,
+        "view_title": "KEY PLAN",
+        "view_type": "KEYPLAN",
+        "room_name": "WELLNESS",
+        "room_number": "112",
+        "arch_ref": "1/AE701 1",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "1",
+        "arch_sheet_no": "AE701",
+        "bbox_percent": [
+          100.0,
+          380.0,
+          150.0,
+          400.0
+        ],
+        "extraction_confidence": 95,
+        "evidence_text": "KEY PLAN ARCH REF 1/AE701 1"
+      },
+      {
+        "view_id": 2,
+        "view_title": "PLAN - WAITROOM 485",
+        "view_type": "PLAN",
+        "room_name": "WAITROOM",
+        "room_number": "485",
+        "arch_ref": "1/AE487",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "1",
+        "arch_sheet_no": "AE487",
+        "bbox_percent": [
+          100.0,
+          550.0,
+          180.0,
+          570.0
+        ],
+        "extraction_confidence": 95,
+        "evidence_text": "PLAN - WAITROOM 485 SCALE 1 34 1/2 1'-0 ARCH REF 1/AE487"
+      },
+      {
+        "view_id": 3,
+        "view_title": "PLAN SECTION BASE - WAITROOM 485",
+        "view_type": "SECTION",
+        "room_name": "WAITROOM",
+        "room_number": "485",
+        "arch_ref": "1/AE487",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "1",
+        "arch_sheet_no": "AE487",
+        "bbox_percent": [
+          100.0,
+          750.0,
+          220.0,
+          770.0
+        ],
+        "extraction_confidence": 95,
+        "evidence_text": "PLAN SECTION BASE - WAITROOM 485 SCALE 1 34 1/2 1'-0 ARCH REF 1/AE487"
+      },
+      {
+        "view_id": 4,
+        "view_title": "PLAN SECTION TALL - WAITROOM 485",
+        "view_type": "SECTION",
+        "room_name": "WAITROOM",
+        "room_number": "485",
+        "arch_ref": "1/AE487",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "1",
+        "arch_sheet_no": "AE487",
+        "bbox_percent": [
+          500.0,
+          750.0,
+          620.0,
+          770.0
+        ],
+        "extraction_confidence": 95,
+        "evidence_text": "PLAN SECTION TALL - WAITROOM 485 SCALE 1 34 1/2 1'-0 ARCH REF 1/AE487"
+      }
+    ],
+    "raw_output": "{\n  \"submittal_views\": [\n    {\n      \"view_id\": 1,\n      \"view_title_raw\": \"KEY PLAN\",\n      \"view_type\": \"KEYPLAN\",\n      \"room_name\": \"WELLNESS\",\n      \"room_number\": \"112\",\n      \"arch_ref_raw\": \"1/AE701.1\",\n      \"title_bbox_percent\": [100.0, 380.0, 150.0, 400.0],\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"\u2460 KEY PLAN\\nARCH REF: 1/AE701.1\"\n    },\n    {\n      \"view_id\": 2,\n      \"view_title_raw\": \"PLAN - WAITROOM 485\",\n      \"view_type\": \"PLAN\",\n      \"room_name\": \"WAITROOM\",\n      \"room_number\": \"485\",\n      \"arch_ref_raw\": \"1/AE487\",\n      \"title_bbox_percent\": [100.0, 550.0, 180.0, 570.0],\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"\u2461 PLAN - WAITROOM 485\\nSCALE 1:34 (1/2\\\" = 1'-0\\\")\\nARCH REF: 1/AE487\"\n    },\n    {\n      \"view_id\": 3,\n      \"view_title_raw\": \"PLAN SECTION BASE - WAITROOM 485\",\n      \"view_type\": \"SECTION\",\n      \"room_name\": \"WAITROOM\",\n      \"room_number\": \"485\",\n      \"arch_ref_raw\": \"1/AE487\",\n      \"title_bbox_percent\": [100.0, 750.0, 220.0, 770.0],\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"\u2462 PLAN SECTION BASE - WAITROOM 485\\nSCALE 1:34 (1/2\\\" = 1'-0\\\")\\nARCH REF: 1/AE487\"\n    },\n    {\n      \"view_id\": 4,\n      \"view_title_raw\": \"PLAN SECTION TALL - WAITROOM 485\",\n      \"view_type\": \"SECTION\",\n      \"room_name\": \"WAITROOM\",\n      \"room_number\": \"485\",\n      \"arch_ref_raw\": \"1/AE487\",\n      \"title_bbox_percent\": [500.0, 750.0, 620.0, 770.0],\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"\u2463 PLAN SECTION TALL - WAITROOM 485\\nSCALE 1:34 (1/2\\\" = 1'-0\\\")\\nARCH REF: 1/AE487\"\n    }\n  ]\n}",
+    "error": null
+  }
+}

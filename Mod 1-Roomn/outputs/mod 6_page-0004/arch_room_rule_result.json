@@ -1,0 +1,8 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "uploads\\mod 6_page-0004.jpg",
+  "run_timestamp": "2026-06-22T17:30:22.609525",
+  "view_validation_results": [],
+  "error": "name '_qwen_call' is not defined"
+}

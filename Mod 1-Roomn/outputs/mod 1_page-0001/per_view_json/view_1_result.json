@@ -1,0 +1,62 @@
+{
+  "view_id": 1,
+  "submittal_room_name": "RECEPTION",
+  "submittal_room_number": "109",
+  "submittal_view_title": "KEY PLAN",
+  "arch_crop_path": "inputs\\A 101.1.jpg",
+  "arch_rooms_found": [
+    {
+      "room_name": "RECEPTION",
+      "room_number": "109"
+    },
+    {
+      "room_name": "LOBBY",
+      "room_number": "109"
+    },
+    {
+      "room_name": "ENTRY PLAZA",
+      "room_number": ""
+    },
+    {
+      "room_name": "CIRCULATION",
+      "room_number": "110"
+    },
+    {
+      "room_name": "COURTYARD",
+      "room_number": "100"
+    },
+    {
+      "room_name": "FIRE SUPPRESSION ROOM",
+      "room_number": "171"
+    },
+    {
+      "room_name": "STOR",
+      "room_number": "133"
+    },
+    {
+      "room_name": "ELEC",
+      "room_number": "131"
+    },
+    {
+      "room_name": "PREFUNCTION",
+      "room_number": "120"
+    },
+    {
+      "room_name": "IDF",
+      "room_number": "128"
+    }
+  ],
+  "rule_result": {
+    "submittal_room_name": "RECEPTION",
+    "submittal_room_number": "109",
+    "architectural_room_name": "RECEPTION",
+    "architectural_room_number": "109",
+    "architectural_rooms_all": "RECEPTION 109; LOBBY 109; ENTRY PLAZA; CIRCULATION 110; COURTYARD 100; FIRE SUPPRESSION ROOM 171; STOR 133; ELEC 131; PREFUNCTION 120; IDF 128",
+    "room_name_match": true,
+    "room_number_match": true,
+    "name_similarity_score": 100.0,
+    "confidence_score": 98,
+    "status": "PASS",
+    "reason": "Submittal room name and room number match the architectural reference view."
+  }
+}

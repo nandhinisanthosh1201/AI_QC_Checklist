@@ -1,0 +1,61 @@
+{
+  "view_id": 1,
+  "submittal_room_name": "LOBBY",
+  "submittal_room_number": "100",
+  "submittal_view_title": "SECTION - UPPER CABINET W/ SLIDING DOOR",
+  "arch_crop_path": "inputs\\A 101.1.jpg",
+  "arch_rooms_found": [
+    {
+      "room_name": "LOBBY",
+      "room_number": "100"
+    },
+    {
+      "room_name": "RECEPTION",
+      "room_number": "101"
+    },
+    {
+      "room_name": "CONFERENCE",
+      "room_number": "102"
+    },
+    {
+      "room_name": "SEC VAULT",
+      "room_number": "104"
+    },
+    {
+      "room_name": "CIRCULATION",
+      "room_number": "105"
+    },
+    {
+      "room_name": "IT OFFICES",
+      "room_number": "107"
+    },
+    {
+      "room_name": "STORAGE",
+      "room_number": "108"
+    },
+    {
+      "room_name": "TCAST MEDIA",
+      "room_number": "110"
+    },
+    {
+      "room_name": "MEDIA CONT",
+      "room_number": "113"
+    },
+    {
+      "room_name": "BREAKOUT",
+      "room_number": "120"
+    }
+  ],
+  "rule_result": {
+    "submittal_room_name": "LOBBY",
+    "submittal_room_number": "100",
+    "architectural_room_name": null,
+    "architectural_room_number": null,
+    "room_name_match": null,
+    "room_number_match": null,
+    "name_similarity_score": 0,
+    "confidence_score": 35,
+    "status": "REVIEW_REQUIRED",
+    "reason": "ARCH REF format is invalid/unreadable."
+  }
+}

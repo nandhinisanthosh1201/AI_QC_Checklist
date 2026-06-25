@@ -1,0 +1,100 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "inputs/mod 6_page-0001.jpg",
+  "run_timestamp": "2026-06-22T13:03:53.524647",
+  "total_views": 2,
+  "pass_count": 0,
+  "fail_count": 0,
+  "review_required_count": 2,
+  "markup_image": "outputs\\mod 6_page-0001\\submittal_markups\\submittal_markup_all_views.png",
+  "view_validation_results": [
+    {
+      "view_id": 1,
+      "submittal_room_name": "KEY",
+      "submittal_room_number": "",
+      "submittal_view_title": "KEY PLAN",
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "submittal_room_name": "KEY",
+        "submittal_room_number": "",
+        "architectural_room_name": null,
+        "architectural_room_number": null,
+        "architectural_rooms_all": "",
+        "room_name_match": null,
+        "room_number_match": null,
+        "name_similarity_score": 0,
+        "confidence_score": 40,
+        "status": "REVIEW_REQUIRED",
+        "reason": "ARCH REF '1/AE101 1' found but no matching arch file was provided."
+      }
+    },
+    {
+      "view_id": 2,
+      "submittal_room_name": "RECEPTION",
+      "submittal_room_number": "658",
+      "submittal_view_title": "PLAN - RECEPTION 658",
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "submittal_room_name": "RECEPTION",
+        "submittal_room_number": "658",
+        "architectural_room_name": null,
+        "architectural_room_number": null,
+        "architectural_rooms_all": "",
+        "room_name_match": null,
+        "room_number_match": null,
+        "name_similarity_score": 0,
+        "confidence_score": 40,
+        "status": "REVIEW_REQUIRED",
+        "reason": "ARCH REF '1/AE407' found but no matching arch file was provided."
+      }
+    }
+  ],
+  "submittal_raw_qwen": {
+    "success": true,
+    "submittal_views": [
+      {
+        "view_id": 1,
+        "view_title": "KEY PLAN",
+        "view_type": "KEYPLAN",
+        "room_name": "KEY",
+        "room_number": "",
+        "arch_ref": "1/AE101 1",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "1",
+        "arch_sheet_no": "AE101",
+        "bbox_percent": [
+          85.0,
+          400.0,
+          125.0,
+          425.0
+        ],
+        "extraction_confidence": 95,
+        "evidence_text": "KEY PLAN SCALE NTS ARCH REF 1/AE101 1"
+      },
+      {
+        "view_id": 2,
+        "view_title": "PLAN - RECEPTION 658",
+        "view_type": "PLAN",
+        "room_name": "RECEPTION",
+        "room_number": "658",
+        "arch_ref": "1/AE407",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "1",
+        "arch_sheet_no": "AE407",
+        "bbox_percent": [
+          100.0,
+          820.0,
+          190.0,
+          845.0
+        ],
+        "extraction_confidence": 95,
+        "evidence_text": "PLAN - RECEPTION 658 SCALE 1/24 1/2 1'-0 ARCH REF 1/AE407"
+      }
+    ],
+    "raw_output": "{\n  \"submittal_views\": [\n    {\n      \"view_id\": 1,\n      \"view_title_raw\": \"KEY PLAN\",\n      \"view_type\": \"KEYPLAN\",\n      \"room_name\": null,\n      \"room_number\": null,\n      \"arch_ref_raw\": \"1/AE101.1\",\n      \"title_bbox_percent\": [85.0, 400.0, 125.0, 425.0],\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"\u2460 KEY PLAN\\nSCALE: NTS\\nARCH REF: 1/AE101.1\"\n    },\n    {\n      \"view_id\": 2,\n      \"view_title_raw\": \"PLAN - RECEPTION 658\",\n      \"view_type\": \"PLAN\",\n      \"room_name\": \"RECEPTION\",\n      \"room_number\": \"658\",\n      \"arch_ref_raw\": \"1/AE407\",\n      \"title_bbox_percent\": [100.0, 820.0, 190.0, 845.0],\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"\u2461 PLAN - RECEPTION 658\\nSCALE: 1/24 (1/2\\\" = 1'-0\\\")\\nARCH REF: 1/AE407\"\n    }\n  ]\n}",
+    "error": null
+  }
+}

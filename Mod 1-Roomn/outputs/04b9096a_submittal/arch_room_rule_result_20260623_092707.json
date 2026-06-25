@@ -1,0 +1,110 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "inputs\\live_uploads\\04b9096a_submittal.jpg",
+  "run_timestamp": "2026-06-23T09:27:07.865157",
+  "total_views": 2,
+  "pass_count": 2,
+  "fail_count": 0,
+  "review_required_count": 0,
+  "markup_image": null,
+  "view_validation_results": [
+    {
+      "view_id": 1,
+      "submittal_room_name": "RECEPTION",
+      "submittal_room_number": "",
+      "submittal_view_title": "ELEVATION NORTH - RECEPTION",
+      "arch_crop_path": "inputs\\live_uploads\\04b9096a_AE580-3.png",
+      "arch_rooms_found": [
+        {
+          "room_name": "RECEPTION DESK - INTERIOR",
+          "room_number": ""
+        }
+      ],
+      "rule_result": {
+        "submittal_room_name": "RECEPTION",
+        "submittal_room_number": "",
+        "architectural_room_name": "RECEPTION DESK - INTERIOR",
+        "architectural_room_number": "",
+        "architectural_rooms_all": "RECEPTION DESK - INTERIOR",
+        "room_name_match": true,
+        "room_number_match": null,
+        "name_similarity_score": 100.0,
+        "confidence_score": 80,
+        "status": "PASS",
+        "reason": "Both room numbers are missing, but room names match."
+      }
+    },
+    {
+      "view_id": 2,
+      "submittal_room_name": "RECEPTION",
+      "submittal_room_number": "",
+      "submittal_view_title": "ELEVATION EAST - RECEPTION",
+      "arch_crop_path": "inputs\\live_uploads\\04b9096a_AE580-3.png",
+      "arch_rooms_found": [
+        {
+          "room_name": "RECEPTION DESK - INTERIOR",
+          "room_number": ""
+        }
+      ],
+      "rule_result": {
+        "submittal_room_name": "RECEPTION",
+        "submittal_room_number": "",
+        "architectural_room_name": "RECEPTION DESK - INTERIOR",
+        "architectural_room_number": "",
+        "architectural_rooms_all": "RECEPTION DESK - INTERIOR",
+        "room_name_match": true,
+        "room_number_match": null,
+        "name_similarity_score": 100.0,
+        "confidence_score": 80,
+        "status": "PASS",
+        "reason": "Both room numbers are missing, but room names match."
+      }
+    }
+  ],
+  "submittal_raw_qwen": {
+    "success": true,
+    "submittal_views": [
+      {
+        "view_id": 1,
+        "view_title": "ELEVATION NORTH - RECEPTION",
+        "view_type": "ELEVATION",
+        "room_name": "RECEPTION",
+        "room_number": "",
+        "arch_ref": "3/AE580",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "3",
+        "arch_sheet_no": "AE580",
+        "bbox_percent": [
+          158.0,
+          465.0,
+          275.0,
+          500.0
+        ],
+        "extraction_confidence": 95,
+        "evidence_text": "ELEVATION NORTH - RECEPTION SCALE 1 32 3/8 1'-0 ARCH REF 3/AE580"
+      },
+      {
+        "view_id": 2,
+        "view_title": "ELEVATION EAST - RECEPTION",
+        "view_type": "ELEVATION",
+        "room_name": "RECEPTION",
+        "room_number": "",
+        "arch_ref": "4/AE580",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "4",
+        "arch_sheet_no": "AE580",
+        "bbox_percent": [
+          158.0,
+          880.0,
+          275.0,
+          915.0
+        ],
+        "extraction_confidence": 95,
+        "evidence_text": "ELEVATION EAST - RECEPTION SCALE 1 32 3/8 1'-0 ARCH REF 4/AE580"
+      }
+    ],
+    "raw_output": "{\n  \"submittal_views\": [\n    {\n      \"view_id\": 1,\n      \"view_title_raw\": \"ELEVATION NORTH - RECEPTION\",\n      \"view_type\": \"ELEVATION\",\n      \"room_name\": \"RECEPTION\",\n      \"room_number\": null,\n      \"arch_ref_raw\": \"3/AE580\",\n      \"title_bbox_percent\": [158.0, 465.0, 275.0, 500.0],\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"\u2460 ELEVATION NORTH - RECEPTION\\nSCALE 1:32 (3/8\\\" = 1'-0\\\")\\nARCH REF: 3/AE580\"\n    },\n    {\n      \"view_id\": 2,\n      \"view_title_raw\": \"ELEVATION EAST - RECEPTION\",\n      \"view_type\": \"ELEVATION\",\n      \"room_name\": \"RECEPTION\",\n      \"room_number\": null,\n      \"arch_ref_raw\": \"4/AE580\",\n      \"title_bbox_percent\": [158.0, 880.0, 275.0, 915.0],\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"\u2461 ELEVATION EAST - RECEPTION\\nSCALE 1:32 (3/8\\\" = 1'-0\\\")\\nARCH REF: 4/AE580\"\n    }\n  ]\n}",
+    "error": null
+  }
+}

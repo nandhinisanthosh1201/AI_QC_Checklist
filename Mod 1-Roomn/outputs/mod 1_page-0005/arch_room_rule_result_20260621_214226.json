@@ -1,0 +1,107 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "inputs/mod 1_page-0005.jpg",
+  "run_timestamp": "2026-06-21T21:42:26.631628",
+  "total_views": 2,
+  "pass_count": 0,
+  "fail_count": 2,
+  "review_required_count": 0,
+  "view_validation_results": [
+    {
+      "view_id": 1,
+      "submittal_room_name": "STAFF",
+      "submittal_room_number": "501",
+      "submittal_view_title": "PLAN SECTION - STAFF 501",
+      "arch_crop_path": "inputs/A 401.jpg",
+      "arch_rooms_found": [
+        {
+          "room_name": "LOBBY",
+          "room_number": "100"
+        },
+        {
+          "room_name": "ALL GENDER",
+          "room_number": "101"
+        },
+        {
+          "room_name": "SECURITY VAULT",
+          "room_number": "104"
+        }
+      ],
+      "rule_result": {
+        "submittal_room_name": "STAFF",
+        "submittal_room_number": "501",
+        "architectural_room_name": "SECURITY VAULT",
+        "architectural_room_number": "104",
+        "architectural_rooms_all": "LOBBY 100; ALL GENDER 101; SECURITY VAULT 104",
+        "room_name_match": false,
+        "room_number_match": false,
+        "name_similarity_score": 40.0,
+        "confidence_score": 75,
+        "status": "FAIL",
+        "reason": "Neither room name nor room number match. Submittal='STAFF 501'. All rooms on arch view: LOBBY 100; ALL GENDER 101; SECURITY VAULT 104.",
+        "mismatch_field": "BOTH"
+      }
+    },
+    {
+      "view_id": 2,
+      "submittal_room_name": "STAFF",
+      "submittal_room_number": "501",
+      "submittal_view_title": "ELEVATION EAST - STAFF 501",
+      "arch_crop_path": "inputs/A 401.jpg",
+      "arch_rooms_found": [
+        {
+          "room_name": "EOC LOBBY RM - EAST INT",
+          "room_number": "100"
+        }
+      ],
+      "rule_result": {
+        "submittal_room_name": "STAFF",
+        "submittal_room_number": "501",
+        "architectural_room_name": "EOC LOBBY RM - EAST INT",
+        "architectural_room_number": "100",
+        "architectural_rooms_all": "EOC LOBBY RM - EAST INT 100",
+        "room_name_match": false,
+        "room_number_match": false,
+        "name_similarity_score": 40.0,
+        "confidence_score": 75,
+        "status": "FAIL",
+        "reason": "Neither room name nor room number match. Submittal='STAFF 501'. All rooms on arch view: EOC LOBBY RM - EAST INT 100.",
+        "mismatch_field": "BOTH"
+      }
+    }
+  ],
+  "submittal_raw_output": {
+    "success": true,
+    "submittal_views": [
+      {
+        "view_id": 1,
+        "view_title": "PLAN SECTION - STAFF 501",
+        "view_type": "SECTION",
+        "room_name": "STAFF",
+        "room_number": "501",
+        "arch_ref": "1/AE401",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "1",
+        "arch_sheet_no": "AE401",
+        "extraction_confidence": 95,
+        "evidence_text": "PLAN SECTION - STAFF 501 SCALE 1 24 1/2 1'-0 ARCH REF 1/AE401"
+      },
+      {
+        "view_id": 2,
+        "view_title": "ELEVATION EAST - STAFF 501",
+        "view_type": "ELEVATION",
+        "room_name": "STAFF",
+        "room_number": "501",
+        "arch_ref": "6/AE401",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "6",
+        "arch_sheet_no": "AE401",
+        "extraction_confidence": 95,
+        "evidence_text": "ELEVATION EAST - STAFF 501 SCALE 1 24 1/2 1'-0 ARCH REF 6/AE401"
+      }
+    ],
+    "raw_output": "{\n  \"submittal_views\": [\n    {\n      \"view_id\": 1,\n      \"view_title_raw\": \"PLAN SECTION - STAFF 501\",\n      \"view_type\": \"SECTION\",\n      \"room_name\": \"STAFF\",\n      \"room_number\": \"501\",\n      \"arch_ref_raw\": \"1/AE401\",\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"PLAN SECTION - STAFF 501\\nSCALE 1:24 (1/2\\\" = 1'-0\\\")\\nARCH REF: 1/AE401\"\n    },\n    {\n      \"view_id\": 2,\n      \"view_title_raw\": \"ELEVATION EAST - STAFF 501\",\n      \"view_type\": \"ELEVATION\",\n      \"room_name\": \"STAFF\",\n      \"room_number\": \"501\",\n      \"arch_ref_raw\": \"6/AE401\",\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"ELEVATION EAST - STAFF 501\\nSCALE 1:24 (1/2\\\" = 1'-0\\\")\\nARCH REF: 6/AE401\"\n    }\n  ]\n}",
+    "error": null
+  }
+}

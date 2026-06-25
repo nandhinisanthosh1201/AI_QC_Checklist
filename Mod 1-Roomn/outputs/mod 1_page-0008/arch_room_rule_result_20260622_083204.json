@@ -1,0 +1,243 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "inputs/mod 1_page-0008.jpg",
+  "run_timestamp": "2026-06-22T08:32:04.740811",
+  "total_views": 7,
+  "pass_count": 0,
+  "fail_count": 0,
+  "review_required_count": 7,
+  "view_validation_results": [
+    {
+      "view_id": 1,
+      "submittal_room_name": "RECEPTION",
+      "submittal_room_number": "",
+      "submittal_view_title": "PLAN - RECEPTION",
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "status": "REVIEW_REQUIRED",
+        "confidence_score": 40,
+        "reason": "ARCH REF '1/AE480' found, but no matching arch file was provided."
+      }
+    },
+    {
+      "view_id": 2,
+      "submittal_room_name": "",
+      "submittal_room_number": "",
+      "submittal_view_title": "1 10",
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "status": "REVIEW_REQUIRED",
+        "confidence_score": 40,
+        "reason": "ARCH REF is N/A, so architectural comparison cannot be performed."
+      }
+    },
+    {
+      "view_id": 3,
+      "submittal_room_name": "",
+      "submittal_room_number": "11",
+      "submittal_view_title": "1 11",
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "status": "REVIEW_REQUIRED",
+        "confidence_score": 40,
+        "reason": "ARCH REF is N/A, so architectural comparison cannot be performed."
+      }
+    },
+    {
+      "view_id": 4,
+      "submittal_room_name": "",
+      "submittal_room_number": "",
+      "submittal_view_title": "1 12",
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "status": "REVIEW_REQUIRED",
+        "confidence_score": 40,
+        "reason": "ARCH REF is N/A, so architectural comparison cannot be performed."
+      }
+    },
+    {
+      "view_id": 5,
+      "submittal_room_name": "",
+      "submittal_room_number": "",
+      "submittal_view_title": "1 10",
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "status": "REVIEW_REQUIRED",
+        "confidence_score": 40,
+        "reason": "ARCH REF is N/A, so architectural comparison cannot be performed."
+      }
+    },
+    {
+      "view_id": 6,
+      "submittal_room_name": "",
+      "submittal_room_number": "",
+      "submittal_view_title": "1 12",
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "status": "REVIEW_REQUIRED",
+        "confidence_score": 40,
+        "reason": "ARCH REF is N/A, so architectural comparison cannot be performed."
+      }
+    },
+    {
+      "view_id": 7,
+      "submittal_room_name": "",
+      "submittal_room_number": "",
+      "submittal_view_title": "1 12",
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "status": "REVIEW_REQUIRED",
+        "confidence_score": 40,
+        "reason": "ARCH REF is N/A, so architectural comparison cannot be performed."
+      }
+    }
+  ],
+  "submittal_raw_output": {
+    "success": true,
+    "submittal_views": [
+      {
+        "view_id": 1,
+        "view_title": "PLAN - RECEPTION",
+        "view_type": "PLAN",
+        "room_name": "RECEPTION",
+        "room_number": "",
+        "arch_ref": "1/AE480",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "1",
+        "arch_sheet_no": "AE480",
+        "bbox_percent": [
+          188,
+          920,
+          285,
+          950
+        ],
+        "extraction_confidence": 95,
+        "evidence_text": "PLAN - RECEPTION SCALE 1 32 3/8 1'-0 ARCH REF 1/AE480"
+      },
+      {
+        "view_id": 2,
+        "view_title": "1 10",
+        "view_type": "UNKNOWN",
+        "room_name": "",
+        "room_number": "",
+        "arch_ref": "N/A",
+        "arch_ref_status": "N/A",
+        "arch_view_no": null,
+        "arch_sheet_no": null,
+        "bbox_percent": [
+          300,
+          280,
+          360,
+          340
+        ],
+        "extraction_confidence": 90,
+        "evidence_text": "CIRCULAR CALLOUT BUBBLE LABELED '2 1 10' LOCATED NEAR TOP CENTER OF DRAWING"
+      },
+      {
+        "view_id": 3,
+        "view_title": "1 11",
+        "view_type": "UNKNOWN",
+        "room_name": "",
+        "room_number": "11",
+        "arch_ref": "N/A",
+        "arch_ref_status": "N/A",
+        "arch_view_no": null,
+        "arch_sheet_no": null,
+        "bbox_percent": [
+          250,
+          660,
+          330,
+          710
+        ],
+        "extraction_confidence": 90,
+        "evidence_text": "CIRCULAR CALLOUT BUBBLE LABELED '1 1 11' LOCATED IN MIDDLE LEFT OF DRAWING"
+      },
+      {
+        "view_id": 4,
+        "view_title": "1 12",
+        "view_type": "UNKNOWN",
+        "room_name": "",
+        "room_number": "",
+        "arch_ref": "N/A",
+        "arch_ref_status": "N/A",
+        "arch_view_no": null,
+        "arch_sheet_no": null,
+        "bbox_percent": [
+          750,
+          480,
+          800,
+          530
+        ],
+        "extraction_confidence": 90,
+        "evidence_text": "CIRCULAR CALLOUT BUBBLE LABELED '2 1 12' LOCATED ON RIGHT SIDE OF DRAWING"
+      },
+      {
+        "view_id": 5,
+        "view_title": "1 10",
+        "view_type": "UNKNOWN",
+        "room_name": "",
+        "room_number": "",
+        "arch_ref": "N/A",
+        "arch_ref_status": "N/A",
+        "arch_view_no": null,
+        "arch_sheet_no": null,
+        "bbox_percent": [
+          330,
+          280,
+          390,
+          340
+        ],
+        "extraction_confidence": 90,
+        "evidence_text": "CIRCULAR CALLOUT BUBBLE LABELED '2 1 10' LOCATED NEAR TOP CENTER OF DRAWING ADJACENT TO PREVIOUS 1 10 BUBBLE"
+      },
+      {
+        "view_id": 6,
+        "view_title": "1 12",
+        "view_type": "UNKNOWN",
+        "room_name": "",
+        "room_number": "",
+        "arch_ref": "N/A",
+        "arch_ref_status": "N/A",
+        "arch_view_no": null,
+        "arch_sheet_no": null,
+        "bbox_percent": [
+          280,
+          920,
+          340,
+          970
+        ],
+        "extraction_confidence": 90,
+        "evidence_text": "CIRCULAR CALLOUT BUBBLE LABELED '3 1 12' LOCATED AT BOTTOM CENTER OF DRAWING"
+      },
+      {
+        "view_id": 7,
+        "view_title": "1 12",
+        "view_type": "UNKNOWN",
+        "room_name": "",
+        "room_number": "",
+        "arch_ref": "N/A",
+        "arch_ref_status": "N/A",
+        "arch_view_no": null,
+        "arch_sheet_no": null,
+        "bbox_percent": [
+          250,
+          45,
+          300,
+          95
+        ],
+        "extraction_confidence": 90,
+        "evidence_text": "CIRCULAR CALLOUT BUBBLE LABELED '1 1 12' LOCATED AT TOP CENTER OF DRAWING"
+      }
+    ],
+    "raw_output": "{\n  \"submittal_views\": [\n    {\n      \"view_id\": 1,\n      \"view_title_raw\": \"PLAN - RECEPTION\",\n      \"view_type\": \"PLAN\",\n      \"room_name\": \"RECEPTION\",\n      \"room_number\": null,\n      \"arch_ref_raw\": \"1/AE480\",\n      \"title_bbox_percent\": [188, 920, 285, 950],\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"PLAN - RECEPTION SCALE 1:32 (3/8\\\" = 1'-0\\\") ARCH REF: 1/AE480\"\n    },\n    {\n      \"view_id\": 2,\n      \"view_title_raw\": \"1.10\",\n      \"view_type\": \"DETAIL\",\n      \"room_name\": null,\n      \"room_number\": null,\n      \"arch_ref_raw\": \"N/A\",\n      \"title_bbox_percent\": [300, 280, 360, 340],\n      \"extraction_confidence\": 90,\n      \"evidence_text\": \"Circular callout bubble labeled '2 1.10' located near top center of drawing.\"\n    },\n    {\n      \"view_id\": 3,\n      \"view_title_raw\": \"1.11\",\n      \"view_type\": \"DETAIL\",\n      \"room_name\": null,\n      \"room_number\": null,\n      \"arch_ref_raw\": \"N/A\",\n      \"title_bbox_percent\": [250, 660, 330, 710],\n      \"extraction_confidence\": 90,\n      \"evidence_text\": \"Circular callout bubble labeled '1 1.11' located in middle left of drawing.\"\n    },\n    {\n      \"view_id\": 4,\n      \"view_title_raw\": \"1.12\",\n      \"view_type\": \"DETAIL\",\n      \"room_name\": null,\n      \"room_number\": null,\n      \"arch_ref_raw\": \"N/A\",\n      \"title_bbox_percent\": [750, 480, 800, 530],\n      \"extraction_confidence\": 90,\n      \"evidence_text\": \"Circular callout bubble labeled '2 1.12' located on right side of drawing.\"\n    },\n    {\n      \"view_id\": 5,\n      \"view_title_raw\": \"1.10\",\n      \"view_type\": \"DETAIL\",\n      \"room_name\": null,\n      \"room_number\": null,\n      \"arch_ref_raw\": \"N/A\",\n      \"title_bbox_percent\": [330, 280, 390, 340],\n      \"extraction_confidence\": 90,\n      \"evidence_text\": \"Circular callout bubble labeled '2 1.10' located near top center of drawing, adjacent to previous 1.10 bubble.\"\n    },\n    {\n      \"view_id\": 6,\n      \"view_title_raw\": \"1.12\",\n      \"view_type\": \"DETAIL\",\n      \"room_name\": null,\n      \"room_number\": null,\n      \"arch_ref_raw\": \"N/A\",\n      \"title_bbox_percent\": [280, 920, 340, 970],\n      \"extraction_confidence\": 90,\n      \"evidence_text\": \"Circular callout bubble labeled '3 1.12' located at bottom center of drawing.\"\n    },\n    {\n      \"view_id\": 7,\n      \"view_title_raw\": \"1.12\",\n      \"view_type\": \"DETAIL\",\n      \"room_name\": null,\n      \"room_number\": null,\n      \"arch_ref_raw\": \"N/A\",\n      \"title_bbox_percent\": [250, 45, 300, 95],\n      \"extraction_confidence\": 90,\n      \"evidence_text\": \"Circular callout bubble labeled '1 1.12' located at top center of drawing.\"\n    }\n  ]\n}",
+    "error": null
+  }
+}

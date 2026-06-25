@@ -1,0 +1,8 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "inputs/mod 6_page-0007.jpg",
+  "run_timestamp": "2026-06-22T16:39:38.437386",
+  "view_validation_results": [],
+  "error": "OpenRouter API failed: HTTP 404: {\"error\":{\"message\":\"No endpoints found for qwen/qwen-2.5-vl-7b-instruct.\",\"code\":404},\"user_id\":\"user_3FUHhBmwhMxj5Z9g03MkNfc1juy\"}"
+}

@@ -1,0 +1,21 @@
+{
+  "view_id": 1,
+  "submittal_room_name": "RECEPTION",
+  "submittal_room_number": "",
+  "submittal_view_title": "PLAN - RECEPTION",
+  "arch_crop_path": "inputs/Arch AE580.jpg",
+  "arch_rooms_found": [],
+  "rule_result": {
+    "submittal_room_name": "RECEPTION",
+    "submittal_room_number": "",
+    "architectural_room_name": null,
+    "architectural_room_number": null,
+    "architectural_rooms_all": "",
+    "room_name_match": null,
+    "room_number_match": null,
+    "name_similarity_score": 0,
+    "confidence_score": 45,
+    "status": "REVIEW_REQUIRED",
+    "reason": "OpenRouter API failed: HTTP 402: {\"error\":{\"message\":\"This request requires more credits, or fewer max_tokens. You requested up to 4096 tokens, but can only afford 3643. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account\",\"code\":402,\"metadata\":{\"provider_name\":null}},\"user_id\":\"user_3FOCJTlPIYA5"
+  }
+}

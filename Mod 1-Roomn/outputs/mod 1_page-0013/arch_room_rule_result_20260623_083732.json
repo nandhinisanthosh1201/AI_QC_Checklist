@@ -1,0 +1,65 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "inputs/mod 1_page-0013.jpg",
+  "run_timestamp": "2026-06-23T08:37:32.749283",
+  "total_views": 1,
+  "pass_count": 0,
+  "fail_count": 1,
+  "review_required_count": 0,
+  "markup_image": "outputs\\mod 1_page-0013\\submittal_markups\\submittal_markup_all_views.png",
+  "view_validation_results": [
+    {
+      "view_id": 1,
+      "submittal_room_name": "- DRAWER W/ TRANSACTION COUNTER",
+      "submittal_room_number": "SECTION - 3 DRAWER BASE CABINET W/ TRANSACTION COUNTER",
+      "submittal_view_title": "SECTION - 3 DRAWER BASE CABINET W/ TRANSACTION COUNTER",
+      "arch_crop_path": "inputs/AE584-1.png",
+      "arch_rooms_found": [
+        {
+          "room_name": "RECEPTION - WORK SURFACE @",
+          "room_number": "RECEPTION - WORK SURFACE @ BASE CABINET"
+        }
+      ],
+      "rule_result": {
+        "submittal_room_name": "- DRAWER W/ TRANSACTION COUNTER",
+        "submittal_room_number": "SECTION - 3 DRAWER BASE CABINET W/ TRANSACTION COUNTER",
+        "architectural_room_name": "RECEPTION - WORK SURFACE @",
+        "architectural_room_number": "RECEPTION - WORK SURFACE @ BASE CABINET",
+        "architectural_rooms_all": "RECEPTION - WORK SURFACE @ RECEPTION - WORK SURFACE @ BASE CABINET",
+        "room_name_match": false,
+        "room_number_match": false,
+        "name_similarity_score": 46.15384615384615,
+        "confidence_score": 75,
+        "status": "FAIL",
+        "reason": "Neither name nor number match. Submittal: '- DRAWER W/ TRANSACTION COUNTER SECTION - 3 DRAWER BASE CABINET W/ TRANSACTION COUNTER'. Arch rooms: RECEPTION - WORK SURFACE @ RECEPTION - WORK SURFACE @ BASE CABINET."
+      }
+    }
+  ],
+  "submittal_raw_qwen": {
+    "success": true,
+    "submittal_views": [
+      {
+        "view_id": 1,
+        "view_title": "SECTION - 3 DRAWER BASE CABINET W/ TRANSACTION COUNTER",
+        "view_type": "SECTION",
+        "room_name": "- DRAWER W/ TRANSACTION COUNTER",
+        "room_number": "SECTION - 3 DRAWER BASE CABINET W/ TRANSACTION COUNTER",
+        "arch_ref": "1/AE584",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "1",
+        "arch_sheet_no": "AE584",
+        "bbox_percent": [
+          130.0,
+          900.0,
+          430.0,
+          930.0
+        ],
+        "extraction_confidence": 95,
+        "evidence_text": "SECTION - 3 DRAWER BASE CABINET W/ TRANSACTION COUNTER SCALE 1 8 1 1/2 1'-0 ARCH REF 1/AE584"
+      }
+    ],
+    "raw_output": "{\n  \"submittal_views\": [\n    {\n      \"view_id\": 1,\n      \"view_title_raw\": \"SECTION - 3 DRAWER BASE CABINET w/ TRANSACTION COUNTER\",\n      \"view_type\": \"SECTION\",\n      \"room_name\": null,\n      \"room_number\": null,\n      \"arch_ref_raw\": \"1/AE584\",\n      \"title_bbox_percent\": [130.0, 900.0, 430.0, 930.0],\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"SECTION - 3 DRAWER BASE CABINET w/ TRANSACTION COUNTER SCALE 1:8 (1 1/2\\\" = 1'-0\\\") ARCH REF: 1/AE584\"\n    }\n  ]\n}",
+    "error": null
+  }
+}

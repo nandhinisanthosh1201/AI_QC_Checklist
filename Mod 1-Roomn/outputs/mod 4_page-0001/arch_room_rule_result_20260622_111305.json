@@ -1,0 +1,140 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "inputs/mod 4_page-0001.jpg",
+  "run_timestamp": "2026-06-22T11:13:05.291343",
+  "total_views": 4,
+  "pass_count": 0,
+  "fail_count": 1,
+  "review_required_count": 3,
+  "view_validation_results": [
+    {
+      "view_id": 1,
+      "submittal_room_name": "TRAINING / MULTI-PURPOSE",
+      "submittal_room_number": "134",
+      "submittal_view_title": "KEY PLAN",
+      "arch_crop_path": "inputs/AE101.1 - 1.png",
+      "arch_rooms_found": [],
+      "rule_result": {
+        "status": "REVIEW_REQUIRED",
+        "confidence_score": 100,
+        "reason": "KEY PLAN views do not specify single rooms. Manual review required.",
+        "evidence": null
+      }
+    },
+    {
+      "view_id": 2,
+      "submittal_room_name": "WAITROOM",
+      "submittal_room_number": "485",
+      "submittal_view_title": "PLAN - WAITROOM 485",
+      "arch_crop_path": "inputs/AE406 -10.png",
+      "arch_rooms_found": [
+        {
+          "room_name": "WELLNESS / LACTATION",
+          "room_number": "112"
+        }
+      ],
+      "rule_result": {
+        "submittal_room_name": "WAITROOM",
+        "submittal_room_number": "485",
+        "architectural_room_name": "WELLNESS / LACTATION",
+        "architectural_room_number": "112",
+        "architectural_rooms_all": "WELLNESS / LACTATION 112",
+        "room_name_match": false,
+        "room_number_match": false,
+        "name_similarity_score": 46.15384615384615,
+        "confidence_score": 75,
+        "status": "FAIL",
+        "reason": "Neither room name nor room number match. Submittal='WAITROOM 485'. All rooms on arch view: WELLNESS / LACTATION 112.",
+        "mismatch_field": "BOTH"
+      }
+    },
+    {
+      "view_id": 3,
+      "submittal_room_name": "WAITROOM",
+      "submittal_room_number": "485",
+      "submittal_view_title": "PLAN SECTION BASE - WAITROOM 485",
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "status": "REVIEW_REQUIRED",
+        "confidence_score": 40,
+        "reason": "ARCH REF is N/A, so architectural comparison cannot be performed.",
+        "evidence": null
+      }
+    },
+    {
+      "view_id": 4,
+      "submittal_room_name": "WAITROOM",
+      "submittal_room_number": "485",
+      "submittal_view_title": "PLAN SECTION TALL - WAITROOM 485",
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "status": "REVIEW_REQUIRED",
+        "confidence_score": 40,
+        "reason": "ARCH REF is N/A, so architectural comparison cannot be performed.",
+        "evidence": null
+      }
+    }
+  ],
+  "submittal_raw_output": {
+    "success": true,
+    "submittal_views": [
+      {
+        "view_id": 1,
+        "view_title": "KEY PLAN",
+        "view_type": "KEYPLAN",
+        "room_name": "TRAINING / MULTI-PURPOSE",
+        "room_number": "134",
+        "arch_ref": "1/AE101 1",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "1",
+        "arch_sheet_no": "AE101",
+        "extraction_confidence": 95,
+        "evidence_text": "KEY PLAN SCALE NTS ARCH REF 1/AE101 1 TRAINING / TI-PURPOSE WELLNESS 134 112"
+      },
+      {
+        "view_id": 2,
+        "view_title": "PLAN - WAITROOM 485",
+        "view_type": "PLAN",
+        "room_name": "WAITROOM",
+        "room_number": "485",
+        "arch_ref": "10/AE406",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "10",
+        "arch_sheet_no": "AE406",
+        "extraction_confidence": 95,
+        "evidence_text": "PLAN - WAITROOM 485 SCALE 1 24 1/2' 1'-0' ARCH REF 10/AE406"
+      },
+      {
+        "view_id": 3,
+        "view_title": "PLAN SECTION BASE - WAITROOM 485",
+        "view_type": "SECTION",
+        "room_name": "WAITROOM",
+        "room_number": "485",
+        "arch_ref": "N/A",
+        "arch_ref_status": "N/A",
+        "arch_view_no": null,
+        "arch_sheet_no": null,
+        "extraction_confidence": 95,
+        "evidence_text": "PLAN SECTION BASE - WAITROOM 485 SCALE 1 24 1/2' 1'-0' ARCH REF NA"
+      },
+      {
+        "view_id": 4,
+        "view_title": "PLAN SECTION TALL - WAITROOM 485",
+        "view_type": "SECTION",
+        "room_name": "WAITROOM",
+        "room_number": "485",
+        "arch_ref": "N/A",
+        "arch_ref_status": "N/A",
+        "arch_view_no": null,
+        "arch_sheet_no": null,
+        "extraction_confidence": 95,
+        "evidence_text": "PLAN SECTION TALL - WAITROOM 485 SCALE 1 24 1/2' 1'-0' ARCH REF NA"
+      }
+    ],
+    "raw_output": "\n```json\n{\n  \"submittal_views\": [\n    {\n      \"view_id\": 1,\n      \"view_title_raw\": \"KEY PLAN\",\n      \"view_type\": \"KEYPLAN\",\n      \"room_name\": \"TRAINING / MULTI-PURPOSE\",\n      \"room_number\": \"134\",\n      \"arch_ref_raw\": \"1/AE101.1\",\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"KEY PLAN SCALE : NTS, ARCH REF: 1/AE101.1 TRAINING / TI-PURPOSE WELLNESS 134 112\"\n    },\n    {\n      \"view_id\": 2,\n      \"view_title_raw\": \"PLAN - WAITROOM 485\",\n      \"view_type\": \"PLAN\",\n      \"room_name\": \"WAITROOM\",\n      \"room_number\": \"485\",\n      \"arch_ref_raw\": \"10/AE406\",\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"PLAN - WAITROOM 485 SCALE 1:24 (1/2'=1'-0') ARCH REF: 10/AE406\"\n    },\n    {\n      \"view_id\": 3,\n      \"view_title_raw\": \"PLAN SECTION BASE - WAITROOM 485\",\n      \"view_type\": \"SECTION\",\n      \"room_name\": \"WAITROOM\",\n      \"room_number\": \"485\",\n      \"arch_ref_raw\": \"N/A\",\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"PLAN SECTION BASE - WAITROOM 485 SCALE 1:24 (1/2'=1'-0') ARCH REF: NA\"\n    },\n    {\n      \"view_id\": 4,\n      \"view_title_raw\": \"PLAN SECTION TALL - WAITROOM 485\",\n      \"view_type\": \"SECTION\",\n      \"room_name\": \"WAITROOM\",\n      \"room_number\": \"485\",\n      \"arch_ref_raw\": \"N/A\",\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"PLAN SECTION TALL - WAITROOM 485 SCALE 1:24 (1/2'=1'-0') ARCH REF: NA\"\n    }\n  ]\n}\n```",
+    "error": null
+  }
+}

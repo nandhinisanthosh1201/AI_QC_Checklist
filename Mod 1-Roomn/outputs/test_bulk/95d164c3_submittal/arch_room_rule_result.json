@@ -1,0 +1,8 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "inputs\\live_uploads\\95d164c3_submittal.jpg",
+  "run_timestamp": "2026-06-23T12:55:03.730878",
+  "view_validation_results": [],
+  "error": "OpenRouter API failed: HTTP 404: {\"error\":{\"message\":\"This model is unavailable for free. The paid version is available now - use this slug instead: qwen/qwen2.5-vl-72b-instruct\",\"code\":404},\"user_id\":\"user_3FWiR7z55xqZa6tlGyVF1VjrYeH\"}"
+}

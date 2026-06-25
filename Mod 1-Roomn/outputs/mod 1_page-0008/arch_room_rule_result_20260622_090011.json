@@ -1,0 +1,60 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "inputs/mod 1_page-0008.jpg",
+  "run_timestamp": "2026-06-22T09:00:11.601405",
+  "total_views": 1,
+  "pass_count": 0,
+  "fail_count": 0,
+  "review_required_count": 1,
+  "markup_image": "outputs\\mod 1_page-0008\\submittal_markups\\submittal_markup_all_views.png",
+  "view_validation_results": [
+    {
+      "view_id": 1,
+      "submittal_room_name": "RECEPTION",
+      "submittal_room_number": "",
+      "submittal_view_title": "PLAN - RECEPTION",
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "submittal_room_name": "RECEPTION",
+        "submittal_room_number": "",
+        "architectural_room_name": null,
+        "architectural_room_number": null,
+        "architectural_rooms_all": "",
+        "room_name_match": null,
+        "room_number_match": null,
+        "name_similarity_score": 0,
+        "confidence_score": 40,
+        "status": "REVIEW_REQUIRED",
+        "reason": "ARCH REF '1/AE80' found but no matching arch file provided."
+      }
+    }
+  ],
+  "submittal_raw_qwen": {
+    "success": true,
+    "submittal_views": [
+      {
+        "view_id": 1,
+        "view_title": "PLAN - RECEPTION",
+        "view_type": "PLAN",
+        "room_name": "RECEPTION",
+        "room_number": "",
+        "arch_ref": "1/AE80",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "1",
+        "arch_sheet_no": "AE80",
+        "bbox_percent": [
+          195.0,
+          920.0,
+          290.0,
+          940.0
+        ],
+        "extraction_confidence": 95,
+        "evidence_text": "PLAN - RECEPTION SCALE 1 32 3/8 1'-0 ARCH REF 1/AE80"
+      }
+    ],
+    "raw_output": "{\n  \"submittal_views\": [\n    {\n      \"view_id\": 1,\n      \"view_title_raw\": \"PLAN - RECEPTION\",\n      \"view_type\": \"PLAN\",\n      \"room_name\": \"RECEPTION\",\n      \"room_number\": null,\n      \"arch_ref_raw\": \"1/AE80\",\n      \"title_bbox_percent\": [195.0, 920.0, 290.0, 940.0],\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"PLAN - RECEPTION\\nSCALE 1:32 (3/8\\\" = 1'-0\\\")\\nARCH REF: 1/AE80\"\n    }\n  ]\n}",
+    "error": null
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "view_id": 1,
+  "submittal_room_name": "STRAPPING BY OTHERS",
+  "submittal_room_number": null,
+  "submittal_view_title": "- RECEPTION",
+  "arch_crop_path": "inputs/Arch AE580.jpg",
+  "arch_rooms_found": [
+    {
+      "room_name": "RECEPTION DESK - FRONT NORTH",
+      "room_number": ""
+    }
+  ],
+  "rule_result": {
+    "submittal_room_name": "STRAPPING BY OTHERS",
+    "submittal_room_number": "",
+    "architectural_room_name": "RECEPTION DESK - FRONT NORTH",
+    "architectural_room_number": "",
+    "architectural_rooms_all": "RECEPTION DESK - FRONT NORTH",
+    "room_name_match": false,
+    "room_number_match": null,
+    "name_similarity_score": 43.75,
+    "confidence_score": 50,
+    "status": "FAIL",
+    "reason": "Room number missing on one side. Name differs. Arch title: 'RECEPTION DESK ELEVATION - FRONT NORTH ELEVATION'. Arch rooms: RECEPTION DESK - FRONT NORTH."
+  }
+}

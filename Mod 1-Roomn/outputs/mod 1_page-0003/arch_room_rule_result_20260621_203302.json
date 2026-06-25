@@ -1,0 +1,53 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "inputs/mod 1_page-0003.jpg",
+  "run_timestamp": "2026-06-21T20:33:02.155342",
+  "total_views": 1,
+  "pass_count": 0,
+  "fail_count": 1,
+  "review_required_count": 0,
+  "view_validation_results": [
+    {
+      "view_id": 1,
+      "submittal_room_name": "LOBBY",
+      "submittal_room_number": "100",
+      "submittal_view_title": "SECTION - UPPER CABINET W SLIDING DOOR",
+      "arch_crop_path": "inputs/A 582.jpg",
+      "arch_rooms_found": [],
+      "rule_result": {
+        "submittal_room_name": "LOBBY",
+        "submittal_room_number": "100",
+        "architectural_room_name": "",
+        "architectural_room_number": "",
+        "architectural_rooms_all": "(none extracted)",
+        "room_name_match": false,
+        "room_number_match": null,
+        "name_similarity_score": 0,
+        "confidence_score": 50,
+        "status": "FAIL",
+        "reason": "Neither room name nor room number match. Submittal='LOBBY 100'. All rooms on arch view: (none extracted)."
+      }
+    }
+  ],
+  "submittal_raw_output": {
+    "success": true,
+    "submittal_views": [
+      {
+        "view_id": 1,
+        "view_title": "SECTION - UPPER CABINET W SLIDING DOOR",
+        "view_type": "SECTION",
+        "room_name": "LOBBY",
+        "room_number": "100",
+        "arch_ref": "A",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "A",
+        "arch_sheet_no": null,
+        "extraction_confidence": 100,
+        "evidence_text": "SECTION - UPPER CABINET W SLIDING DOOR SCALE 1 2'-0 1 24 REF 1/AE406"
+      }
+    ],
+    "raw_output": "{\n  \"submittal_views\": [\n    {\n      \"view_id\": 1,\n      \"view_title_raw\": \"SECTION - UPPER CABINET w SLIDING DOOR\",\n      \"view_type\": \"SECTION\",\n      \"room_name\": \"LOBBY\",\n      \"room_number\": \"100\",\n      \"arch_ref_raw\": \"A\",\n      \"extraction_confidence\": 100,\n      \"evidence_text\": \"SECTION - UPPER CABINET w SLIDING DOOR SCALE: 1\\\"=2'-0\\\" (1:24) REF: 1/AE406\"\n    }\n  ]\n}",
+    "error": null
+  }
+}

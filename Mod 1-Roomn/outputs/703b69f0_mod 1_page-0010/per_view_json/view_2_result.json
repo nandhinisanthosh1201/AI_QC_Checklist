@@ -1,0 +1,26 @@
+{
+  "view_id": 2,
+  "submittal_room_name": "RECEPTION",
+  "submittal_room_number": "ELEVATION EAST - RECEPTION",
+  "submittal_view_title": "ELEVATION EAST - RECEPTION",
+  "arch_crop_path": "C:\\Users\\Lalitha\\OneDrive - QUADE Engineering Services\\Desktop\\Mod 1-Roomn\\inputs\\live_uploads\\703b69f0_AE580-3.png",
+  "arch_rooms_found": [
+    {
+      "room_name": "RECEPTION DESK - INTERIOR",
+      "room_number": ""
+    }
+  ],
+  "rule_result": {
+    "submittal_room_name": "RECEPTION",
+    "submittal_room_number": "ELEVATION EAST - RECEPTION",
+    "architectural_room_name": "RECEPTION DESK - INTERIOR",
+    "architectural_room_number": "",
+    "architectural_rooms_all": "RECEPTION DESK - INTERIOR",
+    "room_name_match": true,
+    "room_number_match": null,
+    "name_similarity_score": 100.0,
+    "confidence_score": 50,
+    "status": "REVIEW_REQUIRED",
+    "reason": "Room number missing on one side. Name matches. Arch title: 'RECEPTION DESK - INTERIOR NORTH ELEVATION'. Arch rooms: RECEPTION DESK - INTERIOR."
+  }
+}

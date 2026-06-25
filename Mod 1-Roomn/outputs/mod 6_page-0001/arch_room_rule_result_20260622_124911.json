@@ -1,0 +1,99 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "inputs/mod 6_page-0001.jpg",
+  "run_timestamp": "2026-06-22T12:49:11.212769",
+  "total_views": 2,
+  "pass_count": 0,
+  "fail_count": 1,
+  "review_required_count": 1,
+  "view_validation_results": [
+    {
+      "view_id": 1,
+      "submittal_room_name": "KEY",
+      "submittal_room_number": "",
+      "submittal_view_title": "KEY PLAN",
+      "arch_crop_path": "inputs/AE101.1 - 1.png",
+      "arch_rooms_found": [
+        {
+          "room_name": "WELLNESS",
+          "room_number": "112"
+        }
+      ],
+      "rule_result": {
+        "submittal_room_name": "KEY",
+        "submittal_room_number": "",
+        "architectural_room_name": "WELLNESS",
+        "architectural_room_number": "112",
+        "architectural_rooms_all": "WELLNESS 112",
+        "room_name_match": false,
+        "room_number_match": null,
+        "name_similarity_score": 40.0,
+        "confidence_score": 50,
+        "status": "REVIEW_REQUIRED",
+        "reason": "Room number missing. Could not verify match. Arch Title was 'FLOORPLAN EDC LEVEL 1 AREA 1'."
+      }
+    },
+    {
+      "view_id": 2,
+      "submittal_room_name": "RECEPTION",
+      "submittal_room_number": "658",
+      "submittal_view_title": "PLAN - RECEPTION 658",
+      "arch_crop_path": "inputs/AE407-1.png",
+      "arch_rooms_found": [
+        {
+          "room_name": "BREAK ROOM",
+          "room_number": "115"
+        }
+      ],
+      "rule_result": {
+        "submittal_room_name": "RECEPTION",
+        "submittal_room_number": "658",
+        "architectural_room_name": "BREAK ROOM",
+        "architectural_room_number": "115",
+        "architectural_rooms_all": "BREAK ROOM 115",
+        "room_name_match": false,
+        "room_number_match": false,
+        "name_similarity_score": 35.29411764705882,
+        "confidence_score": 75,
+        "status": "FAIL",
+        "reason": "Neither room name nor room number match. Submittal='RECEPTION 658'. All rooms on arch view: BREAK ROOM 115.",
+        "mismatch_field": "BOTH"
+      }
+    }
+  ],
+  "submittal_raw_output": {
+    "success": true,
+    "global_title_block_name": "BREAK ROOM 115",
+    "submittal_views": [
+      {
+        "view_id": 1,
+        "view_title": "KEY PLAN",
+        "view_type": "KEYPLAN",
+        "room_name": "KEY",
+        "room_number": "",
+        "arch_ref": "1/AE101 1",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "1",
+        "arch_sheet_no": "AE101",
+        "extraction_confidence": 100,
+        "evidence_text": "KEY PLAN SCALE NTS ARCH REF 1/AE101 1"
+      },
+      {
+        "view_id": 2,
+        "view_title": "PLAN - RECEPTION 658",
+        "view_type": "PLAN",
+        "room_name": "RECEPTION",
+        "room_number": "658",
+        "arch_ref": "1/AE407",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "1",
+        "arch_sheet_no": "AE407",
+        "extraction_confidence": 100,
+        "evidence_text": "PLAN - RECEPTION 658 SCALE 1 24 1/2 1'-0 ARCH REF 1/AE407"
+      }
+    ],
+    "raw_output": "\n```json\n{\n  \"global_title_block_name\": \"BREAK ROOM 115\",\n  \"submittal_views\": [\n    {\n      \"view_id\": 1,\n      \"view_title_raw\": \"KEY PLAN\",\n      \"view_type\": \"KEYPLAN\",\n      \"room_name\": null,\n      \"room_number\": null,\n      \"arch_ref_raw\": \"1/AE101.1\",\n      \"extraction_confidence\": 100,\n      \"evidence_text\": \"KEY PLAN SCALE: NTS ARCH REF: 1/AE101.1\"\n    },\n    {\n      \"view_id\": 2,\n      \"view_title_raw\": \"PLAN - RECEPTION 658\",\n      \"view_type\": \"PLAN\",\n      \"room_name\": \"RECEPTION\",\n      \"room_number\": \"658\",\n      \"arch_ref_raw\": \"1/AE407\",\n      \"extraction_confidence\": 100,\n      \"evidence_text\": \"PLAN - RECEPTION 658 SCALE 1:24 (1/2\\\"=1'-0\\\") ARCH REF: 1/AE407\"\n    }\n  ]\n}\n```",
+    "error": null
+  }
+}

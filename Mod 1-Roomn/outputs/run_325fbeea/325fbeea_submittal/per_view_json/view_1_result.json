@@ -1,0 +1,28 @@
+{
+  "view_id": 1,
+  "submittal_room_name": "- W/ DOOR",
+  "submittal_room_number": "",
+  "submittal_view_title": "SECTION - BASE CABINET W/ DOOR",
+  "submittal_view_type": "SECTION",
+  "arch_view_title": "RECEPTION - WORK SURFACE WITH BASE CABINET",
+  "arch_crop_path": "inputs\\live_uploads\\325fbeea_AE584-7.png",
+  "arch_rooms_found": [
+    {
+      "room_name": "RECEPTION - WORK SURFACE WITH",
+      "room_number": ""
+    }
+  ],
+  "rule_result": {
+    "submittal_room_name": "- W/ DOOR",
+    "submittal_room_number": "",
+    "architectural_room_name": "RECEPTION - WORK SURFACE WITH",
+    "architectural_room_number": "",
+    "architectural_rooms_all": "RECEPTION - WORK SURFACE WITH",
+    "room_name_match": false,
+    "room_number_match": null,
+    "name_similarity_score": 55.55555555555556,
+    "confidence_score": 50,
+    "status": "FAIL",
+    "reason": "Room number missing on one side. Name differs. Arch title: 'RECEPTION - WORK SURFACE WITH BASE CABINET'. Arch rooms: RECEPTION - WORK SURFACE WITH."
+  }
+}

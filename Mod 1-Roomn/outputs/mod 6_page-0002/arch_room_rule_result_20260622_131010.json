@@ -1,0 +1,100 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "inputs/mod 6_page-0002.jpg",
+  "run_timestamp": "2026-06-22T13:10:10.931030",
+  "total_views": 2,
+  "pass_count": 0,
+  "fail_count": 0,
+  "review_required_count": 2,
+  "markup_image": "outputs\\mod 6_page-0002\\submittal_markups\\submittal_markup_all_views.png",
+  "view_validation_results": [
+    {
+      "view_id": 1,
+      "submittal_room_name": "RECEPTION",
+      "submittal_room_number": "658",
+      "submittal_view_title": "PLAN SECTION BASE -RECEPTION 658",
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "submittal_room_name": "RECEPTION",
+        "submittal_room_number": "658",
+        "architectural_room_name": null,
+        "architectural_room_number": null,
+        "architectural_rooms_all": "",
+        "room_name_match": null,
+        "room_number_match": null,
+        "name_similarity_score": 0,
+        "confidence_score": 40,
+        "status": "REVIEW_REQUIRED",
+        "reason": "ARCH REF is N/A \u2014 no comparison possible."
+      }
+    },
+    {
+      "view_id": 2,
+      "submittal_room_name": "RECEPTION",
+      "submittal_room_number": "658",
+      "submittal_view_title": "PLAN SECTION TALL -RECEPTION 658",
+      "arch_crop_path": null,
+      "arch_rooms_found": [],
+      "rule_result": {
+        "submittal_room_name": "RECEPTION",
+        "submittal_room_number": "658",
+        "architectural_room_name": null,
+        "architectural_room_number": null,
+        "architectural_rooms_all": "",
+        "room_name_match": null,
+        "room_number_match": null,
+        "name_similarity_score": 0,
+        "confidence_score": 40,
+        "status": "REVIEW_REQUIRED",
+        "reason": "ARCH REF is N/A \u2014 no comparison possible."
+      }
+    }
+  ],
+  "submittal_raw_qwen": {
+    "success": true,
+    "submittal_views": [
+      {
+        "view_id": 1,
+        "view_title": "PLAN SECTION BASE -RECEPTION 658",
+        "view_type": "SECTION",
+        "room_name": "RECEPTION",
+        "room_number": "658",
+        "arch_ref": "N/A",
+        "arch_ref_status": "N/A",
+        "arch_view_no": null,
+        "arch_sheet_no": null,
+        "bbox_percent": [
+          115.0,
+          630.0,
+          260.0,
+          660.0
+        ],
+        "extraction_confidence": 95,
+        "evidence_text": "PLAN SECTION BASE -RECEPTION 658 SCALE 1 24 1/2 1'-0 ARCH REF NA"
+      },
+      {
+        "view_id": 2,
+        "view_title": "PLAN SECTION TALL -RECEPTION 658",
+        "view_type": "SECTION",
+        "room_name": "RECEPTION",
+        "room_number": "658",
+        "arch_ref": "N/A",
+        "arch_ref_status": "N/A",
+        "arch_view_no": null,
+        "arch_sheet_no": null,
+        "bbox_percent": [
+          115.0,
+          685.0,
+          260.0,
+          715.0
+        ],
+        "extraction_confidence": 95,
+        "evidence_text": "PLAN SECTION TALL -RECEPTION 658 SCALE 1 24 1/2 1'-0 ARCH REF NA"
+      }
+    ],
+    "raw_output": "{\n  \"submittal_views\": [\n    {\n      \"view_id\": 1,\n      \"view_title_raw\": \"PLAN SECTION BASE -RECEPTION 658\",\n      \"view_type\": \"SECTION\",\n      \"room_name\": \"RECEPTION\",\n      \"room_number\": \"658\",\n      \"arch_ref_raw\": \"NA\",\n      \"title_bbox_percent\": [115.0, 630.0, 260.0, 660.0],\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"PLAN SECTION BASE -RECEPTION 658\\nSCALE 1:24 (1/2\\\" = 1'-0\\\")\\nARCH REF: NA\"\n    },\n    {\n      \"view_id\": 2,\n      \"view_title_raw\": \"PLAN SECTION TALL -RECEPTION 658\",\n      \"view_type\": \"SECTION\",\n      \"room_name\": \"RECEPTION\",\n      \"room_number\": \"658\",\n      \"arch_ref_raw\": \"NA\",\n      \"title_bbox_percent\": [115.0, 685.0, 260.0, 715.0],\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"PLAN SECTION TALL -RECEPTION 658\\nSCALE 1:24 (1/2\\\" = 1'-0\\\")\\nARCH REF: NA\"\n    }\n  ]\n}",
+    "error": null
+  }
+}

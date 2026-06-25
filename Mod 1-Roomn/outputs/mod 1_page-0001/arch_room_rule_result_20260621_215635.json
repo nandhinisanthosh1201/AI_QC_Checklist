@@ -1,0 +1,181 @@
+{
+  "rule_code": "ARCH-ROOM-001",
+  "rule_name": "Room Name and Room Number Verification",
+  "submittal_path": "inputs\\mod 1_page-0001.jpg",
+  "run_timestamp": "2026-06-21T21:56:35.883568",
+  "total_views": 3,
+  "pass_count": 1,
+  "fail_count": 2,
+  "review_required_count": 0,
+  "view_validation_results": [
+    {
+      "view_id": 1,
+      "submittal_room_name": "RECEPTION",
+      "submittal_room_number": "109",
+      "submittal_view_title": "KEY PLAN",
+      "arch_crop_path": "inputs\\A 101.1.jpg",
+      "arch_rooms_found": [
+        {
+          "room_name": "RECEPTION",
+          "room_number": "109"
+        },
+        {
+          "room_name": "LOBBY",
+          "room_number": "109"
+        },
+        {
+          "room_name": "ENTRY PLAZA",
+          "room_number": ""
+        },
+        {
+          "room_name": "CIRCULATION",
+          "room_number": "110"
+        },
+        {
+          "room_name": "COURTYARD",
+          "room_number": "100"
+        },
+        {
+          "room_name": "FIRE SUPPRESSION ROOM",
+          "room_number": "171"
+        },
+        {
+          "room_name": "STOR",
+          "room_number": "133"
+        },
+        {
+          "room_name": "ELEC",
+          "room_number": "131"
+        },
+        {
+          "room_name": "PREFUNCTION",
+          "room_number": "120"
+        },
+        {
+          "room_name": "IDF",
+          "room_number": "128"
+        }
+      ],
+      "rule_result": {
+        "submittal_room_name": "RECEPTION",
+        "submittal_room_number": "109",
+        "architectural_room_name": "RECEPTION",
+        "architectural_room_number": "109",
+        "architectural_rooms_all": "RECEPTION 109; LOBBY 109; ENTRY PLAZA; CIRCULATION 110; COURTYARD 100; FIRE SUPPRESSION ROOM 171; STOR 133; ELEC 131; PREFUNCTION 120; IDF 128",
+        "room_name_match": true,
+        "room_number_match": true,
+        "name_similarity_score": 100.0,
+        "confidence_score": 98,
+        "status": "PASS",
+        "reason": "Submittal room name and room number match the architectural reference view."
+      }
+    },
+    {
+      "view_id": 2,
+      "submittal_room_name": "- STAFF",
+      "submittal_room_number": "501",
+      "submittal_view_title": "PLAN - STAFF 501",
+      "arch_crop_path": "inputs\\A 401.jpg",
+      "arch_rooms_found": [
+        {
+          "room_name": "LOBBY",
+          "room_number": "100"
+        },
+        {
+          "room_name": "ALL GENDER",
+          "room_number": "101"
+        },
+        {
+          "room_name": "SECURITY VAULT",
+          "room_number": "104"
+        }
+      ],
+      "rule_result": {
+        "submittal_room_name": "- STAFF",
+        "submittal_room_number": "501",
+        "architectural_room_name": "SECURITY VAULT",
+        "architectural_room_number": "104",
+        "architectural_rooms_all": "LOBBY 100; ALL GENDER 101; SECURITY VAULT 104",
+        "room_name_match": false,
+        "room_number_match": false,
+        "name_similarity_score": 30.76923076923077,
+        "confidence_score": 75,
+        "status": "FAIL",
+        "reason": "Neither room name nor room number match. Submittal='- STAFF 501'. All rooms on arch view: LOBBY 100; ALL GENDER 101; SECURITY VAULT 104.",
+        "mismatch_field": "BOTH"
+      }
+    },
+    {
+      "view_id": 3,
+      "submittal_room_name": "- STAFF",
+      "submittal_room_number": "501",
+      "submittal_view_title": "PLAN SECTION - STAFF 501",
+      "arch_crop_path": "inputs\\A 582.jpg",
+      "arch_rooms_found": [
+        {
+          "room_name": "LOBBY LOCKABLE DISPLAY CASE",
+          "room_number": ""
+        }
+      ],
+      "rule_result": {
+        "submittal_room_name": "- STAFF",
+        "submittal_room_number": "501",
+        "architectural_room_name": "LOBBY LOCKABLE DISPLAY CASE",
+        "architectural_room_number": "",
+        "architectural_rooms_all": "LOBBY LOCKABLE DISPLAY CASE",
+        "room_name_match": false,
+        "room_number_match": null,
+        "name_similarity_score": 42.85714285714286,
+        "confidence_score": 50,
+        "status": "FAIL",
+        "reason": "Neither room name nor room number match. Submittal='- STAFF 501'. All rooms on arch view: LOBBY LOCKABLE DISPLAY CASE."
+      }
+    }
+  ],
+  "submittal_raw_output": {
+    "success": true,
+    "submittal_views": [
+      {
+        "view_id": 1,
+        "view_title": "KEY PLAN",
+        "view_type": "KEYPLAN",
+        "room_name": "RECEPTION",
+        "room_number": "109",
+        "arch_ref": "1/AE101 1",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "1",
+        "arch_sheet_no": "AE101",
+        "extraction_confidence": 95,
+        "evidence_text": "KEY PLAN SCALE NTS ARCH REF 1/AE101 1"
+      },
+      {
+        "view_id": 2,
+        "view_title": "PLAN - STAFF 501",
+        "view_type": "PLAN",
+        "room_name": "- STAFF",
+        "room_number": "501",
+        "arch_ref": "1/AE401",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "1",
+        "arch_sheet_no": "AE401",
+        "extraction_confidence": 95,
+        "evidence_text": "PLAN - STAFF 501 SCALE 1 24 1/2 1'-0 ARCH REF 1/AE401"
+      },
+      {
+        "view_id": 3,
+        "view_title": "PLAN SECTION - STAFF 501",
+        "view_type": "SECTION",
+        "room_name": "- STAFF",
+        "room_number": "501",
+        "arch_ref": "5/AE582",
+        "arch_ref_status": "VALID",
+        "arch_view_no": "5",
+        "arch_sheet_no": "AE582",
+        "extraction_confidence": 95,
+        "evidence_text": "PLAN SECTION - STAFF 501 SCALE 1 24 1/2 1'-0 ARCH REF 5/AE582"
+      }
+    ],
+    "raw_output": "{\n  \"submittal_views\": [\n    {\n      \"view_id\": 1,\n      \"view_title_raw\": \"KEY PLAN\",\n      \"view_type\": \"KEYPLAN\",\n      \"room_name\": \"RECEPTION\",\n      \"room_number\": \"109\",\n      \"arch_ref_raw\": \"1/AE101.1\",\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"KEY PLAN SCALE: NTS ARCH REF: 1/AE101.1\"\n    },\n    {\n      \"view_id\": 2,\n      \"view_title_raw\": \"PLAN - STAFF 501\",\n      \"view_type\": \"PLAN\",\n      \"room_name\": null,\n      \"room_number\": null,\n      \"arch_ref_raw\": \"1/AE401\",\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"PLAN - STAFF 501 SCALE 1:24 (1/2\\\" = 1'-0\\\") ARCH REF: 1/AE401\"\n    },\n    {\n      \"view_id\": 3,\n      \"view_title_raw\": \"PLAN SECTION - STAFF 501\",\n      \"view_type\": \"SECTION\",\n      \"room_name\": null,\n      \"room_number\": null,\n      \"arch_ref_raw\": \"5/AE582\",\n      \"extraction_confidence\": 95,\n      \"evidence_text\": \"PLAN SECTION - STAFF 501 SCALE 1:24 (1/2\\\" = 1'-0\\\") ARCH REF: 5/AE582\"\n    }\n  ]\n}",
+    "error": null
+  }
+}

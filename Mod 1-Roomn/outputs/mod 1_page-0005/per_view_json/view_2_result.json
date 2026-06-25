@@ -1,0 +1,27 @@
+{
+  "view_id": 2,
+  "submittal_room_name": "STAFF",
+  "submittal_room_number": "501",
+  "submittal_view_title": "ELEVATION EAST - STAFF 501",
+  "arch_crop_path": "inputs/A 401.jpg",
+  "arch_rooms_found": [
+    {
+      "room_name": "EOC LOBBY RM - EAST INT",
+      "room_number": "100"
+    }
+  ],
+  "rule_result": {
+    "submittal_room_name": "STAFF",
+    "submittal_room_number": "501",
+    "architectural_room_name": "EOC LOBBY RM - EAST INT",
+    "architectural_room_number": "100",
+    "architectural_rooms_all": "EOC LOBBY RM - EAST INT 100",
+    "room_name_match": false,
+    "room_number_match": false,
+    "name_similarity_score": 40.0,
+    "confidence_score": 75,
+    "status": "FAIL",
+    "reason": "Neither room name nor room number match. Submittal='STAFF 501'. All rooms on arch view: EOC LOBBY RM - EAST INT 100.",
+    "mismatch_field": "BOTH"
+  }
+}
