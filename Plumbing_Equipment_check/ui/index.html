@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blueprint Console - AI QC Pipeline</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div class="app-container">
+    <header>
+        <div class="brand">
+            <h1>AEC QC CONSOLE</h1>
+            <span>v2.0</span>
+        </div>
+        <div class="actions">
+            <button class="btn-cyan" id="btn-reset">Reset Pipeline</button>
+        </div>
+    </header>
+
+    <div class="main-content">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="step-nav active" data-step="1">
+                <span class="step-num">01</span> Document Ingestion
+            </div>
+            <div class="step-nav" data-step="2">
+                <span class="step-num">02</span> Parallel Extraction
+            </div>
+            <div class="step-nav" data-step="3">
+                <span class="step-num">03</span> JSON Generation
+            </div>
+            <div class="step-nav" data-step="4">
+                <span class="step-num">04</span> QC Report Dashboard
+            </div>
+        </aside>
+
+        <!-- View Container -->
+        <main class="view-container">
+            
+            <!-- STEP 1: Ingestion -->
+            <section id="step-1" class="view-section active">
+                <h2 class="section-title">Document Ingestion</h2>
+                <div class="upload-grid">
+                    <div class="upload-card drop-zone" id="dz-submittal">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <h3>Submittal Docs</h3>
+                        <p class="file-name">Drag & Drop PDF here</p>
+                        <input type="file" accept=".pdf" class="file-input" style="display: none;">
+                    </div>
+                    <div class="upload-card drop-zone" id="dz-plumbing">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <h3>Plumbing Schedule</h3>
+                        <p class="file-name">Drag & Drop PDF here</p>
+                        <input type="file" accept=".pdf" class="file-input" style="display: none;">
+                    </div>
+                    <div class="upload-card drop-zone" id="dz-arc">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <h3>Architectural Plans</h3>
+                        <p class="file-name">Drag & Drop PDF here</p>
+                        <input type="file" accept=".pdf" class="file-input" style="display: none;">
+                    </div>
+                </div>
+                <div class="upload-action">
+                    <button class="btn-cyan" id="btn-start-extract" disabled>Initialize Extraction <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </section>
+
+            <!-- STEP 2: Extraction -->
+            <section id="step-2" class="view-section">
+                <h2 class="section-title">Parallel Extraction Engines</h2>
+                
+                <div class="progress-container">
+                    <div class="progress-item">
+                        <div class="prog-label"><span>plumbing.py</span> <span id="prog-val-1">0%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" id="prog-fill-1"></div></div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="prog-label"><span>plumbing16_extractor.py</span> <span id="prog-val-2">0%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" id="prog-fill-2"></div></div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="prog-label"><span>task3_extractor.py</span> <span id="prog-val-3">0%</span></div>
+                        <div class="progress-bar"><div class="progress-fill" id="prog-fill-3"></div></div>
+                    </div>
+                </div>
+
+                <div class="glass-panel" style="padding: 1rem;">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="term-dot r"></div>
+                            <div class="term-dot y"></div>
+                            <div class="term-dot g"></div>
+                            <span style="margin-left: 1rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-secondary);">bash - terminal</span>
+                        </div>
+                        <div class="terminal-body" id="term-output">
+                            <!-- Logs injected by JS -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- STEP 3: JSON Generation -->
+            <section id="step-3" class="view-section">
+                <h2 class="section-title">JSON Artifact Generation</h2>
+                <div style="display: flex; gap: 2rem; align-items: center; justify-content: center; height: 300px;">
+                    <div class="glass-panel" style="text-align: center;">
+                        <i class="fa-solid fa-code" style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 1rem;"></i>
+                        <h3 style="font-family: var(--font-mono); font-size: 1rem;">extracted_schedules.json</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;">(General Schedules)</p>
+                    </div>
+                    <i class="fa-solid fa-plus" style="color: var(--text-secondary);"></i>
+                    <div class="glass-panel" style="text-align: center;">
+                        <i class="fa-solid fa-code" style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 1rem;"></i>
+                        <h3 style="font-family: var(--font-mono); font-size: 1rem;">plumbing16/extracted_schedules.json</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;">(Plumbing Schedule)</p>
+                    </div>
+                    <i class="fa-solid fa-plus" style="color: var(--text-secondary);"></i>
+                    <div class="glass-panel" style="text-align: center;">
+                        <i class="fa-solid fa-code" style="font-size: 2rem; color: var(--accent-cyan); margin-bottom: 1rem;"></i>
+                        <h3 style="font-family: var(--font-mono); font-size: 1rem;">ALL_PAGES_summary.json</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;">(Drawing Annotations)</p>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">All schemas validated. Ready for Cross-Check.</p>
+                    <button class="btn-cyan" id="btn-run-qc">Run qc_cross_check.py <i class="fa-solid fa-microchip"></i></button>
+                </div>
+            </section>
+
+            <!-- STEP 4: QC Report -->
+            <section id="step-4" class="view-section">
+                <h2 class="section-title">AI-Verified QC Report</h2>
+                
+                <div class="qc-stats">
+                    <div class="glass-panel stat-card">
+                        <h2>10</h2>
+                        <p>Total Tags</p>
+                    </div>
+                    <div class="glass-panel stat-card success">
+                        <h2>5</h2>
+                        <p>Matched</p>
+                    </div>
+                    <div class="glass-panel stat-card warning">
+                        <h2>3</h2>
+                        <p>Mismatches</p>
+                    </div>
+                    <div class="glass-panel stat-card danger">
+                        <h2>2</h2>
+                        <p>Missing</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel">
+                    <h3 style="margin-bottom: 1.5rem; font-family: var(--font-mono); color: var(--text-secondary);">INFORMATION MISMATCHES</h3>
+                    <div id="mismatch-list">
+                        <!-- Injected by JS -->
+                    </div>
+
+                    <h3 style="margin-top: 2.5rem; margin-bottom: 1.5rem; font-family: var(--font-mono); color: var(--text-secondary);">MISSING FROM MASTER SCHEDULE</h3>
+                    <div id="missing-list">
+                        <!-- Injected by JS -->
+                    </div>
+
+                    <h3 style="margin-top: 2.5rem; margin-bottom: 1.5rem; font-family: var(--font-mono); color: var(--text-secondary);">SUCCESSFULLY MATCHED</h3>
+                    <div id="matched-list">
+                        <!-- Injected by JS -->
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

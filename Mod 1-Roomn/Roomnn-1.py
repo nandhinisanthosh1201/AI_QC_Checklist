@@ -76,7 +76,7 @@ ocr_engine = None
 # ============================================================
 # OPENROUTER / QWEN CONFIG
 # ============================================================
-OPENROUTER_API_KEY  = os.environ.get("OPENROUTER_API_KEY", "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")
+OPENROUTER_API_KEY  = os.environ.get("OPENROUTER_API_KEY", "")
 
 OPENROUTER_MODEL    = "qwen/qwen3-vl-32b-instruct"
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1/chat/completions"
