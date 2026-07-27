@@ -1,0 +1,158 @@
+{
+  "rule_id": "RULE_NOTE_VDU2_BY_OTHERS_001",
+  "rule_name": "VDU-2 White Marker Board By Others Note Validation",
+  "type_of_rule": "note_validation",
+  "category": "Notes Check",
+  "discipline": "Millwork",
+  "required_sources": [
+    "Submittal Drawing",
+    "Architectural Drawing"
+  ],
+  "source_priority": [
+    "Submittal Drawing",
+    "Architectural Drawing"
+  ],
+  "views_need_to_check": [
+    "Elevation"
+  ],
+  "geometry_logic": {
+    "boundary_detection": "Detect the White Marker Board scope ONLY by identifying the COMBINED structure: a large wall-mounted rectangular board outline (dashed or solid boundary) AND four circular mounting holes positioned near its four corners, appearing together as a single connected board structure in the upper portion of the elevation view. Both the rectangular boundary AND the four corner holes must be present together — neither alone is sufficient.",
+    "wall_interaction_conditions": [
+      "A rectangular board outline (dashed or solid) is visible in the elevation view",
+      "Four circular mounting holes are visible near the four corners of that SAME rectangular outline",
+      "The rectangle and the four corner holes must belong to the same board structure, not separate/unrelated shapes elsewhere in the drawing",
+      "The board is mounted on or aligned with the wall/elevation surface, typically in the upper portion of the elevation",
+      "The physical board structure is identifiable purely by this combined rectangle + 4-corner-hole shape, even without a VDU-2 tag or note",
+      "geometry_applicable = true ONLY when BOTH the rectangular boundary AND the four corner holes are present together as one structure",
+      "geometry_applicable = false if only a rectangle/box is present WITHOUT the four corner holes, or if isolated circles are present WITHOUT a matching rectangular boundary connecting them"
+    ],
+    "expected_boundary_region": "Around the wall-mounted rectangular board outline together with its four corner mounting holes, including the board surface between them. Do not depend on VDU-2 tags, leader lines, schedule references, or note text to determine geometry applicability. Do not mark geometry_applicable = true based on a rectangle alone or holes alone — the combined structure is required. This single image represents one elevation view; do not assume a separate view exists elsewhere within the same crop."
+  },
+  "required_entities": [
+    "Marker Board By Others Note"
+  ],
+  "optional_entities": [
+    "VDU-2",
+    "White Marker Board",
+    "Marker Board",
+    "Board Boundary",
+    "Wall Mounted Board",
+    "Leader Line",
+    "Schedule Reference"
+  ],
+  "detected_text_variants": [
+    "WHITE MARKER BOARD BY OTHERS",
+    "WHITE MARKER BOARD B.O.",
+    "MARKER BOARD BY OTHERS",
+    "MARKER BOARD B.O.",
+    "BOARD BY OTHERS",
+    "PROVIDE MARKER BOARD BY OTHERS",
+    "PROVIDE WHITE MARKER BOARD BY OTHERS"
+  ],
+  "pass_condition": [
+    "Arch drawing has VDU-2 or WHITE MARKER BOARD AND submittal has MARKER BOARD BY OTHERS note.",
+    "Confidence score >= 75.0."
+  ],
+  "fail_condition": [
+    "Arch drawing has VDU-2 but submittal is missing MARKER BOARD BY OTHERS note.",
+    "VDU-2 scope confirmed from arch but no BY OTHERS responsibility note found in submittal."
+  ],
+  "review_required_condition": [
+    "VDU-2 scope is applicable but the note text is unclear or partially readable.",
+    "Confidence score is below 75.0.",
+    "VDU-2 tag is visible but its connected object or leader region is unclear.",
+    "Schedule shows VDU-2 as White Marker Board, but drawing location is ambiguous.",
+    "Multiple nearby notes create uncertainty about whether the BY OTHERS note belongs to VDU-2."
+  ],
+  "omit_condition": [
+    "Arch drawing does not contain VDU-2 or WHITE MARKER BOARD — scope not applicable.",
+    "ARCH REF not found in submittal and arch drawing not available.",
+    "Drawing sheet does not contain VDU-2 scope.",
+    "Rectangle boundary present without the four corner holes, or corner holes present without a matching rectangle — combined structure not confirmed."
+  ],
+  "allowed_status": [
+    "PASS",
+    "FAIL",
+    "REVIEW_REQUIRED",
+    "OMITTED"
+  ],
+  "confidence_score": {
+    "type": "float",
+    "range": "0.0 - 100.0",
+    "minimum_pass_threshold": 75.0
+  },
+  "coordinate_format": "xyxy",
+  "coordinate_keys": {
+    "x1": "left",
+    "y1": "top",
+    "x2": "right",
+    "y2": "bottom"
+  },
+  "markup_required": true,
+  "markup_color": "red",
+  "markup_label": "VDU-2 MARKER BOARD BY OTHERS — CHECK",
+  "severity": "Major",
+  "priority": "High",
+  "output_required": {
+    "confidence_score": true,
+    "reasoning": true,
+    "coordinates": true,
+    "detected_text": true
+  },
+  "reasoning": {
+    "type": "string",
+    "description": "Explain whether VDU-2 / White Marker Board scope is applicable, whether the BY OTHERS responsibility note is found, and why the final status is PASS, FAIL, OMITTED, or REVIEW_REQUIRED."
+  },
+  "output_json_format": {
+    "rule_id": "string",
+    "rule_name": "string",
+    "sheet_status": "PASS | FAIL | OMITTED | REVIEW_REQUIRED",
+    "view_results": [
+      {
+        "view_id": "V1",
+        "view_type": "Detected actual view title from drawing",
+        "matched_rule_view": "Matched rule view or null",
+        "view_applicable": "boolean",
+        "geometry_applicable": "boolean",
+        "mod_condition_active": "boolean",
+        "required_note_found": "boolean",
+        "status": "PASS | FAIL | OMITTED | REVIEW_REQUIRED",
+        "confidence_score": "float",
+        "reasoning": "string",
+        "detected_entities": [
+          {
+            "entity_name": "string",
+            "detected_text": "string",
+            "coordinates": {
+              "x1": 0,
+              "y1": 0,
+              "x2": 0,
+              "y2": 0
+            }
+          }
+        ]
+      }
+    ],
+    "markup_required": "boolean",
+    "markup_color": "string",
+    "markup_label": "string",
+    "severity": "Minor | Major | Critical",
+    "priority": "Low | Medium | High"
+  },
+  "applicability_logic": {
+    "check_view_before_fail": true,
+    "check_geometry_before_fail": true,
+    "check_mod_condition_before_fail": true,
+    "if_view_not_applicable": "OMITTED",
+    "if_geometry_not_applicable": "OMITTED",
+    "if_mod_not_applicable": "OMITTED",
+    "if_condition_unclear": "REVIEW_REQUIRED",
+    "fail_only_when_condition_active_and_note_missing": true,
+    "arch_check_direction": "arch_triggers_millwork_check",
+    "arch_missing_action": "OMITTED"
+  },
+  "arch_trigger_variants": [
+    "VDU-2",
+    "VDU2"
+  ]
+}

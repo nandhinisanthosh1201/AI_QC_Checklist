@@ -1,0 +1,38 @@
+[
+  {
+    "view_name": "SECTION - DOOR/DRAWER CABINET",
+    "arch_ref": "7/AE581",
+    "view_type": "Section",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 - 2026-07-02T114735.942\\S4\\S4_B.png"
+  },
+  {
+    "view_name": "SECTION - SHROUD CABINET",
+    "arch_ref": "9/AE583",
+    "view_type": "Section",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 - 2026-07-02T114735.942\\S4\\S4_A.png"
+  },
+  {
+    "view_name": "SECTION - 3 DRAWER CABINET",
+    "arch_ref": "1/AE583",
+    "view_type": "Section",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 - 2026-07-02T114735.942\\S5\\S5_A.png"
+  },
+  {
+    "view_name": "SECTION - 3 DRAWER CABINET",
+    "arch_ref": "2/AE583",
+    "view_type": "Section",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 - 2026-07-02T114735.942\\S5\\S5_B.png"
+  },
+  {
+    "view_name": "SECTION - 3 DRAWER CABINET",
+    "arch_ref": "2/AE583",
+    "view_type": "Section",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 - 2026-07-02T114735.942\\S6\\S6_A.png"
+  },
+  {
+    "view_name": "SECTION - ACCESSIBLE SINK CABINET",
+    "arch_ref": "12/AE581",
+    "view_type": "Section",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 - 2026-07-02T114735.942\\S6\\S6_B.png"
+  }
+]

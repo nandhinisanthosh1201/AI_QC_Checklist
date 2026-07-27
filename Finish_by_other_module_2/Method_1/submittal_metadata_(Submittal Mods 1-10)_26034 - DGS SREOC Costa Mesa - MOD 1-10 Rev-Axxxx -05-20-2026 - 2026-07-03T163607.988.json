@@ -1,0 +1,14 @@
+[
+  {
+    "view_name": "ELEVATION NORTH - LOBBY 100",
+    "arch_ref": "3/AE401",
+    "view_type": "Elevation",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 - 2026-07-03T163607.988\\1.2\\1.2_1.png"
+  },
+  {
+    "view_name": "PL-E",
+    "arch_ref": "",
+    "view_type": "Plan",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 - 2026-07-03T163607.988\\1.2\\1.2_QTY.png"
+  }
+]

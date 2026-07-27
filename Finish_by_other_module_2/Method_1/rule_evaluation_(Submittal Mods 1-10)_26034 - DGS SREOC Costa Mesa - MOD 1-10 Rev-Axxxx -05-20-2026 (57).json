@@ -1,0 +1,74 @@
+[
+  {
+    "rule_id": "RULE_NOTE_VDU1_BY_OTHERS_001",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 (57)\\2.1\\2.1_1.png",
+    "arch_ref": "1/AE101.1",
+    "view_name": "KEY PLAN",
+    "view_type": "Plan",
+    "view_applicable": false,
+    "status": "OMITTED"
+  },
+  {
+    "rule_id": "RULE_NOTE_VDU1_BY_OTHERS_001",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 (57)\\2.1\\2.1_2.png",
+    "arch_ref": "1/AE406",
+    "view_name": "PLAN - CONFERENCE 102",
+    "view_type": "Plan",
+    "view_applicable": false,
+    "status": "OMITTED"
+  },
+  {
+    "rule_id": "RULE_NOTE_VDU1_BY_OTHERS_001",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 (57)\\2.2\\2.2_1.png",
+    "arch_ref": "9/AE406",
+    "view_name": "ELEVATION WEST - CONFERENCE 102",
+    "view_type": "Elevation",
+    "view_applicable": true,
+    "status": "PASS_APPLICABILITY_CHECK"
+  },
+  {
+    "rule_id": "RULE_NOTE_VDU1_BY_OTHERS_001",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 (57)\\2.3\\2.3_1.png",
+    "arch_ref": "1/AE406",
+    "view_name": "PLAN - CONFERENCE 102",
+    "view_type": "Plan",
+    "view_applicable": false,
+    "status": "OMITTED"
+  },
+  {
+    "rule_id": "RULE_NOTE_VDU1_BY_OTHERS_001",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 (57)\\2.3\\2.3_2.png",
+    "arch_ref": "NA",
+    "view_name": "PLAN SECTION - CONFERENCE 102",
+    "view_type": "Section",
+    "view_applicable": false,
+    "status": "OMITTED"
+  },
+  {
+    "rule_id": "RULE_NOTE_VDU1_BY_OTHERS_001",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 (57)\\2.4\\2.4_1.png",
+    "arch_ref": "6/AE406",
+    "view_name": "ELEVATION NORTH - CONFERENCE 102",
+    "view_type": "Elevation",
+    "view_applicable": true,
+    "status": "PASS_APPLICABILITY_CHECK"
+  },
+  {
+    "rule_id": "RULE_NOTE_VDU1_BY_OTHERS_001",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 (57)\\2.5\\2.5_1.png",
+    "arch_ref": "1/AE406",
+    "view_name": "PLAN - CONFERENCE 102",
+    "view_type": "Plan",
+    "view_applicable": false,
+    "status": "OMITTED"
+  },
+  {
+    "rule_id": "RULE_NOTE_VDU1_BY_OTHERS_001",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 (57)\\2.5\\2.5_2.png",
+    "arch_ref": "7/AE406",
+    "view_name": "ELEVATION EAST - CONFERENCE 102",
+    "view_type": "Elevation",
+    "view_applicable": true,
+    "status": "PASS_APPLICABILITY_CHECK"
+  }
+]

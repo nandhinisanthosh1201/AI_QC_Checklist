@@ -1,0 +1,20 @@
+[
+  {
+    "view_name": "ELEVATION NORTH - RECEPTION",
+    "arch_ref": "8/AE580",
+    "view_type": "Elevation",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 (94)\\1.12\\1.12_1.png"
+  },
+  {
+    "view_name": "ELEVATION EAST - RECEPTION",
+    "arch_ref": "7/AE580",
+    "view_type": "Elevation",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 (94)\\1.12\\1.12_2.png"
+  },
+  {
+    "view_name": "ELEVATION EAST - RECEPTION",
+    "arch_ref": "7/AE580",
+    "view_type": "Elevation",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 (94)\\1.12\\1.12_3.png"
+  }
+]

@@ -1,0 +1,162 @@
+{
+    "rule_id": "RULE_NOTE_RUBBER_BASE_BY_OTHERS_001",
+    "rule_name": "Rubber Base By Others Note Validation",
+    "type_of_rule": "note_validation",
+    "category": "Notes Check",
+    "discipline": "Millwork",
+    "required_sources": [
+        "Submittal Drawing",
+        "Architectural Drawing"
+    ],
+    "source_priority": [
+        "Submittal Drawing",
+        "Architectural Drawing"
+    ],
+    "views_need_to_check": [
+        "Elevation",
+        "Section"
+    ],
+    "view_matching_logic": {
+        "Elevation": "Validate rubber base by others note in elevation view when the millwork run visibly terminates at a floor/base region at the bottom of the view.",
+        "Section": "Validate rubber base by others note in section view when the millwork profile visibly terminates at a wall-floor junction, base, or toe-kick region at the bottom of the view."
+    },
+    "geometry_logic": {
+        "boundary_detection": "Determine geometry_applicable based on VISUAL base condition, not tag text. geometry_applicable = TRUE if the millwork run in the view visibly terminates at or near a floor line, toe-kick recess, or wall-floor junction at the bottom of the Elevation or Section — i.e., a base condition is physically depicted, regardless of whether any text note is present there. Do NOT search for literal 'RB-1' or 'RUBBER BASE' tag text on the submittal to decide geometry_applicable — these are arch-side tags that typically do not appear on submittal drawings. The presence or absence of the BY OTHERS note text (RUBBER BASE BY OTHERS, BASE FINISH BY OTHERS, etc.) is checked separately as required_note_found and must NOT influence geometry_applicable. In Elevation views, the base condition typically spans the bottom edge of the full millwork run. In Section views, it typically appears near the finished-floor line at the bottom of the profile.",
+        "wall_interaction_conditions": [
+            "Floor line visible below millwork",
+            "Wall base junction visible",
+            "Toe-kick region shown",
+            "Millwork terminates at finished floor",
+            "Wall and floor intersection visible in elevation or section"
+        ],
+        "expected_boundary_region": "Elevation: bottom edge of the millwork run where it meets the floor/toe-kick. Section: base of the profile at the finished-floor line. Geometry is judged by this physical termination, independent of note text presence."
+    },
+    "required_entities": [
+        "Rubber Base By Others Note"
+    ],
+    "optional_entities": [
+        "RB-1",
+        "Rubber Base",
+        "Wall Base",
+        "Floor Finish",
+        "Toe-Kick",
+        "Floor Line",
+        "Leader Line"
+    ],
+    "detected_text_variants": [
+        "RUBBER BASE BY OTHERS",
+        "RB BY OTHERS",
+        "RUBBER WALL BASE BY OTHERS",
+        "RUBBER BASE B.O.",
+        "BASE BY OTHERS",
+        "BASE FINISH BY OTHERS",
+        "BASE FINISH B.O."
+    ],
+    "pass_condition": [
+        "Arch drawing has RB-1, RB1, RUBBER BASE, or RUBBER WALL BASE AND submittal has RUBBER BASE BY OTHERS or valid base by others variant.",
+        "Confidence score >= 75.0."
+    ],
+    "fail_condition": [
+        "Arch drawing has RB-1, RB1, RUBBER BASE, or RUBBER WALL BASE but submittal is missing RUBBER BASE BY OTHERS or valid base by others variant."
+    ],
+    "review_required_condition": [
+        "Rubber base scope is applicable but text is unclear, partially readable, or unreadable.",
+        "Confidence score is below 75.0.",
+        "Wall base or floor finish region is visible but note association is ambiguous.",
+        "Multiple nearby finish notes create confusion about whether the rubber base is by others."
+    ],
+    "omit_condition": [
+        "Arch drawing does not contain RB-1, RB1, RUBBER BASE, or RUBBER WALL BASE.",
+        "ARCH REF not found in submittal and arch drawing is not available.",
+        "Drawing view is not Elevation or Section."
+    ],
+    "allowed_status": [
+        "PASS",
+        "FAIL",
+        "REVIEW_REQUIRED",
+        "OMITTED"
+    ],
+    "confidence_score": {
+        "type": "float",
+        "range": "0.0 - 100.0",
+        "minimum_pass_threshold": 75.0
+    },
+    "coordinate_format": "xyxy",
+    "coordinate_keys": {
+        "x1": "left",
+        "y1": "top",
+        "x2": "right",
+        "y2": "bottom"
+    },
+    "markup_required": true,
+    "markup_color": "red",
+    "markup_label": "RUBBER BASE BY OTHERS — CHECK",
+    "severity": "Major",
+    "priority": "High",
+    "output_required": {
+        "confidence_score": true,
+        "reasoning": true,
+        "coordinates": true,
+        "detected_text": true
+    },
+    "reasoning": {
+        "type": "string",
+        "description": "Explain why the rule returned PASS, FAIL, OMITTED, or REVIEW_REQUIRED based on the presence of rubber base scope and rubber base by others note."
+    },
+    "output_json_format": {
+        "rule_id": "string",
+        "rule_name": "string",
+        "sheet_status": "PASS | FAIL | OMITTED | REVIEW_REQUIRED",
+        "view_results": [
+            {
+                "view_id": "V1",
+                "view_type": "Detected actual view title from drawing",
+                "matched_rule_view": "Matched rule view or null",
+                "view_applicable": "boolean",
+                "geometry_applicable": "boolean",
+                "mod_condition_active": "boolean",
+                "required_note_found": "boolean",
+                "status": "PASS | FAIL | OMITTED | REVIEW_REQUIRED",
+                "confidence_score": "float",
+                "reasoning": "string",
+                "detected_entities": [
+                    {
+                        "entity_name": "string",
+                        "detected_text": "string",
+                        "coordinates": {
+                            "x1": 0,
+                            "y1": 0,
+                            "x2": 0,
+                            "y2": 0
+                        }
+                    }
+                ]
+            }
+        ],
+        "markup_required": "boolean",
+        "markup_color": "string",
+        "markup_label": "string",
+        "severity": "Minor | Major | Critical",
+        "priority": "Low | Medium | High"
+    },
+    "applicability_logic": {
+        "check_view_before_fail": true,
+        "check_geometry_before_fail": true,
+        "check_mod_condition_before_fail": true,
+        "if_view_not_applicable": "OMITTED",
+        "if_geometry_not_applicable": "OMITTED",
+        "if_mod_not_applicable": "OMITTED",
+        "if_condition_unclear": "REVIEW_REQUIRED",
+        "fail_only_when_condition_active_and_note_missing": true,
+        "arch_check_direction": "arch_triggers_millwork_check",
+        "arch_missing_action": "OMITTED"
+    },
+    "arch_trigger_variants": [
+        "RUBBER BASE",
+        "RB-1",
+        "RB1",
+        "RUBBER WALL BASE",
+        "BASE FINISH BY OTHERS",
+        "BASE FINISH"
+    ]
+}

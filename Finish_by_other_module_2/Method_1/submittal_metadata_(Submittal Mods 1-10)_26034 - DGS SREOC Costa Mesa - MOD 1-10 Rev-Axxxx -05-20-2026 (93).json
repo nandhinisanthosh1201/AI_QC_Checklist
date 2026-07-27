@@ -1,0 +1,20 @@
+[
+  {
+    "view_name": "SECTION A",
+    "arch_ref": "",
+    "view_type": "Section",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 (93)\\1.19\\1.19_33.png"
+  },
+  {
+    "view_name": "SECTION - BASE CABINET w/ DOOR",
+    "arch_ref": "7/AE584",
+    "view_type": "Section",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 (93)\\1.19\\1.19_A.png"
+  },
+  {
+    "view_name": "SECTION - COUNTERTOP",
+    "arch_ref": "NA",
+    "view_type": "Section",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 (93)\\1.19\\1.19_B.png"
+  }
+]

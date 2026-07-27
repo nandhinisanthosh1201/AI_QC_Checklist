@@ -1,0 +1,163 @@
+{
+  "rule_id": "RULE_NOTE_DOOR_BY_OTHERS_001",
+  "rule_name": "Door By Others Note Validation",
+  "type_of_rule": "note_validation",
+  "category": "Notes Check",
+  "discipline": "Millwork",
+  "required_sources": [
+    "Submittal Drawing"
+  ],
+  "source_priority": [
+    "Submittal Drawing"
+  ],
+  "views_need_to_check": [
+    "Elevation"
+  ],
+  "view_matching_logic": {
+    "Elevation": "Check only Elevation views that visibly show a building door, door opening, door frame, door jamb, or full-height door/opening condition associated with the millwork scope. Do not check every Elevation. Cabinet-only elevations, countertop-only elevations, wall-finish-only elevations, media wall elevations, appliance elevations, or elevations with no visible building door/opening condition shall be omitted."
+  },
+  "geometry_logic": {
+    "boundary_detection": "This rule applies only to Elevation views. In an Elevation, a building door may appear as a full-height rectangular architectural opening, door frame, jamb, door panel, or diagonal door-leaf graphic. If this door geometry is complete and clear, geometry_applicable must be true. If any possible door-like full-height rectangular opening or diagonal door-leaf graphic is partially visible, faint, cropped, or ambiguous, do not return OMITTED; return REVIEW_REQUIRED. Return OMITTED only when there is no visible or partial evidence of a building door/opening anywhere in the Elevation.",
+    "wall_interaction_conditions": [
+      "The detected view is an Elevation.",
+      "A graphical building door/opening condition is visible in the same Elevation.",
+      "A valid door condition may appear as a full-height rectangular outline, door frame, jamb, door panel, door leaf, diagonal door-panel graphics, or door-like full-height opening.",
+      "Door text, door tag, or door swing arc is not mandatory if graphical door/opening geometry is visible.",
+      "A full-height rectangular architectural opening containing diagonal door-leaf graphics shall be treated as a valid building door.",
+      "Door text, door tag, or swing arc is optional and not required.",
+      "If a tall side rectangular opening with diagonal graphics is visible near the edge of an Elevation, do not classify it as cabinet construction with high confidence. If uncertain whether it is a building door or cabinet/millwork panel, return REVIEW_REQUIRED, not OMITTED.",
+      "Cabinet doors, drawer fronts, appliance fronts, and millwork panels shall not be interpreted as building doors.",
+      "Cabinet doors, drawer fronts, appliance doors, and hardware schedule references shall not activate this rule."
+    ],
+    "expected_boundary_region": "The expected checking region is the building door/opening/frame/jamb area within the same Elevation view. The DOOR BY OTHERS note must belong to the same Elevation crop and must not be copied from another view."
+  },
+  "required_entities": [
+    "Door By Others Note"
+  ],
+  "optional_entities": [
+    "Door",
+    "Door Opening",
+    "Door Frame",
+    "Door Jamb",
+    "Wall Opening",
+    "Leader Line"
+  ],
+  "detected_text_variants": [
+    "DOOR BY OTHERS",
+    "DOORS BY OTHERS",
+    "DOOR AND FRAME BY OTHERS",
+    "DOOR FRAME BY OTHERS",
+    "DOOR HARDWARE BY OTHERS",
+    "DR BY OTHERS",
+    "DOOR B.O."
+  ],
+  "pass_condition": [
+    "The detected view is an Elevation.",
+    "The same Elevation shows a graphical building door/opening condition such as full-height rectangular outline, door frame, jamb, door panel, door leaf, or diagonal door-panel graphics.",
+    "The required DOOR BY OTHERS note or accepted variant is visibly present in the same Elevation near the door/opening/frame region.",
+    "Detected note evidence, detected_text, and coordinates are non-empty and belong to the same view_id/crop.",
+    "Confidence score is greater than or equal to 75."
+  ],
+  "fail_condition": [
+    "The detected view is an Elevation.",
+    "The same Elevation shows a graphical building door/opening condition such as full-height rectangular outline, door frame, jamb, door panel, door leaf, or diagonal door-panel graphics.",
+    "The required DOOR BY OTHERS note is missing from that same Elevation.",
+    "Failure is not allowed based on Elevation type alone; the building door/opening condition must be active.",
+    "The Elevation contains a graphical building door represented by a full-height rectangular opening with architectural door-leaf graphics, but the required DOOR BY OTHERS note is missing.",
+    "Failure is allowed when a graphical building door representation (including a full-height rectangular door with diagonal door-leaf symbol) is clearly visible but the required DOOR BY OTHERS note is missing."
+  ],
+  "review_required_condition": [
+    "Door scope is applicable but text is unclear, partially readable, or unreadable.",
+    "Door object is visible but note association is ambiguous.",
+    "Multiple nearby notes create confusion about whether the door is by others.",
+    "A possible building door/opening is partially visible, faint, clipped, or ambiguous.",
+    "A possible full-height rectangular opening or diagonal door-leaf graphic is visible but cannot be confidently distinguished from millwork or wall panel graphics.",
+    "The view contains a door-like vertical rectangular object near the side of the Elevation, but the complete door frame/opening is not clearly visible.",
+    "Confidence score is below 75.",
+    "Do not return OMITTED when partial door-like geometry is visible. If a possible full-height rectangular door/opening or diagonal door-leaf graphic is partially visible but not enough to confidently validate the door scope, return REVIEW_REQUIRED."
+  ],
+  "omit_condition": [
+    "The detected view is not an Elevation.",
+    "Return OMITTED only when the Elevation contains no visible door-like evidence at all: no full-height rectangular opening, no tall side rectangular opening, no diagonal door-leaf graphic, no door frame, and no wall-opening shape.",
+    "The note appears elsewhere on the sheet but not in this exact Elevation view."
+  ],
+  "allowed_status": [
+    "PASS",
+    "FAIL",
+    "REVIEW_REQUIRED",
+    "OMITTED"
+  ],
+  "confidence_score": {
+    "type": "float",
+    "range": "0.0 - 100.0",
+    "minimum_pass_threshold": 75
+  },
+  "coordinate_format": "xyxy",
+  "coordinate_keys": {
+    "x1": "left",
+    "y1": "top",
+    "x2": "right",
+    "y2": "bottom"
+  },
+  "markup_required": true,
+  "markup_color": "red",
+  "markup_label": "DOOR BY OTHERS — CHECK",
+  "severity": "Major",
+  "priority": "High",
+  "output_required": {
+    "confidence_score": true,
+    "reasoning": true,
+    "coordinates": true,
+    "detected_text": true
+  },
+  "reasoning": {
+    "type": "string",
+    "description": "Explain why the rule returned PASS, FAIL, OMITTED, or REVIEW_REQUIRED based on the presence of door scope and door by others note."
+  },
+  "output_json_format": {
+    "rule_id": "string",
+    "rule_name": "string",
+    "sheet_status": "PASS | FAIL | OMITTED | REVIEW_REQUIRED",
+    "view_results": [
+      {
+        "view_id": "V1",
+        "view_type": "Detected actual view title from drawing",
+        "matched_rule_view": "Matched rule view or null",
+        "view_applicable": "boolean",
+        "geometry_applicable": "boolean",
+        "mod_condition_active": "boolean",
+        "required_note_found": "boolean",
+        "status": "PASS | FAIL | OMITTED | REVIEW_REQUIRED",
+        "confidence_score": "float",
+        "reasoning": "string",
+        "detected_entities": [
+          {
+            "entity_name": "string",
+            "detected_text": "string",
+            "coordinates": {
+              "x1": 0,
+              "y1": 0,
+              "x2": 0,
+              "y2": 0
+            }
+          }
+        ]
+      }
+    ],
+    "markup_required": "boolean",
+    "markup_color": "string",
+    "markup_label": "string",
+    "severity": "Minor | Major | Critical",
+    "priority": "Low | Medium | High"
+  },
+  "applicability_logic": {
+    "check_view_before_fail": true,
+    "check_geometry_before_fail": true,
+    "check_mod_condition_before_fail": true,
+    "if_view_not_applicable": "OMITTED",
+    "if_geometry_not_applicable": "OMITTED",
+    "if_mod_not_applicable": "OMITTED",
+    "if_condition_unclear": "REVIEW_REQUIRED",
+    "fail_only_when_condition_active_and_note_missing": true
+  }
+}

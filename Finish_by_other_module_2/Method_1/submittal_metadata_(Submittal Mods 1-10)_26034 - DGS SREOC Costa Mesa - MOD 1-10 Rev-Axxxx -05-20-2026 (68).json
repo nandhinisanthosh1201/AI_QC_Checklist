@@ -1,0 +1,20 @@
+[
+  {
+    "view_name": "PLAN SECTION - BREAK ROOM 115",
+    "arch_ref": "1/AE407",
+    "view_type": "Section",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 (68)\\6.7\\6.7_1.png"
+  },
+  {
+    "view_name": "ELEVATION NORTH - BREAK ROOM 115",
+    "arch_ref": "2/AE407",
+    "view_type": "Elevation",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 (68)\\6.7\\6.7_2.png"
+  },
+  {
+    "view_name": "SECTION - PANELLING",
+    "arch_ref": "NA",
+    "view_type": "Section",
+    "source_file": "Submittal_crop\\(Submittal Mods 1-10)_26034 - DGS SREOC Costa Mesa - MOD 1-10 Rev-Axxxx -05-20-2026 (68)\\6.7\\6.7_A.png"
+  }
+]
