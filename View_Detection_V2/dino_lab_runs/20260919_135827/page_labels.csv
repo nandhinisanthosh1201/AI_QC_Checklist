@@ -1,0 +1,3 @@
+timestamp,page,tag,mode,dpi,box_thr,text_thr,tile,overlap,true_drawing_count,missed,extra,notes
+2026-09-19T14:35:00,3,p3_tiled_dpi200_box0.08_txt0.1_tile2800_ov0.2_nms0.45_procDEFAULT,tiled,200,0.08,0.1,2800,0.2,1,0,0,
+2026-09-19T14:36:46,6,p6_tiled_dpi200_box0.08_txt0.1_tile2800_ov0.2_nms0.45_procDEFAULT,tiled,200,0.08,0.1,2800,0.2,1,0,0,
