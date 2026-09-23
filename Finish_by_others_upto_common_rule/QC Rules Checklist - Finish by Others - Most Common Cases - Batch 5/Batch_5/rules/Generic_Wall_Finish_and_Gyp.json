@@ -1,0 +1,44 @@
+{
+    "rule_id": "GENERIC_WALL_FINISH_AND_GYP_001",
+    "rule_name": "Generic Wall Finish & Gypsum Board Validation",
+    "common_rule_group": "",
+    "type_of_rule": "note_validation",
+    "category": "Notes Check",
+    "discipline": "Millwork",
+    "required_sources": ["Submittal Drawing", "Architectural Drawing"],
+    "validation_flow": "tag_lookup_with_rfi_fallback",
+    "scope_identification": null,
+    "view_applicability": {
+        "allowed_view_types": ["Section"],
+        "view_matching_logic": "Matches generic wall and knee space sections."
+    },
+    "exclusion_logic": {
+        "detection_prompt": "Check if the wall surface is entirely covered by a full-wall functional or decorative material (e.g., Acoustic Wall Panels, Full Wood Panelling, Large Mirrors). If the bare wall is fully obscured by such wall coverings, return true for exclusion. IMPORTANT: Do NOT return true just because the word 'panel' is in the drawing (e.g., 'closure panel', 'cabinet panel'). Do NOT treat structural framing, studs, or cabinet components as an exclusion. Only return true if it is an architectural wall covering."
+    },
+    "geometry_logic": {
+        "boundary_detection": "Detect the graphical representation of a bare wall, drywall, or knee space clearance against a wall. Look for vertical wall sections or hatches."
+    },
+    "submittal_validation": {
+        "validation_type": "note_presence",
+        "match_type": "semantic",
+        "expected_notes": [
+            "WALL FINISH & GYP. BOARD BY OTHERS",
+            "WALL FINISH AND GYPSUM BOARD BY OTHERS",
+            "WALL FINISH & GYP BOARD BY OTHERS",
+            "WALL FINISH & GYP. BD. BY OTHERS"
+        ],
+        "anti_hallucination_prompt": "CRITICAL: You are strictly looking for the exact phrase relating to Wall Finish and Gypsum Board by others. DO NOT hallucinate. If the exact text is NOT visibly written in the drawing, you MUST return note_found: false."
+    },
+    "decision_logic": {
+        "truth_table": [
+            {"A_G": true, "A_T": false, "S_G": false, "S_N": true, "result": "PASS"},
+            {"A_G": true, "A_T": false, "S_G": false, "S_N": false, "result": "FAIL"},
+            {"A_G": false, "A_T": false, "S_G": false, "S_N": false, "result": "OMITTED"},
+            {"A_G": false, "A_T": false, "S_G": false, "S_N": true, "result": "PASS"}
+        ]
+    },
+    "markup": {
+        "enabled": true,
+        "statuses": ["FAIL", "REVIEW_REQUIRED", "RFI_REQUIRED"]
+    }
+}

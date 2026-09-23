@@ -1,0 +1,118 @@
+{
+    "rule_id": "RULE_NOTE_AUDIO_VIDEO_TELEVISION_MONITOR_BY_OTHERS_001",
+    "rule_name": "Audio Video Television/Monitor By Others Note Validation",
+    "type_of_rule": "note_validation",
+    "category": "Notes Check",
+    "discipline": "Millwork",
+    "required_sources": [
+        "Submittal Drawing",
+        "Architectural Drawing"
+    ],
+    "validation_flow": "arch_vs_submittal_v1",
+    "view_applicability": {
+        "allowed_view_types": [
+            "Elevation"
+        ],
+        "view_matching_logic": "Validate this rule only in Elevation views."
+    },
+    "arch_reference": {
+        "required": true
+    },
+    "scope_identification": {
+        "method": "schedule_based",
+        "schedule_name": "Schedule",
+        "match_field": "code / tag",
+        "search_keywords": [
+            "TV"
+        ]
+    },
+    "arch_scope_validation": {
+        "match_type": "intersection",
+        "description": "Compare the TV tags obtained from schedule.json with the visible tags extracted from the corresponding architectural elevation. If the tag TV is visible, the rule scope is applicable."
+    },
+    "submittal_validation": {
+        "validation_type": "note_presence",
+        "expected_notes": [
+            "TELEVISION BY OTHERS",
+            "TV BY OTHERS",
+            "MONITOR BY OTHERS",
+            "TV B.O."
+        ],
+        "match_type": "semantic"
+    },
+    "decision_logic": {
+        "arch_found_submittal_found": "PASS",
+        "arch_found_submittal_not_found": "FAIL",
+        "arch_not_found_submittal_found": "REVIEW_REQUIRED",
+        "arch_not_found_submittal_not_found": "OMITTED"
+    },
+    "execution_flow": {
+        "check_view_applicability": true,
+        "check_arch_scope": true,
+        "check_submittal": true
+    },
+    "confidence_score": {
+        "minimum_pass_threshold": 75.0
+    },
+    "markup": {
+        "enabled": true,
+        "statuses": [
+            "FAIL",
+            "REVIEW_REQUIRED"
+        ]
+    },
+    "severity": "Major",
+    "priority": "High",
+    "output_required": {
+        "confidence_score": true,
+        "reasoning": true,
+        "coordinates": true,
+        "detected_text": true
+    },
+    "output_json_format": {
+        "rule_id": "string",
+        "rule_name": "string",
+        "sheet_status": "PASS | FAIL | REVIEW_REQUIRED | OMITTED",
+        "drawing_context": {
+            "arch_reference": "string",
+            "architectural_view_name": "string",
+            "submittal_view_name": "string"
+        },
+        "view_results": [
+            {
+                "view_id": "string",
+                "view_type": "Elevation",
+                "view_applicable": "boolean",
+                "arch_scope_applicable": "boolean",
+                "required_tags": [
+                    "TV"
+                ],
+                "matched_tags": [
+                    "string"
+                ],
+                "validation_result": {
+                    "arch_scope_found": "boolean",
+                    "submittal_note_found": "boolean"
+                },
+                "status": "PASS | FAIL | REVIEW_REQUIRED | OMITTED",
+                "confidence_score": "float",
+                "reasoning": "string",
+                "detected_entities": [
+                    {
+                        "entity_name": "Audio Video Television/Monitor By Others Note",
+                        "detected_text": "string",
+                        "coordinates": {
+                            "left": 0,
+                            "top": 0,
+                            "right": 0,
+                            "bottom": 0
+                        }
+                    }
+                ]
+            }
+        ],
+        "markup_required": "boolean",
+        "severity": "Minor | Major | Critical",
+        "priority": "Low | Medium | High"
+    }
+}

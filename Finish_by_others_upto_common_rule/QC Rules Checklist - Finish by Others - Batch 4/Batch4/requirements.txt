@@ -1,0 +1,7 @@
+pydantic
+openai
+python-dotenv
+pandas
+openpyxl
+opencv-python
+pillow

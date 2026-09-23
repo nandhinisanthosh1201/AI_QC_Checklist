@@ -1,0 +1,156 @@
+{
+    "rule_id": "RULE_NOTE_ADA_SIGN_BY_OTHERS_001",
+    "rule_name": "ADA Sign By Others Note Validation",
+    "type_of_rule": "note_validation",
+    "category": "Notes Check",
+    "discipline": "Millwork",
+    "required_sources": [
+        "Submittal Drawing",
+        "Architectural Drawing"
+    ],
+    "validation_flow": "arch_vs_submittal_v2",
+    "source_priority": [
+        "Submittal Drawing",
+        "Architectural Drawing"
+    ],
+    "views_need_to_check": [
+        "Elevation"
+    ],
+    "geometry_logic": {
+        "boundary_detection": "Detect the scope purely by shape/structure: an accessibility/ADA symbol icon (a stylized wheelchair pictogram, typically shown as a circular or rounded outline containing a person-in-wheelchair figure), placed on or near the wall/elevation surface. Geometry applicability must be decided from the visual icon shape alone \u2014 the model should NOT expect, search for, or rely on the literal text 'ADA SIGN' being present anywhere in the submittal drawing to confirm geometry. If an accessibility/wheelchair pictogram icon matching this structural description exists anywhere in the elevation view, treat the geometry as applicable, regardless of whether any tag/text label is attached to it.",
+        "wall_interaction_conditions": [
+            "A wheelchair/accessibility pictogram icon (rounded or circular figure of a person in a wheelchair) is visible in the elevation view",
+            "The icon may be solid, outlined, or grayscale/shaded",
+            "A leader line/arrow may or may not connect the icon to a nearby note (presence of leader line is optional, not required)",
+            "The icon is positioned on or aligned with the wall/elevation surface, typically near door, casework, or signage locations",
+            "The icon is identifiable purely by its pictogram shape, independent of any tag text, label, or note being present near it",
+            "Any one of the above indicators is sufficient to consider the geometry applicable"
+        ],
+        "expected_boundary_region": "Around the wall-mounted accessibility/wheelchair pictogram icon, including its boundary and any associated leader line. Geometry detection must NEVER depend on finding the text 'ADA SIGN', tags, leader lines, schedule references, or note text \u2014 those are only used afterward to validate the BY OTHERS note, not to first locate the geometry. This single image represents one elevation view; do not assume a separate view exists elsewhere within the same crop."
+    },
+    "required_entities": [
+        "ADA Sign By Others Note"
+    ],
+    "optional_entities": [
+        "ADA SIGN",
+        "Wheelchair Pictogram",
+        "Accessibility Symbol",
+        "Leader Line",
+        "Schedule Reference"
+    ],
+    "detected_text_variants": [
+        "ADA SIGN BY OTHERS",
+        "ADA SIGN B.O.",
+        "ADA SIGNAGE BY OTHERS",
+        "ADA SIGNAGE B.O.",
+        "PROVIDE ADA SIGN BY OTHERS"
+    ],
+    "pass_condition": [
+        "Arch drawing has ADA sign reference (by tag, schedule, or callout) AND submittal shows the wheelchair pictogram geometry WITH a 'BY OTHERS' note present near it.",
+        "Confidence score >= 75.0."
+    ],
+    "fail_condition": [
+        "Arch drawing has ADA sign reference AND submittal geometry (wheelchair pictogram icon) is present BUT the BY OTHERS note is missing \u2014 regardless of whether an 'ADA SIGN' text tag is visible on the submittal.",
+        "ADA sign scope confirmed from arch but no BY OTHERS responsibility note found near the detected geometry in submittal."
+    ],
+    "review_required_condition": [
+        "ADA sign scope is applicable but the note text is unclear or partially readable.",
+        "Confidence score is below 75.0.",
+        "Wheelchair pictogram is visible but its connected object or leader region is unclear.",
+        "Schedule shows ADA sign, but drawing location is ambiguous.",
+        "Multiple nearby notes create uncertainty about whether the BY OTHERS note belongs to the ADA sign."
+    ],
+    "omit_condition": [
+        "Arch drawing does not contain an ADA sign reference \u2014 scope not applicable.",
+        "ARCH REF not found in submittal and arch drawing not available.",
+        "Drawing sheet does not contain ADA sign scope."
+    ],
+    "allowed_status": [
+        "PASS",
+        "FAIL",
+        "REVIEW_REQUIRED",
+        "OMITTED"
+    ],
+    "confidence_score": {
+        "type": "float",
+        "range": "0.0 - 100.0",
+        "minimum_pass_threshold": 75.0
+    },
+    "coordinate_format": "xyxy",
+    "coordinate_keys": {
+        "x1": "left",
+        "y1": "top",
+        "x2": "right",
+        "y2": "bottom"
+    },
+    "markup_required": true,
+    "markup_color": "red",
+    "markup_label": "ADA SIGN BY OTHERS \u2014 CHECK",
+    "severity": "Major",
+    "priority": "High",
+    "output_required": {
+        "confidence_score": true,
+        "reasoning": true,
+        "coordinates": true,
+        "detected_text": true
+    },
+    "reasoning": {
+        "type": "string",
+        "description": "Explain whether ADA sign scope is applicable, whether the BY OTHERS responsibility note is found, and why the final status is PASS, FAIL, OMITTED, or REVIEW_REQUIRED."
+    },
+    "output_json_format": {
+        "rule_id": "string",
+        "rule_name": "string",
+        "sheet_status": "PASS | FAIL | OMITTED | REVIEW_REQUIRED",
+        "view_results": [
+            {
+                "view_id": "V1",
+                "view_type": "Detected actual view title from drawing",
+                "matched_rule_view": "Matched rule view or null",
+                "view_applicable": "boolean",
+                "geometry_applicable": "boolean",
+                "mod_condition_active": "boolean",
+                "required_note_found": "boolean",
+                "status": "PASS | FAIL | OMITTED | REVIEW_REQUIRED",
+                "confidence_score": "float",
+                "reasoning": "string",
+                "detected_entities": [
+                    {
+                        "entity_name": "string",
+                        "detected_text": "string",
+                        "coordinates": {
+                            "x1": 0,
+                            "y1": 0,
+                            "x2": 0,
+                            "y2": 0
+                        }
+                    }
+                ]
+            }
+        ],
+        "markup_required": "boolean",
+        "markup_color": "string",
+        "markup_label": "string",
+        "severity": "Minor | Major | Critical",
+        "priority": "Low | Medium | High"
+    },
+    "applicability_logic": {
+        "check_view_before_fail": true,
+        "check_geometry_before_fail": true,
+        "check_mod_condition_before_fail": true,
+        "if_view_not_applicable": "OMITTED",
+        "if_geometry_not_applicable": "OMITTED",
+        "if_mod_not_applicable": "OMITTED",
+        "if_condition_unclear": "REVIEW_REQUIRED",
+        "fail_only_when_condition_active_and_note_missing": true,
+        "arch_check_direction": "arch_triggers_millwork_check",
+        "arch_missing_action": "OMITTED"
+    },
+    "arch_trigger_variants": [
+        "ADA SIGN",
+        "ADA SIGNAGE",
+        "ACCESSIBILITY SYMBOL",
+        "WHEELCHAIR SYMBOL"
+    ],
+    "arch_trigger_detection_logic": "On the architectural drawing, the ADA scope is frequently indicated ONLY by the wheelchair/accessibility pictogram icon itself (a rounded or circular symbol containing a person-in-wheelchair figure), with NO accompanying text label such as 'ADA SIGN'. The model must NOT require finding the literal words 'ADA SIGN' or any text variant to confirm the arch trigger. If the wheelchair/accessibility pictogram icon is visually present anywhere on the architectural drawing, the arch trigger must be treated as found (arch_trigger_found = true), based on icon shape recognition alone, exactly the same way geometry is detected on the submittal side."
+}

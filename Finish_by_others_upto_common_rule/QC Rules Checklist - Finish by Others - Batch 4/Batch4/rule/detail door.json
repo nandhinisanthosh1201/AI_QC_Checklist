@@ -1,0 +1,186 @@
+{
+  "rule_id": "RULE_NOTE_DOOR_BY_OTHERS_001",
+  "rule_name": "Door By Others Note Validation",
+  "type_of_rule": "note_validation",
+  "category": "Notes Check",
+  "discipline": "Millwork",
+
+  "required_sources": [
+    "Submittal Drawing",
+    "Architectural Drawing"
+  ],
+
+  "validation_flow": "arch_vs_submittal_v2",
+
+  "source_priority": [
+    "Submittal Drawing",
+    "Architectural Drawing"
+  ],
+
+  "views_need_to_check": [
+    "Detail"
+  ],
+
+  "view_matching_logic": {
+    "Detail": "Validate DOOR BY OTHERS note only in Detail views that depict a door assembly, portal head, side panel, door jamb, or door opening."
+  },
+
+  "geometry_logic": {
+    "boundary_detection": "geometry_applicable = TRUE only when the detected view is a Detail view showing a door-related assembly. Geometry is determined only from the view type and visible door detail, not from note text.",
+    "detail_conditions": [
+      "Millwork Portal - Head",
+      "Millwork Portal - Side Panel",
+      "Door Assembly Detail",
+      "Door Jamb Detail",
+      "Door Opening Detail",
+      "Portal Detail"
+    ],
+    "expected_boundary_region": "Door assembly/detail region.",
+    "note": "Do not use DOOR BY OTHERS text to determine geometry applicability."
+  },
+
+  "required_entities": [
+    "Door By Others Note"
+  ],
+
+  "optional_entities": [
+    "Door",
+    "Door Assembly",
+    "Door Opening",
+    "Frame",
+    "Door Frame",
+    "Leader Line"
+  ],
+
+  "detected_text_variants": [
+    "DOOR BY OTHERS",
+    "DOOR B.O.",
+    "DOOR TO BE PROVIDED BY OTHERS",
+    "DOOR PROVIDED BY OTHERS",
+    "PROVIDE DOOR BY OTHERS"
+  ],
+
+  "pass_condition": [
+    "Arch drawing contains DOOR, DOOR BY OTHERS, DOOR ASSEMBLY, DOOR OPENING, or DOOR FRAME and submittal contains DOOR BY OTHERS or a valid variant.",
+    "Confidence score >= 75.0."
+  ],
+
+  "fail_condition": [
+    "Arch drawing contains DOOR, DOOR BY OTHERS, DOOR ASSEMBLY, DOOR OPENING, or DOOR FRAME but submittal does not contain DOOR BY OTHERS or a valid variant."
+  ],
+
+  "review_required_condition": [
+    "Door detail is applicable but note is partially readable.",
+    "Confidence score below 75.0.",
+    "Door note is present but OCR confidence is low.",
+    "Multiple nearby notes make association ambiguous."
+  ],
+
+  "omit_condition": [
+    "Arch drawing does not contain DOOR, DOOR BY OTHERS, DOOR ASSEMBLY, DOOR OPENING, or DOOR FRAME.",
+    "ARCH REF not found in submittal and architectural drawing is unavailable.",
+    "Drawing view is not a Detail view."
+  ],
+
+  "allowed_status": [
+    "PASS",
+    "FAIL",
+    "REVIEW_REQUIRED",
+    "OMITTED"
+  ],
+
+  "confidence_score": {
+    "type": "float",
+    "range": "0.0 - 100.0",
+    "minimum_pass_threshold": 75.0
+  },
+
+  "coordinate_format": "xyxy",
+
+  "coordinate_keys": {
+    "x1": "left",
+    "y1": "top",
+    "x2": "right",
+    "y2": "bottom"
+  },
+
+  "markup_required": true,
+  "markup_color": "red",
+  "markup_label": "DOOR BY OTHERS - CHECK",
+
+  "severity": "Major",
+  "priority": "High",
+
+  "output_required": {
+    "confidence_score": true,
+    "reasoning": true,
+    "coordinates": true,
+    "detected_text": true
+  },
+
+  "reasoning": {
+    "type": "string",
+    "description": "Explain whether the architectural drawing requires a Door By Others condition and whether the corresponding Door By Others note exists in the submittal."
+  },
+
+  "output_json_format": {
+    "rule_id": "string",
+    "rule_name": "string",
+    "sheet_status": "PASS | FAIL | OMITTED | REVIEW_REQUIRED",
+    "view_results": [
+        {
+            "view_id": "V1",
+            "view_type": "Detected actual view title from drawing",
+            "matched_rule_view": "Matched rule view or null",
+            "view_applicable": "boolean",
+            "geometry_applicable": "boolean",
+            "mod_condition_active": "boolean",
+            "required_note_found": "boolean",
+            "status": "PASS | FAIL | OMITTED | REVIEW_REQUIRED",
+            "confidence_score": "float",
+            "reasoning": "string",
+            "detected_entities": [
+                {
+                    "entity_name": "string",
+                    "detected_text": "string",
+                    "coordinates": {
+                        "x1": 0,
+                        "y1": 0,
+                        "x2": 0,
+                        "y2": 0
+                    }
+                }
+            ]
+        }
+    ],
+    "markup_required": "boolean",
+    "markup_color": "string",
+    "markup_label": "string",
+    "severity": "Minor | Major | Critical",
+    "priority": "Low | Medium | High"
+  },
+
+  "applicability_logic": {
+    "check_view_before_fail": true,
+    "check_geometry_before_fail": true,
+    "check_mod_condition_before_fail": true,
+    "if_view_not_applicable": "OMITTED",
+    "if_geometry_not_applicable": "OMITTED",
+    "if_mod_not_applicable": "OMITTED",
+    "if_condition_unclear": "REVIEW_REQUIRED",
+    "fail_only_when_condition_active_and_note_missing": true,
+    "arch_check_direction": "arch_triggers_millwork_check",
+    "arch_missing_action": "OMITTED"
+  },
+
+  "arch_trigger_variants": [
+    "DOOR",
+    "DOOR BY OTHERS",
+    "DOOR ASSEMBLY",
+    "DOOR OPENING",
+    "DOOR FRAME",
+    "FRAME",
+    "HM DOOR",
+    "ALUMINUM DOOR"
+  ]
+}

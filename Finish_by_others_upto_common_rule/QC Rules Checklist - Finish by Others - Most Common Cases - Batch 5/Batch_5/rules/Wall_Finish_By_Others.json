@@ -1,0 +1,60 @@
+{
+    "rule_id": "RULE_NOTE_WALL_FINISH_BY_OTHERS_001",
+    "rule_name": "Wall Finish By Others Note Validation",
+    "common_rule_group": "paint_schedule",
+    "type_of_rule": "note_validation",
+    "category": "Notes Check",
+    "discipline": "Millwork",
+    "required_sources": [
+        "Submittal Drawing",
+        "Architectural Drawing"
+    ],
+    "validation_flow": "tag_lookup_with_rfi_fallback",
+    "view_applicability": {
+        "allowed_view_types": [],
+        "view_matching_logic": "View types are dynamically pulled at runtime from the 'views_to_check' column in schedule.json for the active row."
+    },
+    "arch_reference": {
+        "required": true
+    },
+    "scope_identification": {
+        "method": "schedule_based",
+        "schedule_name": "Schedule",
+        "match_field": "code / tag",
+        "resolution": "The active code_tag, description, and views_to_check are pulled at runtime from schedule.json."
+    },
+    "exclusion_logic": {
+        "detection_prompt": "Analyze the architectural drawing and check if the bare wall is completely covered by other functional or decorative materials. Look for callouts indicating full-surface coverings such as Mirrors, AV Media Screens, Wood Panelling, Acoustic Panels, Window Systems, Glass Partitions, or similar surface-covering materials. If the wall surface is entirely obscured by such materials, OR if there are explicit notes indicating the finish is out of scope (e.g., 'Deferred Submittal', 'By Others', 'Future Scope', 'Per Plan'), treat it as an exclusion."
+    },
+    "geometry_logic": {
+        "boundary_detection": "Look carefully for any graphic representing a wall. This INCLUDES plain wall elevations, wall hatches, and cross-sections of structural stud walls behind cabinets. DO NOT match glass storefronts, mullioned panels, acoustic panels, or specialized millwork wall panelling as a plain wall."
+    },
+    "note_template": {
+        "expected_notes_pattern": [
+            "{DESCRIPTION} BY OTHERS",
+            "{DESCRIPTION} B.O.",
+            "WALL FINISH BY OTHERS",
+            "WALL FINISH B.O."
+        ],
+        "match_type": "semantic",
+        "description": "{DESCRIPTION} and {TAG} placeholders are filled at runtime using the matched schedule.json row."
+    },
+    "submittal_validation": {
+        "validation_type": "note_presence",
+        "anchoring": {
+            "required": false
+        },
+        "match_type": "semantic",
+        "notes_source": "note_template.expected_notes_pattern resolved with active_description",
+        "anti_hallucination_prompt": "CRITICAL RESTRICTION: DO NOT confuse different materials, trades, or wall layers. Check if the note specifically addresses the exact material requested. Do not blindly match notes describing substrates, framing, or other wall layers (e.g., drywall, gyp board) if they do not exactly match the required finish/trade."
+    },
+    "markup": {
+        "enabled": true,
+        "statuses": [
+            "FAIL",
+            "REVIEW_REQUIRED"
+        ]
+    },
+    "severity": "Major",
+    "priority": "High"
+}

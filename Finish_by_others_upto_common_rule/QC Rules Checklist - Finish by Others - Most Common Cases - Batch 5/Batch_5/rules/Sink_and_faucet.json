@@ -1,0 +1,186 @@
+{
+    "rule_id": "RULE_NOTE_SINK_AND_FAUCET_BY_OTHERS_001",
+    "rule_name": "Sink and Faucet By Others Note Validation (RFI Fallback)",
+    "common_rule_group": "sink_and_faucet_schedule",
+    "type_of_rule": "note_validation",
+    "category": "Notes Check",
+    "discipline": "Millwork",
+    "required_sources": [
+        "Submittal Drawing",
+        "Architectural Drawing"
+    ],
+    "validation_flow": "tag_lookup_with_rfi_fallback",
+    "view_applicability": {
+        "allowed_view_types": [],
+        "view_matching_logic": "View types are dynamically pulled at runtime from the 'views_to_check' column in schedule.json for the active row."
+    },
+    "arch_reference": {
+        "required": true
+    },
+    "scope_identification": {
+        "method": "schedule_based",
+        "schedule_name": "Schedule",
+        "match_field": "code / tag",
+        "resolution": "The active code_tag, description, and views_to_check are pulled at runtime from schedule.json. No keywords are hardcoded."
+    },
+    "geometry_logic": {
+        "boundary_detection": "Look carefully for any graphic representing a sink, basin, or faucet. In architectural CAD drawings, these fixtures do not have a fixed shape and can be drawn in countless abstract styles and variations. They may be extremely thin, faint, or schematic. Look for any geometric block, outline, or symbol that contextually represents a plumbing fixture. Do not expect a realistic image. Ignore all text, dimension arrows, and circular tags, and focus purely on finding the CAD representation of the fixture, no matter how it is drawn."
+    },
+    "note_template": {
+        "expected_notes_pattern": [
+            "{DESCRIPTION} BY OTHERS",
+            "{DESCRIPTION} B.O.",
+            "{DESCRIPTION} SINK & FAUCET BY OTHERS, TYP.",
+            "{TAG} SINK AND FAUCET BY OTHERS",
+            "{TAG} SINK & FAUCET BY OTHERS",
+            "{TAG} SINK AND FAUCET BY OTHERS TYP."
+        ],
+        "match_type": "semantic",
+        "description": "{DESCRIPTION} and {TAG} placeholders are filled at runtime using the matched schedule.json row."
+    },
+    "submittal_validation": {
+        "validation_type": "note_presence",
+        "anchoring": {
+            "required": false
+        },
+        "match_type": "semantic",
+        "notes_source": "note_template.expected_notes_pattern resolved with active_description"
+    },
+    "decision_logic": {
+        "truth_table": [
+            {
+                "A_G": false,
+                "A_T": false,
+                "S_G": false,
+                "S_N": false,
+                "result": "OMITTED"
+            },
+            {
+                "A_G": false,
+                "A_T": false,
+                "S_G": true,
+                "S_N": true,
+                "result": "REVIEW_REQUIRED"
+            },
+            {
+                "A_G": false,
+                "A_T": false,
+                "S_G": true,
+                "S_N": false,
+                "result": "REVIEW_REQUIRED"
+            },
+            {
+                "A_G": false,
+                "A_T": true,
+                "S_G": true,
+                "S_N": true,
+                "result": "REVIEW_REQUIRED"
+            },
+            {
+                "A_G": true,
+                "A_T": false,
+                "S_G": true,
+                "S_N": true,
+                "result": "RFI_REQUIRED"
+            },
+            {
+                "A_G": true,
+                "A_T": false,
+                "S_G": true,
+                "S_N": false,
+                "result": "RFI_REQUIRED"
+            },
+            {
+                "A_G": true,
+                "A_T": true,
+                "S_G": true,
+                "S_N": false,
+                "result": "FAIL"
+            },
+            {
+                "A_G": true,
+                "A_T": true,
+                "S_G": false,
+                "S_N": true,
+                "result": "FAIL"
+            },
+            {
+                "A_G": true,
+                "A_T": false,
+                "S_G": false,
+                "S_N": true,
+                "result": "FAIL"
+            },
+            {
+                "A_G": true,
+                "A_T": true,
+                "S_G": false,
+                "S_N": false,
+                "result": "FAIL"
+            },
+            {
+                "A_G": true,
+                "A_T": true,
+                "S_G": true,
+                "S_N": true,
+                "result": "PASS"
+            }
+        ]
+    },
+    "execution_flow": {
+        "check_view_applicability": true,
+        "check_arch_scope": true,
+        "check_submittal": true,
+        "check_rfi_fallback": true
+    },
+    "confidence_score": {
+        "minimum_pass_threshold": 75.0
+    },
+    "markup": {
+        "enabled": true,
+        "statuses": [
+            "FAIL",
+            "REVIEW_REQUIRED",
+            "RFI_REQUIRED"
+        ]
+    },
+    "severity": "Major",
+    "priority": "High",
+    "output_required": {
+        "confidence_score": true,
+        "reasoning": true,
+        "coordinates": true,
+        "detected_text": true
+    },
+    "output_json_format": {
+        "rule_id": "string",
+        "rule_name": "string",
+        "common_rule_group": "string",
+        "active_code_tag": "string",
+        "active_description": "string",
+        "sheet_status": "PASS | FAIL | REVIEW_REQUIRED | OMITTED | RFI_REQUIRED",
+        "drawing_context": {
+            "arch_reference": "string",
+            "architectural_view_name": "string",
+            "submittal_view_name": "string"
+        },
+        "view_results": [
+            {
+                "view_id": "string",
+                "view_type": "string",
+                "view_applicable": "boolean",
+                "active_code_tag": "string",
+                "truth_table_inputs": {
+                    "arch_graphic": "boolean",
+                    "arch_tag": "boolean",
+                    "sub_graphic": "boolean",
+                    "sub_note": "boolean"
+                },
+                "status": "PASS | FAIL | REVIEW_REQUIRED | OMITTED | RFI_REQUIRED",
+                "confidence_score": "float",
+                "reasoning": "string"
+            }
+        ],
+        "markup_required": "boolean"
+    }
+}
