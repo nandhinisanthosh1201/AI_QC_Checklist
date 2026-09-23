@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Outputs and large data
+outputs/
+outputs_production_final/
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.zip
+
+# Deep learning weights (store in cloud/release storage instead of git)
+*.pt
+*.onnx
+
+# OS files
+.DS_Store
+Thumbs.db
+*.log
